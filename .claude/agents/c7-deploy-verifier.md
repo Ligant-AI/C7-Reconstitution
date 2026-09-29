@@ -32,3 +32,13 @@ You are read-only towards the world. Never deploy, never change DNS, CDN or host
 ## Output
 
 `verification/deploy/report-<YYYY-MM-DD>.md`: the URL, the date and time, the check-headers output, the request list, the storage listing, the resource list, and pass, fail or not-verifiable per claim with evidence. Your final message: the verdict per acceptance (16, 17, 25) and the report path.
+
+## At the deployed address
+
+The deployed page forbids framing (`frame-ancestors 'none'`), so the iframe sweep
+(`verification/ui/sweep.js`) cannot run there: use `verification/ui/sweep-toplevel.js`,
+which acts on the page itself and refuses to measure unless the viewport is exactly
+1366 × 650. If the viewport cannot be set, record "not measured" — never a figure
+taken at another size. `check-headers.mjs` requests the page with browser navigation
+headers, because the hosting edge injects scripts only into browser-like responses;
+a real-browser run remains the authority.

@@ -402,3 +402,38 @@ register now discloses the limit for both bounds; the decision should say the sa
   tree unchanged. It records that it too is a same-author reimplementation.
   **C1** (cc60a5c) and **C3** (59aed26) have **no second implementation** to
   check — acceptance 3 is undischarged for both on that ground, not on this one.
+
+## 22. Deployed at https://benchtools.ligant.ai/reconstitution/ — 29 September 2026
+
+Pages project `ligant-reconstitution` (Ligant.ai account) behind router Worker
+`ligant-reconstitution-router`, on the pattern of the sibling tools. Verified by
+`c7-deploy-verifier` (verification/deploy/report-2026-09-29.md):
+
+- **Acceptance 16 FAIL, 17 FAIL, 25 partial — one cause: the hosting edge injects
+  Cloudflare's Web Analytics beacon** (`static.cloudflareinsights.com/beacon.min.js`)
+  into every browser-like response on the **whole hostname** benchtools.ligant.ai —
+  the catalog root, C7 and the sibling tools alike (confirmed by the builder with
+  browser request headers); the project's own `ligant-reconstitution.pages.dev`
+  address is clean. C7's CSP blocks it, but it is an attempted load of third-party
+  code, which §14.1 claim 3 forbids. **Correction:** the builder had reported the
+  precondition (NADIRA's memo, item 1) as clear on the basis of non-browser
+  requests, which the edge serves clean; that conclusion was wrong.
+  `check-headers.mjs` now requests like a browser and catches it. **Owner action:**
+  in the Cloudflare dashboard, turn off Web Analytics automatic setup for the
+  benchtools.ligant.ai hostname, or add a rule excluding `/reconstitution/*` — not
+  something the build can do. It bears on every sibling page's privacy claim too.
+- **Claim 5 (repository) FAIL, as expected:** github.com/Ligant-ai/C7-Reconstitution
+  is public but empty — the commit is ready; `abmodi-ai` has read-only access.
+- **Claim 2 passes for C7** (no C7 data in any storage). Found on the shared origin,
+  for the owner: localStorage keys of other tools (`adc.state.v1`, `c4.state.v1`,
+  `cyto.state.v1` — C4's is its known finding B2) and cookies not set by this page
+  (`_ga`, `_ga_9V1GYE3KRX`, `_cs_c`, `_cs_id`) — likely domain-wide cookies from other
+  Ligant sites; their Domain attribute needs checking, and they bear on the "no
+  cookies for advertising" wording (outstanding item 4, THERON).
+- **Acceptances 18 and 19 PASS** at the deployed address (reload clears everything;
+  re-entry reproduces exactly; changing a declaration recomputes).
+- **C7-NF-05 not re-measured:** the iframe sweep is (correctly) blocked by
+  `frame-ancestors 'none'`, and the verifier's viewport could not be set to
+  1366 × 650. A top-level sweep (`verification/ui/sweep-toplevel.js`) now exists;
+  it refuses to measure at any other viewport. Logic-tested on the dev server
+  (not a measurement). The 349 px register figure stays marked "development build".

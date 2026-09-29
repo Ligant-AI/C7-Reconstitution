@@ -11,7 +11,18 @@
 const url = process.argv[2];
 if (!url) { console.error('usage: check-headers.mjs <deployed url>'); process.exit(64); }
 const origin = new URL(url).origin;
-const res = await fetch(url, { redirect: 'follow', headers: { 'user-agent': 'Mozilla/5.0 (Ligant C7 deploy check)' } });
+// Request the page AS A BROWSER DOES. The hosting edge injects its analytics
+// beacon only into responses to browser-like navigations; a bare request gets
+// clean HTML (29 September 2026: this check passed while a real browser was
+// served the beacon). These are the headers a top-level navigation sends.
+const BROWSER = {
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36',
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'accept-language': 'en-US,en;q=0.9',
+  'sec-fetch-mode': 'navigate', 'sec-fetch-dest': 'document', 'sec-fetch-site': 'none', 'sec-fetch-user': '?1',
+  'upgrade-insecure-requests': '1',
+};
+const res = await fetch(url, { redirect: 'follow', headers: BROWSER });
 const html = await res.text();
 const h = Object.fromEntries(res.headers.entries());
 const fail = []; const note = [];
@@ -45,5 +56,5 @@ console.log(`\n## Resources referenced by the served HTML (${resources.length})\
 for (const r of resources) console.log(`- ${new URL(r, url).href}`);
 console.log(`\n## Outbound links (not loaded; listed for the repository claim)\n`);
 for (const l of links) console.log(`- ${l}`);
-console.log(`\n## Result\n\n${fail.length ? fail.map((f) => `- FAIL: ${f}`).join('\n') : '- No server-side failure found.'}${note.length ? `\n${note.map((n) => `- NOTE: ${n}`).join('\n')}` : ''}\n\nThis check sees the HTML as served. Scripts injected after load, and requests made by the page, are only visible in the real-browser run.`);
+console.log(`\n## Result\n\n${fail.length ? fail.map((f) => `- FAIL: ${f}`).join('\n') : '- No server-side failure found.'}${note.length ? `\n${note.map((n) => `- NOTE: ${n}`).join('\n')}` : ''}\n\nThis check requests the page with a browser's navigation headers and sees the HTML as served to it. Scripts injected after load, and requests made by the page, are only visible in the real-browser run.`);
 process.exit(fail.length ? 1 : 0);
