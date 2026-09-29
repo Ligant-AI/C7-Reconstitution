@@ -21,6 +21,8 @@ export const CONFIG = Object.freeze({
   // Named on the sibling pattern; it must exist before the page is published.
   repositoryUrl: 'https://github.com/Ligant-AI/C7-Reconstitution',
   repositoryLabel: 'github.com/Ligant-AI/C7-Reconstitution',
+  // The footer's Privacy Policy link: the one standard statement across the suite.
+  privacyUrl: 'https://ligant.ai/privacy',
   contactEmail: 'hello@ligant.ai',
   address: ['3675 Market Street', 'Suite 200', 'Philadelphia PA 19104'],
   doi: null,

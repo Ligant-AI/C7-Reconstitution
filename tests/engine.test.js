@@ -433,3 +433,14 @@ test('T2: the departure names the values it is taken on, and an "at most" depart
   assert.equal(a.target.departure.display, '+0.452 %');
   assert.match(notebookText(b), /on the unrounded values = at most -0\.0399 %/);
 });
+
+test('one privacy text: the footer carries the statement word for word, and links the policy', async () => {
+  const { PRIVACY_STATEMENT } = await import('../src/ui/privacy.js');
+  const { renderFooter } = await import('../src/ui/chrome.js');
+  const { CONFIG } = await import('../src/config.js');
+  const footer = renderFooter();
+  assert.ok(footer.includes(PRIVACY_STATEMENT), 'footer statement differs from the Privacy section');
+  assert.ok(footer.includes(`href="${CONFIG.privacyUrl}"`));
+  assert.equal(CONFIG.privacyUrl, 'https://ligant.ai/privacy');
+  assert.doesNotMatch(footer, /no data is transmitted|no analytics scripts|no third.party code/);
+});

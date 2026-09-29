@@ -8,7 +8,7 @@
 import { CONFIG, toolUrl, citationText } from '../config.js';
 import { markSvg, lockupHtml } from './mark.js';
 import { escapeHtml as esc } from './page-content.js';
-import { PRIVACY_PARAGRAPHS } from './privacy.js';
+import { SCOPE_STATEMENT } from './privacy.js';
 
 export function renderHeader() {
   const nav = CONFIG.tools.map((t) => `<li>${t.slug === CONFIG.slug
@@ -32,7 +32,7 @@ export function renderFooter() {
   return `
     <div class="footer-grid">
       <div class="footer-prose">
-        <p><a href="#privacy">Privacy statement</a> — what this page does and does not do with what you enter, displayed in full on this page.</p>
+        <p>Ligant Bench Tools are free and open source under Apache 2.0, for research and educational use. <strong>Privacy.</strong> Everything you enter into this tool stays on your computer. Calculations run entirely in your browser, and your inputs are never transmitted, stored, or logged. We use Cloudflare Web Analytics to count visits and measure how quickly this page loads, so we can see which tools are used and improve them. It sets no cookie, does not identify you, and never reads what you type. <a href="${esc(CONFIG.privacyUrl)}" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
         <p>Every figure on this page comes from code you can read, download or run yourself, at ${repo}. Clone it and <code>npm run dev</code> for a local copy.</p>
         <p>These tools are standalone calculators. Ligant's enterprise platform adds reference databases, connected agentic workflows, on-premise language models, and full GxP validation. If your lab needs that, please email us ${mail}.</p>
       </div>
@@ -53,12 +53,12 @@ export function renderFooter() {
       <p class="footer-citation-note">${CONFIG.doi ? 'The identifier is given as text, not as a link: a link that navigated to a publisher would disclose a visit that the rest of the tool is built to prevent.' : 'No identifier is stated: one is minted when the tool is released, and a placeholder would read as a record that does not exist.'}</p>
     </div>
 
-    <p class="footer-licence">Licensed under the Apache License, Version 2.0. You may obtain a copy of the License in the <a href="./LICENSE"><code>LICENSE</code></a> file served with this page and distributed with the source. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or conditions of any kind, either express or implied. <strong>${esc(PRIVACY_PARAGRAPHS[3])}</strong></p>`;
+    <p class="footer-licence">Licensed under the Apache License, Version 2.0. You may obtain a copy of the License in the <a href="./LICENSE"><code>LICENSE</code></a> file served with this page and distributed with the source. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or conditions of any kind, either express or implied. <strong>${esc(SCOPE_STATEMENT)}</strong></p>`;
 }
 
 /** The scope statement: the privacy statement's fourth paragraph, not reworded (C7-OUT-06), and C7-OUT-08. */
 export function renderDisclaimer(statement) {
-  return `<strong>${esc(PRIVACY_PARAGRAPHS[3])}</strong> ${esc(statement)}`;
+  return `<strong>${esc(SCOPE_STATEMENT)}</strong> ${esc(statement)}`;
 }
 
 export function renderColophon() {

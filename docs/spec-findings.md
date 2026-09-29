@@ -483,3 +483,19 @@ the cleaned referrer, which the wording does not name. **Open for the owner:** t
 `_ga`/`_cs_*` cookies — not set by any current page — are still present on
 `.ligant.ai`; if Contentsquare and GA are not used, they are leftovers whose setter
 should be found and removed.
+
+## 25. The privacy statement of 29 September 2026 (A. Modi)
+
+Adopted verbatim in the footer — in the reference footer's first paragraph, in place
+of "They run entirely in your browser: no data is transmitted." — and in the page's
+Privacy section, so the page carries one privacy text; both link "Privacy Policy" to
+https://ligant.ai/privacy (the site's own policy page, which covers Bench Tools and
+Cloudflare). A test pins the footer and the section to the same words. Applied to
+C7 only, as decided; the other tools keep their own texts. The scope statement
+(C7-OUT-06) is unchanged. Each of the statement's claims about the page is covered
+by the deployed-address sentinel test with the analytics live
+(verification/deploy/sentinel-test.md): inputs never transmitted; no cookie set;
+the analytics never read what is typed. "Does not identify you" rests on
+Cloudflare's documentation. This supersedes the interim text of item 24 and the
+draft's statement-wording placeholder; URS §14.1 (the verbatim v1.0 statement) and
+acceptance 17 still need amending to match (spec/proposed-amendment-privacy-2026-09-29.md).
