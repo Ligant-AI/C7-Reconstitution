@@ -2,15 +2,15 @@
 # frame-ancestors cannot be delivered from a meta element, so the policy has to
 # be sent here as well.
 #
-# Everything is 'self' (C7-NF-12, §14.1 claim 3). Unlike C3 1.0.1 there is NO
-# allowance for static.cloudflareinsights.com: the verbatim privacy statement
-# says no analytics scripts and no third-party code of any kind run on this
-# page. Edge-injected scripts (Web Analytics auto-injection, Rocket Loader,
-# email obfuscation) must also be confirmed OFF for this path in the zone
-# configuration — the CSP would block them, but acceptance 17 requires that
-# they are not injected, not merely that they fail.
+# Everything is 'self' (C7-NF-12) except the one analytics product decided by
+# A. Modi on 29 September 2026: Cloudflare Web Analytics — its beacon script and its
+# reporting endpoint, and nothing else, mirroring the Dilution Planner's allowance.
+# No other edge-injected script (Rocket Loader, email obfuscation) may be added
+# without changing this policy and the page's disclosure together. Entered data
+# never leaves the browser (C7-NF-01): verified by the sentinel test
+# (verification/deploy/sentinel-test.md), re-run after any analytics or CSP change.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js/; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://benchtools.ligant.ai/cdn-cgi/rum; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   Cross-Origin-Opener-Policy: same-origin

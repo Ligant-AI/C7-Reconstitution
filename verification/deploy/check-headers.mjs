@@ -29,8 +29,17 @@ const fail = []; const note = [];
 
 const csp = h['content-security-policy'] || '';
 if (!csp) fail.push('no Content-Security-Policy response header (frame-ancestors cannot come from the meta tag)');
-for (const d of ["default-src 'self'", "script-src 'self'", "connect-src 'none'", "frame-ancestors 'none'"]) if (csp && !csp.includes(d)) fail.push(`CSP header lacks ${d}`);
-if (/cloudflareinsights|beacon\.min\.js/.test(csp)) fail.push('CSP allows the Cloudflare analytics beacon');
+// Policy of 29 September 2026: Cloudflare Web Analytics is the one disclosed
+// analytics product. The CSP must allow exactly its beacon and reporting endpoint.
+const DISCLOSED = { script: ['https://static.cloudflareinsights.com/beacon.min.js', 'https://static.cloudflareinsights.com/beacon.min.js/'], connect: [`${origin}/cdn-cgi/rum`] };
+for (const d of ["default-src 'self'", "frame-ancestors 'none'"]) if (csp && !csp.includes(d)) fail.push(`CSP header lacks ${d}`);
+const directive = (name) => ((new RegExp(`${name}\\s+([^;]*)`).exec(csp) || [])[1] || '').trim().split(/\s+/).filter(Boolean);
+const scriptSrc = directive('script-src'); const connectSrc = directive('connect-src');
+const extraScript = scriptSrc.filter((x) => x !== "'self'" && !DISCLOSED.script.includes(x));
+const extraConnect = connectSrc.filter((x) => !DISCLOSED.connect.includes(x) && x !== "'none'");
+if (!scriptSrc.includes("'self'")) fail.push("CSP script-src lacks 'self'");
+if (extraScript.length) fail.push(`CSP script-src allows undisclosed sources: ${extraScript.join(' ')}`);
+if (extraConnect.length) fail.push(`CSP connect-src allows undisclosed endpoints: ${extraConnect.join(' ')}`);
 if (h['set-cookie']) fail.push(`response sets a cookie: ${h['set-cookie']}`);
 
 const refs = [...html.matchAll(/\b(?:src|href)\s*=\s*["']([^"']+)["']/g)].map((m) => m[1]).filter((r) => !r.startsWith('#') && !r.startsWith('data:') && !r.startsWith('mailto:'));
@@ -42,8 +51,9 @@ const resources = [
   ...[...html.matchAll(/<link\b[^>]*>/g)].map((m) => m[0]).filter((tag) => LOADING_RELS.test((/\brel\s*=\s*["']([^"']+)["']/.exec(tag) || [])[1] || '')).map((tag) => (/\bhref\s*=\s*["']([^"']+)["']/.exec(tag) || [])[1]).filter(Boolean),
 ].filter((r) => !r.startsWith('data:'));
 const external = resources.map((r) => new URL(r, url)).filter((u) => u.origin !== origin);
-for (const u of external) fail.push(`loads a resource from another origin: ${u.href}`);
-for (const [re, what] of [[/cloudflareinsights|cf-beacon|__cfBeacon/i, 'Cloudflare Web Analytics beacon'], [/rocket-loader|data-cfasync/i, 'Rocket Loader'], [/email-decode|__cf_email__/i, 'email obfuscation'], [/cdn-cgi\/challenge-platform/i, 'challenge script']]) {
+const disclosedScript = (u) => DISCLOSED.script.some((d) => u.href === d || (d.endsWith('/') && u.href.startsWith(d)));
+for (const u of external) if (!disclosedScript(u)) fail.push(`loads a resource from another origin: ${u.href}`); else note.push(`disclosed analytics script loaded: ${u.href}`);
+for (const [re, what] of [[/rocket-loader|data-cfasync/i, 'Rocket Loader'], [/email-decode|__cf_email__/i, 'email obfuscation'], [/cdn-cgi\/challenge-platform/i, 'challenge script']]) {
   if (re.test(html)) fail.push(`edge injection present in the served HTML: ${what}`);
 }
 const links = refs.map((r) => new URL(r, url)).filter((u) => u.origin !== origin).map((u) => u.href);
