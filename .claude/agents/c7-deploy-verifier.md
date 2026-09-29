@@ -18,10 +18,10 @@ You are read-only towards the world. Never deploy, never change DNS, CDN or host
 ## Checks
 
 1. **Served HTML and headers.** Run `node verification/deploy/check-headers.mjs <url>` and keep its whole output. It checks for:
-   - a Content-Security-Policy response header including `frame-ancestors 'none'` and `connect-src 'none'`, and allowing no analytics beacon;
+   - a Content-Security-Policy response header including `frame-ancestors 'none'`, allowing exactly the disclosed analytics (the Cloudflare Web Analytics beacon and `/cdn-cgi/rum` for everyone; the Google Analytics hosts, used only after Allow in the banner) and nothing else;
    - no Set-Cookie;
    - no resource from another origin;
-   - no edge-injected analytics, Rocket Loader or email-obfuscation script.
+   - no Rocket Loader or email-obfuscation script, and no Google resource in the served HTML (Google Analytics is loaded by the footer's banner, only after Allow).
 2. **Acceptance 16 in a real browser.** With the Claude in Chrome tools, open a new tab and start network monitoring (`read_network_requests`, and `read_console_messages` with a pattern) before the page loads. Then load the URL. Run C7-FX-06 through the form: 80 mg, reagent alone, lot certificate, not a conjugate, carrier absent, whole vial, target 80 mg/mL, diluent to add. Then copy for notebook. List every request from load to the end, with its origin. Pass only if every request is to the page's own origin and none carries user-entered data. Note any CSP violation in the console: a blocked injection is still an attempted load, and it fails §14.1 claim 3.
 3. **C7-ST-07 and claim 2.** After the determination, list localStorage, sessionStorage, IndexedDB databases, service workers, and `document.cookie`. There must be no user-entered data in any of them. Cookies that belong to the domain but were not set by this page must be named and attributed; don't assume them away.
 4. **Claim 3, what loads.** Use `performance.getEntriesByType('resource')`: every entry must be from the page's own origin. Fonts must be self-hosted.
