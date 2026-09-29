@@ -215,7 +215,15 @@ function init() {
   // exception is a transport link's fragment, re-read visibly below.)
   form.reset();
   minTouched = false;
-  if (/^#c1=/.test(location.hash)) $('import-text').value = location.href;
+  if (/^#c1=/.test(location.hash)) {
+    $('import-text').value = location.href;
+    // The envelope carries another tool's entered data. Once it is in the visible
+    // import field, remove it from the address, so that no script on the page that
+    // reads or reports the URL — an analytics beacon, in particular — can see it,
+    // and it does not persist in the reloadable address (NADIRA's production note,
+    // item 3; C7-ST-04). A fragment is never sent to a server either way.
+    history.replaceState(null, '', location.pathname + location.search);
+  }
   form.addEventListener('input', compute);
   form.addEventListener('change', compute);
   form.addEventListener('submit', (e) => e.preventDefault());
