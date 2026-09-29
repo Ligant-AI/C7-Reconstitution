@@ -1,0 +1,9274 @@
+{
+ "groups": {
+  "random": {
+   "cases": 600,
+   "counts": {
+    "status:result": 572,
+    "status:rejected": 28
+   },
+   "obs": {
+    "rel_Dmin": {
+     "n": 88,
+     "max": 1.937645624587646e-16,
+     "nonzero": 88
+    },
+    "fa_ulp": {
+     "n": 572,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 572,
+     "max": 2.949618101423173e-16,
+     "nonzero": 567
+    },
+    "rel_fmin": {
+     "n": 88,
+     "max": 9.636495328531282e-17,
+     "nonzero": 86
+    },
+    "fin_bound_margin": {
+     "n": 88,
+     "max": 0.008624962823436106,
+     "nonzero": 88
+    },
+    "conc_bound_margin": {
+     "n": 88,
+     "max": 8.677219171649654e-06,
+     "nonzero": 88
+    },
+    "add_gap_units": {
+     "n": 572,
+     "max": 0.9523809523809523,
+     "nonzero": 366
+    },
+    "add_gap_atmost": {
+     "n": 88,
+     "max": 0.9523809523809523,
+     "nonzero": 85
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 88,
+     "max": 9.636495328531282e-17,
+     "nonzero": 86
+    },
+    "rel_D": {
+     "n": 320,
+     "max": 1.9011133770361706e-16,
+     "nonzero": 320
+    },
+    "rel_f": {
+     "n": 320,
+     "max": 1.0268772206881669e-16,
+     "nonzero": 314
+    },
+    "add_gap_other": {
+     "n": 484,
+     "max": 0.6,
+     "nonzero": 281
+    },
+    "rel_fl08_factor_vs_engine_f": {
+     "n": 31,
+     "max": 1.838427436755168e-15,
+     "nonzero": 31
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 31,
+     "max": 2.5107215560329357e-16,
+     "nonzero": 31
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 31,
+     "max": 1.721345735317763e-16,
+     "nonzero": 31
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 31,
+     "max": 9.593640489606207e-17,
+     "nonzero": 28
+    },
+    "rel_target": {
+     "n": 281,
+     "max": 1.630331428525078e-16,
+     "nonzero": 199
+    },
+    "rel_F": {
+     "n": 281,
+     "max": 2.8492274409080704e-16,
+     "nonzero": 271
+    },
+    "fx14_discriminating": {
+     "n": 47
+    },
+    "dep_abs": {
+     "n": 281,
+     "max": 2.3473245045987896e-16,
+     "nonzero": 268
+    },
+    "rel_fl08_factor_final": {
+     "n": 119,
+     "max": 1.6222622693708795e-16,
+     "nonzero": 119
+    },
+    "rel_fl08_percent_final": {
+     "n": 119,
+     "max": 4.0569160638954787e-16,
+     "nonzero": 119
+    },
+    "rel_molar": {
+     "n": 17,
+     "max": 1.8720524459781007e-16,
+     "nonzero": 17
+    },
+    "hi08": {
+     "n": 28
+    }
+   }
+  },
+  "fx14": {
+   "cases": 60,
+   "counts": {
+    "status:result": 60
+   },
+   "obs": {
+    "rel_D": {
+     "n": 60,
+     "max": 2.1369235748323835e-16,
+     "nonzero": 60
+    },
+    "rel_target": {
+     "n": 60,
+     "max": 9.036308430383271e-17,
+     "nonzero": 59
+    },
+    "rel_F": {
+     "n": 60,
+     "max": 1.7371495558642338e-16,
+     "nonzero": 60
+    },
+    "fx14_discriminating": {
+     "n": 59
+    },
+    "fa_ulp": {
+     "n": 60,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 60,
+     "max": 2.0361028744634416e-16,
+     "nonzero": 60
+    },
+    "rel_f": {
+     "n": 60,
+     "max": 8.860597075683867e-17,
+     "nonzero": 60
+    },
+    "add_gap_units": {
+     "n": 60,
+     "max": 1.0,
+     "nonzero": 56
+    },
+    "add_gap_other": {
+     "n": 60,
+     "max": 1.0,
+     "nonzero": 56
+    },
+    "dep_abs": {
+     "n": 60,
+     "max": 1.1083160236549456e-16,
+     "nonzero": 60
+    },
+    "rel_fl08_factor_final": {
+     "n": 53,
+     "max": 2.009975051082943e-16,
+     "nonzero": 53
+    },
+    "rel_fl08_percent_final": {
+     "n": 53,
+     "max": 3.150200622086359e-16,
+     "nonzero": 53
+    }
+   }
+  },
+  "boundary": {
+   "cases": 165,
+   "counts": {
+    "status:result": 114,
+    "status:rejected": 46,
+    "status:not-representable": 5
+   },
+   "obs": {
+    "rel_D": {
+     "n": 71,
+     "max": 9.495333711341314e-17,
+     "nonzero": 69
+    },
+    "rel_target": {
+     "n": 59,
+     "max": 5.770482582437883e-17,
+     "nonzero": 31
+    },
+    "rel_F": {
+     "n": 59,
+     "max": 1.1132817316994587e-05,
+     "nonzero": 47
+    },
+    "fa_ulp": {
+     "n": 114,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 114,
+     "max": 1.1132817316987565e-05,
+     "nonzero": 114
+    },
+    "rel_f": {
+     "n": 71,
+     "max": 1.0155548546775848e-16,
+     "nonzero": 67
+    },
+    "add_gap_units": {
+     "n": 114,
+     "max": 0.49375312343828087,
+     "nonzero": 84
+    },
+    "add_gap_other": {
+     "n": 101,
+     "max": 0.33333333333335,
+     "nonzero": 71
+    },
+    "dep_abs": {
+     "n": 59,
+     "max": 1.056292830980965e-16,
+     "nonzero": 24
+    },
+    "rel_fl08_factor_final": {
+     "n": 19,
+     "max": 1.4163381477509359e-16,
+     "nonzero": 19
+    },
+    "rel_fl08_percent_final": {
+     "n": 19,
+     "max": 1.993981463961834e-16,
+     "nonzero": 19
+    },
+    "rel_fl08_factor_vs_engine_f": {
+     "n": 4,
+     "max": 0.053601650369275,
+     "nonzero": 4
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 4,
+     "max": 1.2455419087550372e-16,
+     "nonzero": 2
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 4,
+     "max": 5.367909186770335e-17,
+     "nonzero": 1
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 4,
+     "max": 4.9245050655749166e-17,
+     "nonzero": 4
+    },
+    "rel_Dmin": {
+     "n": 13,
+     "max": 0.32319774542294993,
+     "nonzero": 13
+    },
+    "rel_fmin": {
+     "n": 13,
+     "max": 6.765421556309548e-17,
+     "nonzero": 13
+    },
+    "fin_bound_margin": {
+     "n": 13,
+     "max": 0.005806092420265648,
+     "nonzero": 13
+    },
+    "conc_bound_margin": {
+     "n": 13,
+     "max": 0.0018807623,
+     "nonzero": 13
+    },
+    "add_gap_atmost": {
+     "n": 13,
+     "max": 0.49375312343828087,
+     "nonzero": 13
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 13,
+     "max": 6.765421556309548e-17,
+     "nonzero": 13
+    },
+    "hi08": {
+     "n": 27
+    },
+    "fx14_discriminating": {
+     "n": 21
+    },
+    "status": {
+     "n": 5
+    }
+   }
+  },
+  "flags": {
+   "cases": 88,
+   "counts": {
+    "status:result": 88
+   },
+   "obs": {
+    "rel_D": {
+     "n": 75,
+     "max": 8.235199888728257e-17,
+     "nonzero": 75
+    },
+    "rel_target": {
+     "n": 48,
+     "max": 2.5124459723756513e-17,
+     "nonzero": 38
+    },
+    "rel_F": {
+     "n": 48,
+     "max": 3.3679900446404037e-18,
+     "nonzero": 38
+    },
+    "fa_ulp": {
+     "n": 88,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 88,
+     "max": 1.109930586321345e-16,
+     "nonzero": 87
+    },
+    "rel_f": {
+     "n": 75,
+     "max": 5.853485937052219e-17,
+     "nonzero": 72
+    },
+    "add_gap_units": {
+     "n": 88,
+     "max": 0.103,
+     "nonzero": 80
+    },
+    "add_gap_other": {
+     "n": 80,
+     "max": 0.103,
+     "nonzero": 72
+    },
+    "dep_abs": {
+     "n": 48,
+     "max": 8.40963112611924e-17,
+     "nonzero": 46
+    },
+    "rel_Dmin": {
+     "n": 8,
+     "max": 4.1299858423805167e-17,
+     "nonzero": 8
+    },
+    "rel_fmin": {
+     "n": 8,
+     "max": 5.853485937052219e-17,
+     "nonzero": 8
+    },
+    "fin_bound_margin": {
+     "n": 8,
+     "max": 0.0003379958467637449,
+     "nonzero": 8
+    },
+    "conc_bound_margin": {
+     "n": 8,
+     "max": 2.1397785269199236e-06,
+     "nonzero": 8
+    },
+    "add_gap_atmost": {
+     "n": 8,
+     "max": 0.05339733013349333,
+     "nonzero": 8
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 8,
+     "max": 5.853485937052219e-17,
+     "nonzero": 8
+    },
+    "rel_molar": {
+     "n": 8,
+     "max": 8.222387777902895e-17,
+     "nonzero": 8
+    },
+    "rel_fl08_factor_final": {
+     "n": 2,
+     "max": 4.729550084903167e-17,
+     "nonzero": 2
+    },
+    "rel_fl08_percent_final": {
+     "n": 2,
+     "max": 3.5930162954478527e-17,
+     "nonzero": 2
+    },
+    "rel_fl08_factor_vs_engine_f": {
+     "n": 1,
+     "max": 4.63754648970176e-18,
+     "nonzero": 1
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 1,
+     "max": 9.547918011776345e-18,
+     "nonzero": 1
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 1,
+     "max": 1.307933974215938e-16,
+     "nonzero": 1
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 1,
+     "max": 4.027438816341946e-17,
+     "nonzero": 1
+    }
+   }
+  },
+  "pairing": {
+   "cases": 145,
+   "counts": {
+    "status:rejected": 43,
+    "status:result": 102
+   },
+   "obs": {
+    "rel_D": {
+     "n": 78,
+     "max": 7.52267984079988e-17,
+     "nonzero": 78
+    },
+    "rel_target": {
+     "n": 54,
+     "max": 6.82932249726649e-18,
+     "nonzero": 6
+    },
+    "rel_F": {
+     "n": 54,
+     "max": 1.6080896974742693e-16,
+     "nonzero": 48
+    },
+    "fx14_discriminating": {
+     "n": 36
+    },
+    "fa_ulp": {
+     "n": 102,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 102,
+     "max": 1.1676669019069936e-16,
+     "nonzero": 90
+    },
+    "rel_f": {
+     "n": 78,
+     "max": 5.827675366819893e-17,
+     "nonzero": 42
+    },
+    "add_gap_units": {
+     "n": 102,
+     "max": 0.0876,
+     "nonzero": 78
+    },
+    "add_gap_other": {
+     "n": 102,
+     "max": 0.0876,
+     "nonzero": 78
+    },
+    "dep_abs": {
+     "n": 54,
+     "max": 6.335002826438943e-17,
+     "nonzero": 6
+    },
+    "rel_molar": {
+     "n": 18,
+     "max": 2.5897462897941845e-17,
+     "nonzero": 18
+    }
+   }
+  },
+  "rejections": {
+   "cases": 18,
+   "counts": {
+    "status:rejected": 18
+   },
+   "obs": {
+    "hi08": {
+     "n": 2
+    }
+   }
+  },
+  "invariance-kept": {
+   "cases": 222,
+   "counts": {
+    "status:result": 222
+   },
+   "obs": {
+    "rel_D": {
+     "n": 141,
+     "max": 1.865375795615478e-16,
+     "nonzero": 141
+    },
+    "rel_target": {
+     "n": 144,
+     "max": 1.2049265981960755e-16,
+     "nonzero": 138
+    },
+    "rel_F": {
+     "n": 144,
+     "max": 2.1340945896981365e-16,
+     "nonzero": 144
+    },
+    "fa_ulp": {
+     "n": 222,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 222,
+     "max": 2.1163367771594333e-16,
+     "nonzero": 222
+    },
+    "rel_f": {
+     "n": 141,
+     "max": 9.488818491297972e-17,
+     "nonzero": 141
+    },
+    "add_gap_units": {
+     "n": 222,
+     "max": 0.9523809523809523,
+     "nonzero": 185
+    },
+    "add_gap_other": {
+     "n": 155,
+     "max": 0.8,
+     "nonzero": 120
+    },
+    "dep_abs": {
+     "n": 144,
+     "max": 1.9961260246043668e-16,
+     "nonzero": 135
+    },
+    "rel_fl08_factor_final": {
+     "n": 84,
+     "max": 1.4046153218560953e-16,
+     "nonzero": 84
+    },
+    "rel_fl08_percent_final": {
+     "n": 84,
+     "max": 3.497023448909023e-16,
+     "nonzero": 84
+    },
+    "fx14_discriminating": {
+     "n": 36
+    },
+    "rel_fl08_factor_vs_engine_f": {
+     "n": 25,
+     "max": 2.057360365424089e-15,
+     "nonzero": 25
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 25,
+     "max": 1.6446447031483202e-16,
+     "nonzero": 25
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 25,
+     "max": 2.8974147767482083e-16,
+     "nonzero": 25
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 25,
+     "max": 8.998369238339625e-17,
+     "nonzero": 25
+    },
+    "rel_Dmin": {
+     "n": 67,
+     "max": 1.51583761830328e-16,
+     "nonzero": 67
+    },
+    "rel_fmin": {
+     "n": 67,
+     "max": 8.207260996579914e-17,
+     "nonzero": 67
+    },
+    "fin_bound_margin": {
+     "n": 67,
+     "max": 0.006831273587757252,
+     "nonzero": 67
+    },
+    "conc_bound_margin": {
+     "n": 67,
+     "max": 8.960573476737681e-06,
+     "nonzero": 67
+    },
+    "add_gap_atmost": {
+     "n": 67,
+     "max": 0.9523809523809523,
+     "nonzero": 65
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 67,
+     "max": 8.207260996579914e-17,
+     "nonzero": 67
+    },
+    "rel_molar": {
+     "n": 12,
+     "max": 9.69526386459053e-17,
+     "nonzero": 12
+    }
+   }
+  },
+  "hostile": {
+   "cases": 53,
+   "counts": {
+    "status:result": 25,
+    "status:rejected": 14,
+    "status:not-representable": 5,
+    "oracle-na": 3,
+    "status:incomplete": 9
+   },
+   "obs": {
+    "rel_Dmin": {
+     "n": 4,
+     "max": 1.0568175590777893e-16,
+     "nonzero": 4
+    },
+    "rel_target": {
+     "n": 20,
+     "max": 3.026687778748964e-17,
+     "nonzero": 4
+    },
+    "rel_F": {
+     "n": 20,
+     "max": 6.645659242301823e-17,
+     "nonzero": 5
+    },
+    "fa_ulp": {
+     "n": 23,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 23,
+     "max": 1.2853577053653562e-16,
+     "nonzero": 21
+    },
+    "rel_fmin": {
+     "n": 4,
+     "max": 6.618295221541785e-17,
+     "nonzero": 3
+    },
+    "fin_bound_margin": {
+     "n": 4,
+     "max": 0.005852641706085144,
+     "nonzero": 4
+    },
+    "conc_bound_margin": {
+     "n": 4,
+     "max": 1e-05,
+     "nonzero": 4
+    },
+    "add_gap_units": {
+     "n": 23,
+     "max": 0.7296351824087957,
+     "nonzero": 16
+    },
+    "add_gap_atmost": {
+     "n": 4,
+     "max": 0.7296351824087957,
+     "nonzero": 4
+    },
+    "dep_abs": {
+     "n": 20,
+     "max": 0.0,
+     "nonzero": 0
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 4,
+     "max": 6.618295221541785e-17,
+     "nonzero": 3
+    },
+    "hi08": {
+     "n": 3
+    },
+    "status": {
+     "n": 5
+    },
+    "add_gap_other": {
+     "n": 19,
+     "max": 0.03,
+     "nonzero": 12
+    },
+    "rel_D": {
+     "n": 13,
+     "max": 1.0568175590777893e-16,
+     "nonzero": 13
+    },
+    "rel_f": {
+     "n": 13,
+     "max": 4.752667057470705e-17,
+     "nonzero": 10
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 2,
+     "max": 1.0568175590777893e-16,
+     "nonzero": 2
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 2,
+     "max": 1.0568175590777893e-16,
+     "nonzero": 2
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 2,
+     "max": 5.33459416785305e-17,
+     "nonzero": 1
+    },
+    "rel_fl08_factor_final": {
+     "n": 10,
+     "max": 6.750155989720952e-17,
+     "nonzero": 10
+    },
+    "rel_fl08_percent_final": {
+     "n": 10,
+     "max": 1.993981463961834e-16,
+     "nonzero": 10
+    }
+   }
+  },
+  "directed": {
+   "cases": 604,
+   "counts": {
+    "status:result": 551,
+    "status:rejected": 53
+   },
+   "obs": {
+    "rel_Dmin": {
+     "n": 391,
+     "max": 2.532008212625589e-16,
+     "nonzero": 391
+    },
+    "rel_target": {
+     "n": 354,
+     "max": 2.0905780322776672e-16,
+     "nonzero": 289
+    },
+    "rel_F": {
+     "n": 354,
+     "max": 3.6810959305099667e-16,
+     "nonzero": 322
+    },
+    "fa_ulp": {
+     "n": 551,
+     "max": 0,
+     "nonzero": 0
+    },
+    "rel_Ca": {
+     "n": 551,
+     "max": 2.9102153304803544e-16,
+     "nonzero": 544
+    },
+    "rel_fmin": {
+     "n": 391,
+     "max": 1.0318917931874583e-16,
+     "nonzero": 385
+    },
+    "fin_bound_margin": {
+     "n": 391,
+     "max": 0.008588800000000014,
+     "nonzero": 391
+    },
+    "conc_bound_margin": {
+     "n": 391,
+     "max": 9.999999999952536e-06,
+     "nonzero": 391
+    },
+    "add_gap_units": {
+     "n": 551,
+     "max": 0.9950248756218906,
+     "nonzero": 509
+    },
+    "add_gap_atmost": {
+     "n": 391,
+     "max": 0.9950248756218906,
+     "nonzero": 382
+    },
+    "dep_abs": {
+     "n": 354,
+     "max": 2.6540820135725953e-16,
+     "nonzero": 317
+    },
+    "rel_fl05_fmin_vs_Dmin_over_F": {
+     "n": 391,
+     "max": 1.0318917931874583e-16,
+     "nonzero": 385
+    },
+    "fx14_discriminating": {
+     "n": 60
+    },
+    "rel_D": {
+     "n": 153,
+     "max": 2.0898378276501825e-16,
+     "nonzero": 153
+    },
+    "rel_f": {
+     "n": 153,
+     "max": 1.0196008678905816e-16,
+     "nonzero": 140
+    },
+    "add_gap_other": {
+     "n": 160,
+     "max": 0.9,
+     "nonzero": 127
+    },
+    "rel_fl08_factor_final": {
+     "n": 55,
+     "max": 1.5959761525599023e-16,
+     "nonzero": 55
+    },
+    "rel_fl08_percent_final": {
+     "n": 55,
+     "max": 3.8924807677978367e-16,
+     "nonzero": 55
+    },
+    "rel_fl08_factor_vs_engine_f": {
+     "n": 24,
+     "max": 1.4136210025203264e-14,
+     "nonzero": 24
+    },
+    "rel_fl08_factor_diluent": {
+     "n": 25,
+     "max": 1.781875730309657e-16,
+     "nonzero": 25
+    },
+    "rel_fl08_percent_diluent": {
+     "n": 25,
+     "max": 1.8778817653869762e-16,
+     "nonzero": 25
+    },
+    "rel_fl08_factor_vs_F_over_Vd": {
+     "n": 25,
+     "max": 1.0081082710356456e-16,
+     "nonzero": 24
+    },
+    "rel_molar": {
+     "n": 164,
+     "max": 2.125889410879681e-16,
+     "nonzero": 164
+    },
+    "hi08": {
+     "n": 53
+    }
+   }
+  }
+ },
+ "findings": [],
+ "unspecified": [
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-TGT-UL-EXACT",
+   "prop": "unspecified",
+   "msg": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag -> engine: result [] []"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-FIN-UL-EXACT",
+   "prop": "unspecified",
+   "msg": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag -> engine: result [] []"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-DIL-UL-EXACT",
+   "prop": "unspecified",
+   "msg": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag -> engine: result [] []"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-DMIN-UL-EXACT",
+   "prop": "unspecified",
+   "msg": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag -> engine: result [] ['C7-FL-05']"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI07-DEC-BELOW",
+   "prop": "unspecified",
+   "msg": "UNSPECIFIED: solids below content only beyond double precision -> engine: rejected ['C7-HI-07'] None"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-FIN-ON",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "FL-06: Fa vs capacity differs as exact decimals vs as doubles; engine flags []"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-FL06-DMIN-ON",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "FL-06: Fa vs capacity differs as exact decimals vs as doubles; engine flags ['C7-FL-05']"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI01-1em320",
+   "prop": "relations",
+   "kind": "subnormal",
+   "msg": "Dmin=5e-324 vs solids×v̄ exact 7.3E-324 (rel 0.323) [subnormal operands ['F', 'Dmin', 'Dapp', 'Vd', 'VdPrime', 'Fa']: reduced binary precision, not judged]"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI01-1em320",
+   "prop": "relations",
+   "kind": "subnormal",
+   "msg": "Dapp=5e-324 vs URS 7.3E-324 [subnormal operands ['F', 'Dmin', 'Dapp', 'Vd', 'VdPrime', 'Fa']: reduced binary precision, not judged]"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI01-1em320",
+   "prop": "relations",
+   "kind": "subnormal",
+   "msg": "F=1.25e-321 vs content/target 1.25E-321 [subnormal operands ['F', 'Dmin', 'Dapp', 'Vd', 'VdPrime', 'Fa']: reduced binary precision, not judged]"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI01-1em320",
+   "prop": "relations",
+   "kind": "subnormal",
+   "msg": "VdPrime=1.25e-321 != round3(Vd) 1.25E-321 mL [subnormal operands ['F', 'Dmin', 'Dapp', 'Vd', 'VdPrime', 'Fa']: reduced binary precision, not judged]"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI01-1em320",
+   "prop": "relations",
+   "kind": "subnormal",
+   "msg": "Ca=7.968503937007874 vs content/(Vd′+Dapp)=7.9685926498941188 (rel 1.11e-05) [subnormal operands ['F', 'Dmin', 'Dapp', 'Vd', 'VdPrime', 'Fa']: reduced binary precision, not judged]"
+  },
+  {
+   "group": "boundary",
+   "id": "ADV-BND-HI07-DEC-BELOW",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-07: solids < content as decimals but not as doubles; engine: status=rejected rejections=['C7-HI-07']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-02-R3-0",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-02-R3-F",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-16-R3-0",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-16-R3-F",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-17-R3-0",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "pairing",
+   "id": "ADV-PAIR-MOLAR-17-R3-F",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "rejections",
+   "id": "ADV-REJ-03-VOL-MG-IU",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 on a volume-direction reportUnit (§7 names the target); engine: status=rejected rejections=['C7-HI-03']"
+  },
+  {
+   "group": "rejections",
+   "id": "ADV-REJ-04-IU-MOLAR",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "HI-03 alongside HI-04 for activity content with a molar target; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-DIGITS-TRAIL",
+   "prop": "unspecified",
+   "msg": "trailing dot '80.' -> result {'diluent': '9.93', 'final': '10.0', 'concentration': '7.99760'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-DIGITS-LEADDOT",
+   "prop": "unspecified",
+   "msg": "'.5' mg -> result {'diluent': '0.0621', 'final': '0.0624', 'concentration': '8.00449'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-PLUS",
+   "prop": "unspecified",
+   "msg": "'+80' -> result {'diluent': '9.93', 'final': '10.0', 'concentration': '7.99760'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-SPACES",
+   "prop": "unspecified",
+   "msg": "' 80 ' -> result {'diluent': '9.93', 'final': '10.0', 'concentration': '7.99760'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-COMMA",
+   "prop": "unspecified",
+   "msg": "'1,000' -> rejected ['C7-HI-07']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-HEX",
+   "prop": "unspecified",
+   "msg": "'0x50' -> incomplete ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-INF",
+   "prop": "unspecified",
+   "msg": "'Infinity' -> incomplete ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-NAN",
+   "prop": "unspecified",
+   "msg": "'NaN' -> incomplete ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-EMPTY",
+   "prop": "unspecified",
+   "msg": "'' -> incomplete ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-SOL-IU",
+   "prop": "unspecified",
+   "msg": "solids unit IU -> incomplete ['solids-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-VOL-MG",
+   "prop": "unspecified",
+   "msg": "volume unit mg -> incomplete ['volume-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-MIN-ML",
+   "prop": "unspecified",
+   "msg": "minimum transfer in mL -> result {'diluent': '9.93', 'final': '10.0', 'concentration': '7.99760'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-TGT-UL",
+   "prop": "unspecified",
+   "msg": "target unit µL -> incomplete ['target-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-lower-iu",
+   "prop": "unspecified",
+   "msg": "unit 'iu' -> incomplete ['content-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-ug-ascii",
+   "prop": "unspecified",
+   "msg": "unit 'ug' (ASCII) -> result {'diluent': '9.93', 'final': '10.0', 'concentration': '7.99760'}"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-micro-sign",
+   "prop": "unspecified",
+   "msg": "unit 'μg' (Greek mu U+03BC, not micro sign U+00B5) -> incomplete ['content-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MW-ZERO",
+   "prop": "unspecified",
+   "msg": "MW 0 kDa with molar target -> rejected ['C7-HI-04']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MW-NEG",
+   "prop": "unspecified",
+   "msg": "MW -148 kDa with molar target -> rejected ['C7-HI-04']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-VOL-1e-300-DIL",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "binary F = Vd′ + D equals D=0.073 with a diluent entered: §7's 'cannot fire when a diluent volume is entered' and D ≥ F on doubles conflict (carried over from 28 Sep; spec audit finding 16); engine returned a result"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-SOL-1e300",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "binary F = Vd′ + D equals D=7.299999999999999e+296 with a diluent entered: §7's 'cannot fire when a diluent volume is entered' and D ≥ F on doubles conflict (carried over from 28 Sep; spec audit finding 16); engine returned a result"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-HEX",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-INF",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-NAN",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-EMPTY",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-SOL-IU",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['solids-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-VOL-MG",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['volume-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MIX-TGT-UL",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['target-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-lower-iu",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-micro-sign",
+   "prop": "unspecified",
+   "msg": "status 'incomplete' (not a PROTOCOL status; PROTOCOL: every case complete) ['content-unit']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MW-ZERO",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "molecular weight <= 0 in the imported C1 object; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-MW-NEG",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "molecular weight <= 0 in the imported C1 object; engine: status=rejected rejections=['C7-HI-04']"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-FL08-HUGE",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "binary F = Vd′ + D equals D=0.073 with a diluent entered: §7's 'cannot fire when a diluent volume is entered' and D ≥ F on doubles conflict (carried over from 28 Sep; spec audit finding 16); engine returned a result"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-MOL-R7-VOL-NOUNIT",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "extended.molar status for volume direction with no molarUnit is not defined; engine 'unit-not-selected'"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-MOL-R8-VOL-NOUNIT",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "extended.molar status for volume direction with no molarUnit is not defined; engine 'unit-not-selected'"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-MOL-R9-VOL-NOUNIT",
+   "prop": "unspecified",
+   "kind": "unspecified",
+   "msg": "extended.molar status for volume direction with no molarUnit is not defined; engine 'unit-not-selected'"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-FAGRID-1p25-ON",
+   "prop": "bound",
+   "kind": "unspecified",
+   "msg": "'at least' final 1.25 mL exceeds exact Vd′+content·v̄ = 1.2499999999999999366 mL by 6.34E-17 (within one ULP of Fa; the decision discloses its limit only for the upper bound)"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-FAGRID-0p5-ON",
+   "prop": "bound",
+   "kind": "unspecified",
+   "msg": "'at least' final 0.500 mL exceeds exact Vd′+content·v̄ = 0.4999999999999999658 mL by 3.42E-17 (within one ULP of Fa; the decision discloses its limit only for the upper bound)"
+  }
+ ],
+ "ties": 4,
+ "tooling_failures": [],
+ "disclosed": [
+  {
+   "group": "invariance-kept",
+   "id": "ADV-IV01-dmin-037-B",
+   "prop": "bound",
+   "kind": "disclosed",
+   "msg": "'at most' 2.60700 mg/mL is below the exact bound 2.607000000000000080314045 by 8.03e-17 — inside the disclosed one-ULP zone (decision, Stated limit)"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-CAGRID-64-ON",
+   "prop": "bound",
+   "kind": "disclosed",
+   "msg": "'at most' 64.0000 mg/mL is below the exact bound 64.00000000000000131171328 by 1.31e-15 — inside the disclosed one-ULP zone (decision, Stated limit)"
+  },
+  {
+   "group": "directed",
+   "id": "ADV-DR-CAGRID-0p5-ON",
+   "prop": "bound",
+   "kind": "disclosed",
+   "msg": "'at most' 0.500000 mg/mL is below the exact bound 0.5000000000000000597656776 by 5.98e-17 — inside the disclosed one-ULP zone (decision, Stated limit)"
+  }
+ ],
+ "oracle_na": [
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-SPACES",
+   "why": "number text ' 80 ' outside the URS/PROTOCOL grammar",
+   "engine_status": "result"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-COMMA",
+   "why": "number text '1,000' outside the URS/PROTOCOL grammar",
+   "engine_status": "rejected"
+  },
+  {
+   "group": "hostile",
+   "id": "ADV-HOST-UNIT-ug-ascii",
+   "why": "unit outside the URS/PROTOCOL sets",
+   "engine_status": "result"
+  }
+ ],
+ "boundary": [
+  {
+   "id": "ADV-PROT-THR-0.01",
+   "expect": "PROTOCOL: flag iff f > case threshold 0.01",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-PROT-THR-0.0073",
+   "expect": "PROTOCOL: flag iff f > case threshold 0.0073",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-PROT-THR-0.5",
+   "expect": "PROTOCOL: flag iff f > case threshold 0.5",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-TGT-ON",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f == threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.006,
+   "Fa": 0.12172999999999999,
+   "input_value": "8.219178082191782",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-TGT-BELOW",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextdown threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.005999999999999998,
+   "Fa": 0.12172999999999999,
+   "input_value": "8.219178082191778",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-TGT-ABOVE",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextup threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.006000000000000002,
+   "Fa": 0.12172999999999999,
+   "input_value": "8.219178082191783",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-FIN-ON",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f == threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.006,
+   "Fa": 0.12172999999999999,
+   "input_value": "0.12166666666666666",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-FIN-BELOW",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextdown threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.005999999999999999,
+   "Fa": 0.12172999999999999,
+   "input_value": "0.12166666666666667",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-FIN-ABOVE",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextup threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.006000000000000001,
+   "Fa": 0.12172999999999999,
+   "input_value": "0.12166666666666665",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-DIL-ON",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f == threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.006,
+   "Fa": 0.12166666666666666,
+   "input_value": "0.12093666666666666",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-DIL-BELOW",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextdown threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.005999999999999999,
+   "Fa": 0.12166666666666667,
+   "input_value": "0.12093666666666668",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-DIL-ABOVE",
+   "expect": "C7-FL-08 raised iff f > 0.006 (f = nextup threshold)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.006000000000000001,
+   "Fa": 0.12166666666666665,
+   "input_value": "0.12093666666666665",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-TGT-ON",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ON)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0006499790120251434,
+   "Fa": 1.5810271100000002,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.5810271100000002",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-TGT-BELOW",
+   "expect": "C7-FL-06 raised iff Fa > capacity (BELOW)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.0006499790120251434,
+   "Fa": 1.5810271100000002,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.58102711",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-TGT-ABOVE",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ABOVE)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0006499790120251434,
+   "Fa": 1.5810271100000002,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.5810271100000004",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-TGT-UL-EXACT",
+   "expect": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag",
+   "ok": null,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0006499790120251434,
+   "Fa": 1.5810271100000002,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1581.0271100000001798235871319775469601154327392578125000",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-TGT-UL-3SF",
+   "expect": "C7-FL-06 iff Fa > displayed final (µL)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.0006499790120251434,
+   "Fa": 1.5810271100000002,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1580.00",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-FIN-ON",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ON)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0007497153284671532,
+   "Fa": 1.3710271100000002,
+   "input_value": "1.37",
+   "capacity": {
+    "value": "1.3710271100000002",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-FIN-BELOW",
+   "expect": "C7-FL-06 raised iff Fa > capacity (BELOW)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.0007497153284671532,
+   "Fa": 1.3710271100000002,
+   "input_value": "1.37",
+   "capacity": {
+    "value": "1.37102711",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-FIN-ABOVE",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ABOVE)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0007497153284671532,
+   "Fa": 1.3710271100000002,
+   "input_value": "1.37",
+   "capacity": {
+    "value": "1.3710271100000004",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-FIN-UL-EXACT",
+   "expect": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag",
+   "ok": null,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0007497153284671532,
+   "Fa": 1.3710271100000002,
+   "input_value": "1.37",
+   "capacity": {
+    "value": "1371.0271100000002153507239199825562536716461181640625000",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-FIN-UL-3SF",
+   "expect": "C7-FL-06 iff Fa > displayed final (µL)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.0007497153284671532,
+   "Fa": 1.3710271100000002,
+   "input_value": "1.37",
+   "capacity": {
+    "value": "1370.00",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DIL-ON",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ON)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.001438474794045285,
+   "Fa": 0.71402711,
+   "input_value": "0.713",
+   "capacity": {
+    "value": "0.71402711",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DIL-BELOW",
+   "expect": "C7-FL-06 raised iff Fa > capacity (BELOW)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.001438474794045285,
+   "Fa": 0.71402711,
+   "input_value": "0.713",
+   "capacity": {
+    "value": "0.7140271099999999",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DIL-ABOVE",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ABOVE)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.001438474794045285,
+   "Fa": 0.71402711,
+   "input_value": "0.713",
+   "capacity": {
+    "value": "0.7140271100000001",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DIL-UL-EXACT",
+   "expect": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag",
+   "ok": null,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.001438474794045285,
+   "Fa": 0.71402711,
+   "input_value": "0.713",
+   "capacity": {
+    "value": "714.027109999999964884409564547240734100341796875000",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DIL-UL-3SF",
+   "expect": "C7-FL-06 iff Fa > displayed final (µL)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-06"
+   ],
+   "f": 0.001438474794045285,
+   "Fa": 0.71402711,
+   "input_value": "0.713",
+   "capacity": {
+    "value": "714.000",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DMIN-ON",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ON)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 1.580534214,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.580534214",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DMIN-BELOW",
+   "expect": "C7-FL-06 raised iff Fa > capacity (BELOW)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-06"
+   ],
+   "f": null,
+   "Fa": 1.580534214,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.5805342139999998",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DMIN-ABOVE",
+   "expect": "C7-FL-06 raised iff Fa > capacity (ABOVE)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 1.580534214,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1.5805342140000003",
+    "unit": "mL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DMIN-UL-EXACT",
+   "expect": "UNSPECIFIED probe: capacity in µL equal to Fa exactly as decimals; exact comparison gives no flag",
+   "ok": null,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 1.580534214,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1580.534214000000048372385208494961261749267578125000",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL06-DMIN-UL-3SF",
+   "expect": "C7-FL-06 iff Fa > displayed final (µL)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-06"
+   ],
+   "f": null,
+   "Fa": 1.580534214,
+   "input_value": "0.4631",
+   "capacity": {
+    "value": "1580.00",
+    "unit": "µL"
+   },
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DIL-ON",
+   "expect": "C7-FL-07 iff 0.002 mL < 2 µL as decimals",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.004360899261235788,
+   "Fa": 0.00200876,
+   "input_value": "0.002",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DIL-BELOW",
+   "expect": "C7-FL-07 iff 0.0019999999999999996 mL < 2 µL as decimals",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07"
+   ],
+   "f": 0.004360899261235789,
+   "Fa": 0.0020087599999999996,
+   "input_value": "0.0019999999999999996",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DIL-ABOVE",
+   "expect": "C7-FL-07 iff 0.0020000000000000005 mL < 2 µL as decimals",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.004360899261235787,
+   "Fa": 0.0020087600000000005,
+   "input_value": "0.0020000000000000005",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DILMIN-ON",
+   "expect": "C7-FL-07 iff 2 µL < min 2",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.004360899261235788,
+   "Fa": 0.00200876,
+   "input_value": "0.002",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DILMIN-MINBELOW",
+   "expect": "C7-FL-07 iff 2 µL < min 1.9999999999999998",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.004360899261235788,
+   "Fa": 0.00200876,
+   "input_value": "0.002",
+   "capacity": null,
+   "minTransfer": {
+    "value": "1.9999999999999998",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-DILMIN-MINABOVE",
+   "expect": "C7-FL-07 iff 2 µL < min 2.0000000000000004",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07"
+   ],
+   "f": 0.004360899261235788,
+   "Fa": 0.00200876,
+   "input_value": "0.002",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.0000000000000004",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-00",
+   "expect": "C7-FL-07 not raised: 0.0021 mL == 2.1 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.004154100039833837,
+   "Fa": 0.00210876,
+   "input_value": "0.0021",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-00",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0021 mL == 2.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-00",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0021 mL == 2.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "0.0021",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-01",
+   "expect": "C7-FL-07 not raised: 0.0041 mL == 4.1 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0021320301015391504,
+   "Fa": 0.00410876,
+   "input_value": "0.0041",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-01",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0041 mL == 4.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0041,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-01",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0041 mL == 4.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0041,
+   "input_value": "0.0041",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-02",
+   "expect": "C7-FL-07 not raised: 0.0042 mL == 4.2 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.002081373136030565,
+   "Fa": 0.00420876,
+   "input_value": "0.0042",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-02",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0042 mL == 4.2 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0042,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-02",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0042 mL == 4.2 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0042,
+   "input_value": "0.0042",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-03",
+   "expect": "C7-FL-07 not raised: 0.0049 mL == 4.9 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0017845647373267385,
+   "Fa": 0.00490876,
+   "input_value": "0.0049",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-03",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0049 mL == 4.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0049,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-03",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0049 mL == 4.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0049,
+   "input_value": "0.0049",
+   "capacity": null,
+   "minTransfer": {
+    "value": "4.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-04",
+   "expect": "C7-FL-07 not raised: 0.0051 mL == 5.1 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0017147018063091632,
+   "Fa": 0.00510876,
+   "input_value": "0.0051",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-04",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0051 mL == 5.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0051,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-04",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0051 mL == 5.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0051,
+   "input_value": "0.0051",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-05",
+   "expect": "C7-FL-07 not raised: 0.0059 mL == 5.9 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0014825445609569522,
+   "Fa": 0.00590876,
+   "input_value": "0.0059",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-05",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0059 mL == 5.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0059,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-05",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0059 mL == 5.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0059,
+   "input_value": "0.0059",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-06",
+   "expect": "C7-FL-07 not raised: 0.0061 mL == 6.1 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.001434006246766938,
+   "Fa": 0.00610876,
+   "input_value": "0.0061",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-06",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0061 mL == 6.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0061,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-06",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0061 mL == 6.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0061,
+   "input_value": "0.0061",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-07",
+   "expect": "C7-FL-07 not raised: 0.0069 mL == 6.9 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0012679554652354403,
+   "Fa": 0.00690876,
+   "input_value": "0.0069",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-07",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0069 mL == 6.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0069,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-07",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0069 mL == 6.9 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0069,
+   "input_value": "0.0069",
+   "capacity": null,
+   "minTransfer": {
+    "value": "6.9",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-08",
+   "expect": "C7-FL-07 not raised: 0.0071 mL == 7.1 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0012322824233762287,
+   "Fa": 0.00710876,
+   "input_value": "0.0071",
+   "capacity": null,
+   "minTransfer": {
+    "value": "7.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-08",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0071 mL == 7.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0071,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "7.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-08",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0071 mL == 7.1 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0071,
+   "input_value": "0.0071",
+   "capacity": null,
+   "minTransfer": {
+    "value": "7.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-09",
+   "expect": "C7-FL-07 not raised: 0.0082 mL == 8.2 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0010671526515576043,
+   "Fa": 0.00820876,
+   "input_value": "0.0082",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-09",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0082 mL == 8.2 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0082,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-09",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0082 mL == 8.2 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0082,
+   "input_value": "0.0082",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-10",
+   "expect": "C7-FL-07 not raised: 0.0084 mL == 8.4 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0010417707248155496,
+   "Fa": 0.00840876,
+   "input_value": "0.0084",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.4",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-10",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0084 mL == 8.4 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0084,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.4",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-10",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0084 mL == 8.4 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0084,
+   "input_value": "0.0084",
+   "capacity": null,
+   "minTransfer": {
+    "value": "8.4",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-DIL-11",
+   "expect": "C7-FL-07 not raised: 0.0093 mL == 9.3 µL as decimals (PROTOCOL 6)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0009410490763538862,
+   "Fa": 0.00930876,
+   "input_value": "0.0093",
+   "capacity": null,
+   "minTransfer": {
+    "value": "9.3",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-TGT-11",
+   "expect": "C7-FL-07 not raised: Vd′ displayed 0.0093 mL == 9.3 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0093,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "9.3",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-INEXACT-FIN-11",
+   "expect": "C7-FL-07 not raised: Vd′ (final entered) 0.0093 mL == 9.3 µL",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0093,
+   "input_value": "0.0093",
+   "capacity": null,
+   "minTransfer": {
+    "value": "9.3",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-TGT-ON",
+   "expect": "C7-FL-07 iff 2.10 µL < 2.1",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-TGT-MINBELOW",
+   "expect": "C7-FL-07 iff 2.10 µL < 2.0999999999999996",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.0999999999999996",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-TGT-MINABOVE",
+   "expect": "C7-FL-07 iff 2.10 µL < 2.1000000000000005",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "1000000",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1000000000000005",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-FIN-ON",
+   "expect": "C7-FL-07 iff Vd′ 2.10 µL < 2.1 (final entered)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "0.0021",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-FIN-MINBELOW",
+   "expect": "C7-FL-07 iff Vd′ 2.10 µL < 2.0999999999999996 (final entered)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "0.0021",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.0999999999999996",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL07-FIN-MINABOVE",
+   "expect": "C7-FL-07 iff Vd′ 2.10 µL < 2.1000000000000005 (final entered)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.0021,
+   "input_value": "0.0021",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2.1000000000000005",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-CASETHR-ON",
+   "expect": "C7-FL-08 iff f > case threshold (threshold == f)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-CASETHR-BELOW",
+   "expect": "C7-FL-08 iff f > case threshold (threshold just below f)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-FL08-CASETHR-ABOVE",
+   "expect": "C7-FL-08 iff f > case threshold (threshold just above f)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-D-ON",
+   "expect": "D ≥ F rejects (C7-HI-08); F = ON",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.73",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-D-BELOW",
+   "expect": "D ≥ F rejects (C7-HI-08); F = BELOW",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.7299999999999999",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-D-ABOVE",
+   "expect": "D ≥ F rejects (C7-HI-08); F = ABOVE",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999999,
+   "Fa": 0.7300000000000001,
+   "input_value": "0.7300000000000001",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--6",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000008): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999989,
+   "Fa": 0.7300000000000008,
+   "input_value": "1369.8630136986287",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--5",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000006): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999991,
+   "Fa": 0.7300000000000006,
+   "input_value": "1369.863013698629",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--4",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000005): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999992,
+   "Fa": 0.7300000000000005,
+   "input_value": "1369.8630136986292",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--3",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000004): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999994,
+   "Fa": 0.7300000000000004,
+   "input_value": "1369.8630136986294",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--2",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000003): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999996,
+   "Fa": 0.7300000000000003,
+   "input_value": "1369.8630136986296",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D--1",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7300000000000002): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999997,
+   "Fa": 0.7300000000000002,
+   "input_value": "1369.8630136986299",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+0",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.73): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.86301369863",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+1",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999999): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986303",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+2",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999998): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986305",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+3",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999996): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986308",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+4",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999995): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.863013698631",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+5",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999994): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986312",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-D-+6",
+   "expect": "HI-08 iff D(0.73) ≥ F=1000/T(0.7299999999999993): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986314",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-DMIN-ON",
+   "expect": "DMIN ≥ F rejects (C7-HI-08); F = ON",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.73",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-DMIN-BELOW",
+   "expect": "DMIN ≥ F rejects (C7-HI-08); F = BELOW",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.7299999999999999",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-DMIN-ABOVE",
+   "expect": "DMIN ≥ F rejects (C7-HI-08); F = ABOVE",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000001,
+   "input_value": "0.7300000000000001",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--6",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000008): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000008,
+   "input_value": "1369.8630136986287",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--5",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000006): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000006,
+   "input_value": "1369.863013698629",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--4",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000005): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000005,
+   "input_value": "1369.8630136986292",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--3",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000004): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000004,
+   "input_value": "1369.8630136986294",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--2",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000003): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000003,
+   "input_value": "1369.8630136986296",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN--1",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7300000000000002): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 0.7300000000000002,
+   "input_value": "1369.8630136986299",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+0",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.73): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.86301369863",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+1",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999999): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986303",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+2",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999998): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986305",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+3",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999996): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986308",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+4",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999995): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.863013698631",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+5",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999994): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986312",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-DMIN-+6",
+   "expect": "HI-08 iff DMIN(0.73) ≥ F=1000/T(0.7299999999999993): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986314",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-TOTAL-ON",
+   "expect": "TOTAL ≥ F rejects (C7-HI-08); F = ON",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.73",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-TOTAL-BELOW",
+   "expect": "TOTAL ≥ F rejects (C7-HI-08); F = BELOW",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0.7299999999999999",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-FIN-TOTAL-ABOVE",
+   "expect": "TOTAL ≥ F rejects (C7-HI-08); F = ABOVE",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999999,
+   "Fa": 0.7300000000000001,
+   "input_value": "0.7300000000000001",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--6",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000008): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999989,
+   "Fa": 0.7300000000000008,
+   "input_value": "1369.8630136986287",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--5",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000006): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999991,
+   "Fa": 0.7300000000000006,
+   "input_value": "1369.863013698629",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--4",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000005): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999992,
+   "Fa": 0.7300000000000005,
+   "input_value": "1369.8630136986292",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--3",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000004): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999994,
+   "Fa": 0.7300000000000004,
+   "input_value": "1369.8630136986294",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--2",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000003): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999996,
+   "Fa": 0.7300000000000003,
+   "input_value": "1369.8630136986296",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL--1",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7300000000000002): result",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999997,
+   "Fa": 0.7300000000000002,
+   "input_value": "1369.8630136986299",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+0",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.73): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.86301369863",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+1",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999999): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986303",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+2",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999998): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986305",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+3",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999996): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986308",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+4",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999995): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.863013698631",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+5",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999994): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986312",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-TGT-TOTAL-+6",
+   "expect": "HI-08 iff TOTAL(0.73) ≥ F=1000/T(0.7299999999999993): reject",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1369.8630136986314",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-DIL-0",
+   "expect": "HI-08 cannot fire with a diluent entered (§7 note)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.999999998630137,
+   "Fa": 730.000001,
+   "input_value": "0.000001",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-DIL-1",
+   "expect": "HI-08 cannot fire with a diluent entered (§7 note)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9999999999999986,
+   "Fa": 730000.000000001,
+   "input_value": "1e-9",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI08-DIL-2",
+   "expect": "HI-08 cannot fire with a diluent entered (§7 note)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-07",
+    "C7-FL-08"
+   ],
+   "f": 0.9997261024376883,
+   "Fa": 3.651,
+   "input_value": "0.001",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-0",
+   "expect": "HI-01 iff content ≤ 0 (0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-0",
+   "expect": "HI-02 iff target ≤ 0 (0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-0",
+   "expect": "HI-02 iff volume ≤ 0 (0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "0",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-0",
+   "expect": "HI-06 iff min ≤ 0 (0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "0",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-m0",
+   "expect": "HI-01 iff content ≤ 0 (-0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-m0",
+   "expect": "HI-02 iff target ≤ 0 (-0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-0",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-m0",
+   "expect": "HI-02 iff volume ≤ 0 (-0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-0",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-m0",
+   "expect": "HI-06 iff min ≤ 0 (-0)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "-0",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-5em324",
+   "expect": "HI-01 iff content ≤ 0 (5e-324)",
+   "ok": true,
+   "status": "not-representable",
+   "rejections": [],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-5em324",
+   "expect": "HI-02 iff target ≤ 0 (5e-324)",
+   "ok": true,
+   "status": "not-representable",
+   "rejections": [],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "5e-324",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-5em324",
+   "expect": "HI-02 iff volume ≤ 0 (5e-324)",
+   "ok": true,
+   "status": "not-representable",
+   "rejections": [],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "5e-324",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-5em324",
+   "expect": "HI-06 iff min ≤ 0 (5e-324)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "5e-324",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-m5em324",
+   "expect": "HI-01 iff content ≤ 0 (-5e-324)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-m5em324",
+   "expect": "HI-02 iff target ≤ 0 (-5e-324)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-5e-324",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-m5em324",
+   "expect": "HI-02 iff volume ≤ 0 (-5e-324)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-5e-324",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-m5em324",
+   "expect": "HI-06 iff min ≤ 0 (-5e-324)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "-5e-324",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-m1",
+   "expect": "HI-01 iff content ≤ 0 (-1)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-m1",
+   "expect": "HI-02 iff target ≤ 0 (-1)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-1",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-m1",
+   "expect": "HI-02 iff volume ≤ 0 (-1)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-02"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "-1",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-m1",
+   "expect": "HI-06 iff min ≤ 0 (-1)",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "-1",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI01-1em320",
+   "expect": "HI-01 iff content ≤ 0 (1e-320)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-07"
+   ],
+   "f": null,
+   "Fa": 1.255e-321,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02T-1em320",
+   "expect": "HI-02 iff target ≤ 0 (1e-320)",
+   "ok": true,
+   "status": "not-representable",
+   "rejections": [],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1e-320",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI02V-1em320",
+   "expect": "HI-02 iff volume ≤ 0 (1e-320)",
+   "ok": true,
+   "status": "not-representable",
+   "rejections": [],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "1e-320",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI06-1em320",
+   "expect": "HI-06 iff min ≤ 0 (1e-320)",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [
+    "C7-FL-08"
+   ],
+   "f": 0.007299999999999999,
+   "Fa": 10.003,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "1e-320",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-ON",
+   "expect": "HI-07 iff solids 1 mg < content 1 mg",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.00584,
+   "Fa": 0.12473,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-BELOW",
+   "expect": "HI-07 iff solids 0.9999999999999999 mg < content 1 mg",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-07"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-ABOVE",
+   "expect": "HI-07 iff solids 1.0000000000000002 mg < content 1 mg",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.0058400000000000014,
+   "Fa": 0.12473,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-UG-ON",
+   "expect": "HI-07 iff solids 1000 µg < content 1 mg",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.00584,
+   "Fa": 0.12473,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-UG-BELOW",
+   "expect": "HI-07 iff solids 999.9999999999999 µg < content 1 mg",
+   "ok": true,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-07"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-G-ON",
+   "expect": "HI-07 iff solids 0.001 g < content 1 mg",
+   "ok": true,
+   "status": "result",
+   "rejections": [],
+   "flags": [],
+   "f": 0.00584,
+   "Fa": 0.12473,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  },
+  {
+   "id": "ADV-BND-HI07-DEC-BELOW",
+   "expect": "UNSPECIFIED: solids below content only beyond double precision",
+   "ok": null,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-07"
+   ],
+   "flags": null,
+   "f": null,
+   "Fa": null,
+   "input_value": "8",
+   "capacity": null,
+   "minTransfer": {
+    "value": "2",
+    "unit": "µL"
+   },
+   "error": null
+  }
+ ],
+ "fl08_scans": {
+  "TGT": 79,
+  "FIN": 64,
+  "DIL": 64
+ },
+ "toggles": [
+  {
+   "id": "ADV-FLG-TGTD-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-CLEAN-CAP",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-WEIGHED",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL01",
+   "expected": [
+    "C7-FL-01"
+   ],
+   "engine": [
+    "C7-FL-01"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL02",
+   "expected": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL03",
+   "expected": [
+    "C7-FL-03"
+   ],
+   "engine": [
+    "C7-FL-03"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL04",
+   "expected": [
+    "C7-FL-04"
+   ],
+   "engine": [
+    "C7-FL-04"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL05",
+   "expected": [
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL06",
+   "expected": [
+    "C7-FL-06"
+   ],
+   "engine": [
+    "C7-FL-06"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL07",
+   "expected": [
+    "C7-FL-07"
+   ],
+   "engine": [
+    "C7-FL-07"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL09",
+   "expected": [
+    "C7-FL-09"
+   ],
+   "engine": [
+    "C7-FL-09"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL10",
+   "expected": [
+    "C7-FL-10"
+   ],
+   "engine": [
+    "C7-FL-10"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-C1OK",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL11",
+   "expected": [
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL12",
+   "expected": [
+    "C7-FL-12"
+   ],
+   "engine": [
+    "C7-FL-12"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL13P",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL13C",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL14",
+   "expected": [
+    "C7-FL-14"
+   ],
+   "engine": [
+    "C7-FL-14"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTD-FL11-FL05",
+   "expected": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-CLEAN-CAP",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-WEIGHED",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL01",
+   "expected": [
+    "C7-FL-01"
+   ],
+   "engine": [
+    "C7-FL-01"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL02",
+   "expected": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL03",
+   "expected": [
+    "C7-FL-03"
+   ],
+   "engine": [
+    "C7-FL-03"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL04",
+   "expected": [
+    "C7-FL-04"
+   ],
+   "engine": [
+    "C7-FL-04"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL05",
+   "expected": [
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL06",
+   "expected": [
+    "C7-FL-06"
+   ],
+   "engine": [
+    "C7-FL-06"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL07",
+   "expected": [
+    "C7-FL-07"
+   ],
+   "engine": [
+    "C7-FL-07"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL09",
+   "expected": [
+    "C7-FL-09"
+   ],
+   "engine": [
+    "C7-FL-09"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL10",
+   "expected": [
+    "C7-FL-10"
+   ],
+   "engine": [
+    "C7-FL-10"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-C1OK",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL11",
+   "expected": [
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL12",
+   "expected": [
+    "C7-FL-12"
+   ],
+   "engine": [
+    "C7-FL-12"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL13P",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL13C",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL14",
+   "expected": [
+    "C7-FL-14"
+   ],
+   "engine": [
+    "C7-FL-14"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-TGTF-FL11-FL05",
+   "expected": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-CLEAN-CAP",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-WEIGHED",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL01",
+   "expected": [
+    "C7-FL-01"
+   ],
+   "engine": [
+    "C7-FL-01"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL02",
+   "expected": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL03",
+   "expected": [
+    "C7-FL-03"
+   ],
+   "engine": [
+    "C7-FL-03"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL04",
+   "expected": [
+    "C7-FL-04"
+   ],
+   "engine": [
+    "C7-FL-04"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL05",
+   "expected": [
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL06",
+   "expected": [
+    "C7-FL-06"
+   ],
+   "engine": [
+    "C7-FL-06"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL07",
+   "expected": [
+    "C7-FL-07"
+   ],
+   "engine": [
+    "C7-FL-07"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL09",
+   "expected": [
+    "C7-FL-09"
+   ],
+   "engine": [
+    "C7-FL-09"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL10",
+   "expected": [
+    "C7-FL-10"
+   ],
+   "engine": [
+    "C7-FL-10"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-C1OK",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL11",
+   "expected": [
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL12",
+   "expected": [
+    "C7-FL-12"
+   ],
+   "engine": [
+    "C7-FL-12"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL13P",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL13C",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL14",
+   "expected": [
+    "C7-FL-14"
+   ],
+   "engine": [
+    "C7-FL-14"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLD-FL11-FL05",
+   "expected": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-CLEAN-CAP",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-WEIGHED",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL01",
+   "expected": [
+    "C7-FL-01"
+   ],
+   "engine": [
+    "C7-FL-01"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL02",
+   "expected": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-02",
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL03",
+   "expected": [
+    "C7-FL-03"
+   ],
+   "engine": [
+    "C7-FL-03"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL04",
+   "expected": [
+    "C7-FL-04"
+   ],
+   "engine": [
+    "C7-FL-04"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL05",
+   "expected": [
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL06",
+   "expected": [
+    "C7-FL-06"
+   ],
+   "engine": [
+    "C7-FL-06"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL07",
+   "expected": [
+    "C7-FL-07"
+   ],
+   "engine": [
+    "C7-FL-07"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL09",
+   "expected": [
+    "C7-FL-09"
+   ],
+   "engine": [
+    "C7-FL-09"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL10",
+   "expected": [
+    "C7-FL-10"
+   ],
+   "engine": [
+    "C7-FL-10"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-C1OK",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL11",
+   "expected": [
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL12",
+   "expected": [
+    "C7-FL-12"
+   ],
+   "engine": [
+    "C7-FL-12"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL13P",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL13C",
+   "expected": [
+    "C7-FL-13"
+   ],
+   "engine": [
+    "C7-FL-13"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL14",
+   "expected": [
+    "C7-FL-14"
+   ],
+   "engine": [
+    "C7-FL-14"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-VOLF-FL11-FL05",
+   "expected": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-05",
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-FL08-TGT",
+   "expected": [
+    "C7-FL-08"
+   ],
+   "engine": [
+    "C7-FL-08"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-FL08-FIN",
+   "expected": [
+    "C7-FL-08"
+   ],
+   "engine": [
+    "C7-FL-08"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-FL08-DIL",
+   "expected": [
+    "C7-FL-08"
+   ],
+   "engine": [
+    "C7-FL-08"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-BASIS-TOTAL",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-BASIS-NR",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-CONJ-NR",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-CONJ-C",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-NOSOLIDS",
+   "expected": [
+    "C7-FL-05"
+   ],
+   "engine": [
+    "C7-FL-05"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-CARRIER",
+   "expected": [
+    "C7-FL-11"
+   ],
+   "engine": [
+    "C7-FL-11"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-IU-NOMINAL",
+   "expected": [
+    "C7-FL-03"
+   ],
+   "engine": [
+    "C7-FL-03"
+   ],
+   "status": "result",
+   "ok": true
+  },
+  {
+   "id": "ADV-FLG-U-CLEAN",
+   "expected": [],
+   "engine": [],
+   "status": "result",
+   "ok": true
+  }
+ ],
+ "pairing": [
+  {
+   "id": "ADV-PAIR-MOLAR-00-R1-0",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-00-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-00-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-00-R1-F",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-00-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-00-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-01-R2-0",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-01-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-01-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-01-R2-F",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-01-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-01-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-02-R3-0",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-02-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-02-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-02-R3-F",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-02-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-02-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-03-R4-0",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-03-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-03-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-03-R4-F",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-03-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-03-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-04-R5-0",
+   "row": 5,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-04-R5-0",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-04-R5-0",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-04-R5-F",
+   "row": 5,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-04-R5-F",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-04-R5-F",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-05-R6-0",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-05-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-05-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-05-R6-F",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-05-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-05-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-06-R7-0",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": []
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-06-R7-0",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": []
+  },
+  {
+   "id": "ADV-PAIR-VOL-06-R7-0",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": []
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-06-R7-F",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-06-R7-F",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-06-R7-F",
+   "row": 7,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 7,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-07-R8-0",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-07-R8-0",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-07-R8-0",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-07-R8-F",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-07-R8-F",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-07-R8-F",
+   "row": 8,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 8,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-08-R9-0",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-08-R9-0",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-08-R9-0",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-08-R9-F",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-08-R9-F",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-08-R9-F",
+   "row": 9,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 9,
+    "status": "reported"
+   },
+   "flags": [
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-09-R10-0",
+   "row": 10,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-09-R10-0",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-09-R10-0",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-09-R10-F",
+   "row": 10,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-09-R10-F",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-09-R10-F",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-10-R10-0",
+   "row": 10,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-10-R10-0",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-10-R10-0",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-10-R10-F",
+   "row": 10,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-10-R10-F",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-10-R10-F",
+   "row": 10,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 10,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-11-R11-0",
+   "row": 11,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-11-R11-0",
+   "row": 11,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 11,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-11-R11-0",
+   "row": 11,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 11,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-11-R11-F",
+   "row": 11,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-11-R11-F",
+   "row": 11,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 11,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-11-R11-F",
+   "row": 11,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 11,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-12-R1-0",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-12-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-12-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-12-R1-F",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-12-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-12-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-13-R1-0",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-13-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-13-R1-0",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-13-R1-F",
+   "row": 1,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-13-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-13-R1-F",
+   "row": 1,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 1,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-01",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-14-R2-0",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-14-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-14-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-14-R2-F",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-14-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-14-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-15-R2-0",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-15-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-15-R2-0",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-15-R2-F",
+   "row": 2,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-15-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-15-R2-F",
+   "row": 2,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 2,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-02",
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-16-R3-0",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-16-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-16-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-16-R3-F",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-16-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-16-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-17-R3-0",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-17-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-17-R3-0",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-17-R3-F",
+   "row": 3,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-17-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-17-R3-F",
+   "row": 3,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 3,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-05",
+    "C7-FL-09",
+    "C7-FL-10"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-18-R4-0",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-18-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-18-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-18-R4-F",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-18-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-18-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-19-R4-0",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-19-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-19-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-19-R4-F",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-19-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-19-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-20-R4-0",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-20-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-20-R4-0",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-20-R4-F",
+   "row": 4,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-20-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-20-R4-F",
+   "row": 4,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 4,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-14"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-21-R5-0",
+   "row": 5,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-21-R5-0",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-21-R5-0",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-21-R5-F",
+   "row": 5,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-21-R5-F",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-21-R5-F",
+   "row": 5,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 5,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-22-R6-0",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-22-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-22-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-22-R6-F",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-22-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-22-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-23-R6-0",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-23-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-23-R6-0",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-23-R6-F",
+   "row": 6,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  },
+  {
+   "id": "ADV-PAIR-IMPORT-23-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-VOL-23-R6-F",
+   "row": 6,
+   "status": "result",
+   "rejections": [],
+   "molar": {
+    "row": 6,
+    "status": "withheld"
+   },
+   "flags": [
+    "C7-FL-09",
+    "C7-FL-10",
+    "C7-FL-13"
+   ]
+  },
+  {
+   "id": "ADV-PAIR-MOLAR-NOC1",
+   "row": null,
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ],
+   "molar": null,
+   "flags": null
+  }
+ ],
+ "rejcombos": [
+  {
+   "id": "ADV-REJ-01-02-06",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01",
+    "C7-HI-02",
+    "C7-HI-06"
+   ]
+  },
+  {
+   "id": "ADV-REJ-03-06",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-03",
+    "C7-HI-06"
+   ]
+  },
+  {
+   "id": "ADV-REJ-04-07",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04",
+    "C7-HI-07"
+   ]
+  },
+  {
+   "id": "ADV-REJ-06-09",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06",
+    "C7-HI-09"
+   ]
+  },
+  {
+   "id": "ADV-REJ-09-IU-U",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-09"
+   ]
+  },
+  {
+   "id": "ADV-REJ-09-U-IU-VOL",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-09"
+   ]
+  },
+  {
+   "id": "ADV-REJ-03-IU-MG",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-03"
+   ]
+  },
+  {
+   "id": "ADV-REJ-03-VOL-MG-IU",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-03"
+   ]
+  },
+  {
+   "id": "ADV-REJ-04-IU-MOLAR",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04"
+   ]
+  },
+  {
+   "id": "ADV-REJ-08-SUPPRESSED-06",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06"
+   ]
+  },
+  {
+   "id": "ADV-REJ-08-SUPPRESSED-07",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-07"
+   ]
+  },
+  {
+   "id": "ADV-REJ-04-06",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-04",
+    "C7-HI-06"
+   ]
+  },
+  {
+   "id": "ADV-REJ-03-06-07",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-03",
+    "C7-HI-06",
+    "C7-HI-07"
+   ]
+  },
+  {
+   "id": "ADV-REJ-01-03-06",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-01",
+    "C7-HI-03",
+    "C7-HI-06"
+   ]
+  },
+  {
+   "id": "ADV-REJ-06-07",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06",
+    "C7-HI-07"
+   ]
+  },
+  {
+   "id": "ADV-REJ-06-09B",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-06",
+    "C7-HI-09"
+   ]
+  },
+  {
+   "id": "ADV-REJ-08-ALONE",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ]
+  },
+  {
+   "id": "ADV-REJ-08-ALONE-FINAL",
+   "status": "rejected",
+   "rejections": [
+    "C7-HI-08"
+   ]
+  }
+ ],
+ "unspec_probes": [
+  {
+   "id": "ADV-UNSPEC-TOTAL-WITH-SOLIDS",
+   "engine": {
+    "id": "ADV-UNSPEC-TOTAL-WITH-SOLIDS",
+    "status": "result",
+    "rejections": [],
+    "flags": [
+     "C7-FL-01"
+    ],
+    "label": "achieved",
+    "treatment": "computed",
+    "molar": null,
+    "unrounded": {
+     "F": 1,
+     "D": 0.00073,
+     "Dmin": null,
+     "Dapp": 0.00073,
+     "Vd": 0.99927,
+     "VdPrime": 0.999,
+     "Fa": 0.99973,
+     "Ca": 1.0002700729196883,
+     "f": 0.00073,
+     "fmin": null,
+     "target": 1
+    },
+    "displayed": {
+     "diluent": "0.999",
+     "final": "1.00",
+     "concentration": "1.00027"
+    },
+    "extended": {
+     "reagentConcentration": "not-computable",
+     "concentrationRounding": "half-away",
+     "final": {
+      "isLowerBound": false,
+      "rounding": "half-away"
+     },
+     "departure": {
+      "unrounded": 0.00027007291968828007,
+      "display": "+0.0270 %",
+      "isUpperBound": false,
+      "rounding": "half-away"
+     },
+     "fl05": null,
+     "fl08": null,
+     "molar": null
+    }
+   }
+  },
+  {
+   "id": "ADV-UNSPEC-NR-WITH-SOLIDS",
+   "engine": {
+    "id": "ADV-UNSPEC-NR-WITH-SOLIDS",
+    "status": "result",
+    "rejections": [],
+    "flags": [
+     "C7-FL-02",
+     "C7-FL-05"
+    ],
+    "label": "uncorrected-for-displacement",
+    "treatment": "not-computable-uncorrected",
+    "molar": null,
+    "unrounded": {
+     "F": 1,
+     "D": null,
+     "Dmin": null,
+     "Dapp": 0,
+     "Vd": 1,
+     "VdPrime": 1,
+     "Fa": 1,
+     "Ca": 1,
+     "f": null,
+     "fmin": null,
+     "target": 1
+    },
+    "displayed": {
+     "diluent": "1.00",
+     "final": "1.00",
+     "concentration": "1.00000"
+    },
+    "extended": {
+     "reagentConcentration": "computable",
+     "concentrationRounding": "half-away",
+     "final": {
+      "isLowerBound": false,
+      "rounding": "half-away"
+     },
+     "departure": {
+      "unrounded": 0,
+      "display": "0 %",
+      "isUpperBound": false,
+      "rounding": "half-away"
+     },
+     "fl05": null,
+     "fl08": null,
+     "molar": null
+    }
+   }
+  },
+  {
+   "id": "ADV-UNSPEC-VOL-MOLAR-REPORT",
+   "engine": {
+    "id": "ADV-UNSPEC-VOL-MOLAR-REPORT",
+    "status": "incomplete",
+    "rejections": [],
+    "incomplete": [
+     "report-unit"
+    ]
+   }
+  },
+  {
+   "id": "ADV-UNSPEC-WHOLEVIAL-FALSE",
+   "engine": {
+    "id": "ADV-UNSPEC-WHOLEVIAL-FALSE",
+    "status": "incomplete",
+    "rejections": [],
+    "incomplete": [
+     "whole-vial"
+    ]
+   }
+  }
+ ],
+ "exclusion_violations": [],
+ "iv01": {
+  "skipped (rejected forward) [computed]": 4,
+  "target->Vd->Ca [computed]": [
+   3.2846075846994114e-16,
+   "ADV-IV01-computed-000-T"
+  ],
+  "diluent->Ca->target->Vd [computed]": [
+   2.1124750997096002e-15,
+   "ADV-IV01-computed-012-V"
+  ],
+  "skipped (rejected forward) [dmin]": 0,
+  "target->Vd->Ca [dmin]": [
+   1.7034492130804088e-16,
+   "ADV-IV01-dmin-037-T"
+  ],
+  "diluent->Ca->target->Vd [dmin]": [
+   1.8503717077085943e-16,
+   "ADV-IV01-dmin-044-V"
+  ],
+  "skipped (rejected forward) [zero]": 0,
+  "target->Vd->Ca [zero]": [
+   1.6008983772532898e-16,
+   "ADV-IV01-zero-008-T"
+  ],
+  "diluent->Ca->target->Vd [zero]": [
+   1.6428733774800003e-16,
+   "ADV-IV01-zero-052-V"
+  ]
+ },
+ "iv04": {
+  "F": [
+   2.7401326266142554e-16,
+   "ADV-IV04-009-01 vs ADV-IV04-009-00"
+  ],
+  "D": [
+   2.5699631905907817e-16,
+   "ADV-IV04-003-05 vs ADV-IV04-003-00"
+  ],
+  "Dmin": [
+   1.5632127728234873e-16,
+   "ADV-IV04-023-04 vs ADV-IV04-023-00"
+  ],
+  "Dapp": [
+   2.5699631905907817e-16,
+   "ADV-IV04-003-05 vs ADV-IV04-003-00"
+  ],
+  "Vd": [
+   8.004373050435709e-16,
+   "ADV-IV04-018-05 vs ADV-IV04-018-00"
+  ],
+  "VdPrime": [
+   0.0,
+   null
+  ],
+  "Fa": [
+   3.3299271740929063e-16,
+   "ADV-IV04-018-05 vs ADV-IV04-018-00"
+  ],
+  "Ca": [
+   3.479734836350985e-16,
+   "ADV-IV04-018-05 vs ADV-IV04-018-00"
+  ],
+  "f": [
+   5.709301199854962e-16,
+   "ADV-IV04-041-20 vs ADV-IV04-041-00"
+  ],
+  "fmin": [
+   2.1005671634815612e-16,
+   "ADV-IV04-023-04 vs ADV-IV04-023-00"
+  ],
+  "target": [
+   1.8436117977833885e-16,
+   "ADV-IV04-009-01 vs ADV-IV04-009-00"
+  ]
+ },
+ "iv04_flag_label_diffs": [],
+ "iv05": {
+  "Vd": [
+   2.679514998096961e-16,
+   "ADV-IV05-034-MOLAR"
+  ],
+  "VdPrime": [
+   0.0,
+   null
+  ],
+  "F": [
+   2.381248050353878e-16,
+   "ADV-IV05-035-MOLAR"
+  ],
+  "Ca": [
+   0.0,
+   null
+  ],
+  "target": [
+   2.1216585253828925e-16,
+   "ADV-IV05-013-MOLAR"
+  ]
+ },
+ "iv05_fail": [],
+ "vb_diffs": [],
+ "hostile": [
+  {
+   "id": "ADV-HOST-CONT-1e-300",
+   "note": "content 1e-300 mg, Dmin applied",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05",
+     "C7-FL-07"
+    ],
+    "displayed": {
+     "diluent": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000124",
+     "final": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000124",
+     "concentration": "8.01732"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e-300"
+  },
+  {
+   "id": "ADV-HOST-CONT-1e300",
+   "note": "content 1e300 mg, target 1 mg/mL",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "999000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "final": "999000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "concentration": "1.00028"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e300"
+  },
+  {
+   "id": "ADV-HOST-CONT-1e300-T1e300",
+   "note": "content 1e300 mg, target 1e300 mg/mL (F=1, HI-08 fires on Dmin)",
+   "spec": "HI-08",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-08"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e300"
+  },
+  {
+   "id": "ADV-HOST-TGT-1e-300",
+   "note": "target 1e-300 mg/mL: F = 8e301 mL overflows nothing yet",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "final": "80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "concentration": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-TGT-1e-310-ng",
+   "note": "target 1e-310 ng/mL: F = content/target overflows to Infinity",
+   "spec": "NR",
+   "status": "not-representable",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-CONT-5e-324-UG",
+   "note": "content 5e-324 µg: base mg underflows to 0",
+   "spec": "NR",
+   "status": "not-representable",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "5e-324"
+  },
+  {
+   "id": "ADV-HOST-CONT-1e-300-IU",
+   "note": "activity 1e-300 IU",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "1.00",
+     "final": "1.00",
+     "concentration": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e-300"
+  },
+  {
+   "id": "ADV-HOST-CONT-1e300-IU",
+   "note": "activity 1e300 IU at 1 IU/mL: F = 1e300 mL",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "final": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "concentration": "1.00000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e300"
+  },
+  {
+   "id": "ADV-HOST-VOL-1e300",
+   "note": "diluent 1e300 mL",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [],
+    "displayed": {
+     "diluent": "1e300",
+     "final": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "concentration": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-VOL-1e-300-FIN",
+   "note": "final 1e-300 mL: D ≥ F",
+   "spec": "HI-08",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-08"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-VOL-1e-300-DIL",
+   "note": "diluent 1e-300 mL: computable, F = 0.073",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-07",
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "1e-300",
+     "final": "0.0730",
+     "concentration": "1095.89"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-VOL-5e-324-DIL",
+   "note": "diluent 5e-324 mL (denormal); FL-08 overstatement factor F/Vd′ ≈ 1.5e322 is not a finite double, and protocol 2 makes it a reported number (extended.fl08.factor.unrounded) — result-or-NR since 29 Sep",
+   "spec": "result-or-NR",
+   "status": "not-representable",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-VOL-1e-310-UL-DIL",
+   "note": "diluent 1e-310 µL",
+   "spec": "result-or-NR",
+   "status": "not-representable",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-SOL-1e300",
+   "note": "solids 1e300 mg, diluent entered",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "1.00",
+     "final": "730000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+     "concentration": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000109589"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIN-1e300",
+   "note": "minimum 1e300 µL",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-07",
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIN-1e-300",
+   "note": "minimum 1e-300 µL",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-CAP-1e-300",
+   "note": "capacity 1e-300 mL",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-06",
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-CONC-SMALL-DISP",
+   "note": "Ca ≈ 1e-200 mg/mL, display must be exponent-free at 6 sf",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-02",
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "1.00",
+     "final": "1.00",
+     "concentration": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e-200"
+  },
+  {
+   "id": "ADV-HOST-CONC-LARGE-DISP",
+   "note": "Ca ≈ 1e200 IU/mL, display exponent-free",
+   "spec": "result-or-NR",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "1.00",
+     "final": "1.00",
+     "concentration": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e200"
+  },
+  {
+   "id": "ADV-HOST-SCI-1",
+   "note": "1e-3 g content, 8E0 mg/mL",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "0.0520",
+     "final": "0.125",
+     "concentration": "8.00000"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e-3"
+  },
+  {
+   "id": "ADV-HOST-SCI-2",
+   "note": "8.0e+1 mg",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "8.0e+1"
+  },
+  {
+   "id": "ADV-HOST-DIGITS-40",
+   "note": "40 significant digits",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80.00000000000000000000000000000000000001"
+  },
+  {
+   "id": "ADV-HOST-DIGITS-LEAD0",
+   "note": "leading zeros",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "0000080"
+  },
+  {
+   "id": "ADV-HOST-DIGITS-TRAIL",
+   "note": "trailing dot '80.'",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80."
+  },
+  {
+   "id": "ADV-HOST-DIGITS-LEADDOT",
+   "note": "'.5' mg",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "0.0621",
+     "final": "0.0624",
+     "concentration": "8.00449"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": ".5"
+  },
+  {
+   "id": "ADV-HOST-PLUS",
+   "note": "'+80'",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "+80"
+  },
+  {
+   "id": "ADV-HOST-SPACES",
+   "note": "' 80 '",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": " 80 "
+  },
+  {
+   "id": "ADV-HOST-COMMA",
+   "note": "'1,000'",
+   "spec": "unspecified",
+   "status": "rejected",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-07"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1,000"
+  },
+  {
+   "id": "ADV-HOST-HEX",
+   "note": "'0x50'",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content"
+    ]
+   },
+   "value": "0x50"
+  },
+  {
+   "id": "ADV-HOST-INF",
+   "note": "'Infinity'",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content"
+    ]
+   },
+   "value": "Infinity"
+  },
+  {
+   "id": "ADV-HOST-NAN",
+   "note": "'NaN'",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content"
+    ]
+   },
+   "value": "NaN"
+  },
+  {
+   "id": "ADV-HOST-EMPTY",
+   "note": "''",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content"
+    ]
+   },
+   "value": ""
+  },
+  {
+   "id": "ADV-HOST-OVERFLOW-STR",
+   "note": "'1e400' (not a finite double)",
+   "spec": "NR-or-unspecified",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-07"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e400"
+  },
+  {
+   "id": "ADV-HOST-UNDERFLOW-STR",
+   "note": "'1e-400' mg (positive decimal, rounds to 0)",
+   "spec": "NR-or-unspecified",
+   "status": "not-representable",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e-400"
+  },
+  {
+   "id": "ADV-HOST-NEG-ZERO-SOL",
+   "note": "solids '-0' (HI-07: -0 < 80)",
+   "spec": "HI-07",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-07"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIX-MG-IUML",
+   "note": "mg content, IU/mL target",
+   "spec": "HI-03",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-03"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIX-IU-MGML",
+   "note": "IU content, mg/mL target",
+   "spec": "HI-03",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-03"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-U-IUML",
+   "note": "U content, IU/mL target",
+   "spec": "HI-09",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-09"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-IU-UML",
+   "note": "IU content, U/mL target",
+   "spec": "HI-09",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-09"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-IU-IUML",
+   "note": "IU content, IU/mL target",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "100",
+     "final": "100",
+     "concentration": "10000.0"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-U-UML",
+   "note": "U content, U/mL target",
+   "spec": "result",
+   "status": "result",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-05"
+    ],
+    "displayed": {
+     "diluent": "100",
+     "final": "100",
+     "concentration": "10000.0"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-VOL-U-IU",
+   "note": "volume dir: U content, IU/mL report",
+   "spec": "HI-09",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-09"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-VOL-IU-U",
+   "note": "volume dir: IU content, U/mL report",
+   "spec": "HI-09",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-09"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-MIX-SOL-IU",
+   "note": "solids unit IU",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "solids-unit"
+    ]
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIX-VOL-MG",
+   "note": "volume unit mg",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "volume-unit"
+    ]
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIX-MIN-ML",
+   "note": "minimum transfer in mL",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MIX-TGT-UL",
+   "note": "target unit µL",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "target-unit"
+    ]
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-UNIT-lower-iu",
+   "note": "unit 'iu'",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content-unit"
+    ]
+   },
+   "value": "1e6"
+  },
+  {
+   "id": "ADV-HOST-UNIT-ug-ascii",
+   "note": "unit 'ug' (ASCII)",
+   "spec": "unspecified",
+   "status": "result",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": [
+     "C7-FL-08"
+    ],
+    "displayed": {
+     "diluent": "9.93",
+     "final": "10.0",
+     "concentration": "7.99760"
+    },
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80000"
+  },
+  {
+   "id": "ADV-HOST-UNIT-micro-sign",
+   "note": "unit 'μg' (Greek mu U+03BC, not micro sign U+00B5)",
+   "spec": "unspecified",
+   "status": "incomplete",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": [
+     "content-unit"
+    ]
+   },
+   "value": "80000"
+  },
+  {
+   "id": "ADV-HOST-MW-ZERO",
+   "note": "MW 0 kDa with molar target",
+   "spec": "unspecified",
+   "status": "rejected",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-04"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MW-NEG",
+   "note": "MW -148 kDa with molar target",
+   "spec": "unspecified",
+   "status": "rejected",
+   "verdict": "recorded",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-04"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  },
+  {
+   "id": "ADV-HOST-MW-HUGE",
+   "note": "MW 1e300 kDa, 1 M target",
+   "spec": "NR-or-unspecified",
+   "status": "rejected",
+   "verdict": "ok",
+   "same_in_batch": true,
+   "engine": {
+    "rejections": [
+     "C7-HI-08"
+    ],
+    "flags": null,
+    "displayed": null,
+    "error": null,
+    "incomplete": null
+   },
+   "value": "80"
+  }
+ ],
+ "directed_fixed": [
+  {
+   "id": "ADV-DR-FX06-TGT",
+   "what": "displayed.concentration",
+   "want": "79.9681",
+   "got": "79.9681",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-TGT-FIN",
+   "what": "displayed.final",
+   "want": "1.00",
+   "got": "1.00",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-TGT-DEP",
+   "what": "extended.departure.display",
+   "want": "-0.0399 %",
+   "got": "-0.0399 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-TGT-FMIN",
+   "what": "extended.fl05.fmin.display",
+   "want": "5.84 %",
+   "got": "5.84 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-DIL100",
+   "what": "displayed.concentration",
+   "want": "75.5858",
+   "got": "75.5858",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-DIL100-FIN",
+   "what": "displayed.final",
+   "want": "1.05",
+   "got": "1.05",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-DIL100-FMIN",
+   "what": "extended.fl05.fmin.display",
+   "want": "5.52 %",
+   "got": "5.52 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-DIL942",
+   "what": "displayed.concentration",
+   "want": "79.9681",
+   "got": "79.9681",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-1p0044",
+   "what": "displayed.concentration",
+   "want": "1.00367",
+   "got": "1.00367",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-1p0044-DEP",
+   "what": "extended.departure.display",
+   "want": "+0.367 %",
+   "got": "+0.367 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX06-1p0044-DIL",
+   "what": "displayed.diluent",
+   "want": "1.00",
+   "got": "1.00",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX17-DEP",
+   "what": "extended.departure.display",
+   "want": "+0.452 %",
+   "got": "+0.452 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX17-CONC",
+   "what": "displayed.concentration",
+   "want": "1.00452",
+   "got": "1.00452",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX17-FLAGS",
+   "what": "flags",
+   "want": [],
+   "got": [],
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-TGT",
+   "what": "extended.fl08.percent.display",
+   "want": "6.80 %",
+   "got": "6.80 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-TGT-KV",
+   "what": "extended.fl08.knownVolume",
+   "want": "final",
+   "got": "final",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-TGT-DILBASIS-KV",
+   "what": "extended.fl08.knownVolume",
+   "want": "final",
+   "got": "final",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-TGT-FINBASIS-KV",
+   "what": "extended.fl08.knownVolume",
+   "want": "final",
+   "got": "final",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-FIN-KV",
+   "what": "extended.fl08.knownVolume",
+   "want": "final",
+   "got": "final",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-FIN-FACTOR",
+   "what": "extended.fl08.factor.display",
+   "want": "0.932",
+   "got": "0.932",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-DIL-KV",
+   "what": "extended.fl08.knownVolume",
+   "want": "diluent",
+   "got": "diluent",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-DIL-PCT",
+   "what": "extended.fl08.percent.display",
+   "want": "7.87 %",
+   "got": "7.87 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-FL08-DIL-FACTOR",
+   "what": "extended.fl08.factor.display",
+   "want": "1.08",
+   "got": "1.08",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-ROUNDING",
+   "what": "extended.concentrationRounding",
+   "want": "half-away",
+   "got": "half-away",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FX05-DEP-ZERO",
+   "what": "extended.departure.display",
+   "want": "0 %",
+   "got": "0 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-NULL-IU",
+   "what": "extended.fl05",
+   "want": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-NULL-IU-FLAG",
+   "what": "flags has C7-FL-05",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-NULL-NOTREC",
+   "what": "extended.fl05",
+   "want": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-NULL-NOTREC-ROUND",
+   "what": "extended.final.isLowerBound",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-RC-TVC",
+   "what": "extended.reagentConcentration",
+   "want": "not-computable",
+   "got": "not-computable",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-RC-TVC-VOL",
+   "what": "extended.reagentConcentration",
+   "want": "not-computable",
+   "got": "not-computable",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-RC-IU-TVC",
+   "what": "extended.reagentConcentration",
+   "want": "computable",
+   "got": "computable",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-RC-NOTREC",
+   "what": "extended.reagentConcentration",
+   "want": "computable",
+   "got": "computable",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-DEP-NULL-VOL",
+   "what": "extended.departure",
+   "want": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-UL",
+   "what": "extended.fl05.Dmin.display",
+   "want": "58.4",
+   "got": "58.4",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05-UL-FIN",
+   "what": "displayed.final",
+   "want": "1050",
+   "got": "1050",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL08-UL-FIN",
+   "what": "extended.fl08.knownVolume",
+   "want": "final",
+   "got": "final",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL08-PCT-243",
+   "what": "extended.fl08.percent.display",
+   "want": "243 %",
+   "got": "243 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL08-PCT-1460",
+   "what": "extended.fl08.percent.display",
+   "want": "1460 %",
+   "got": "1460 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL08-FACTOR-1560",
+   "what": "extended.fl08.factor.display",
+   "want": "15.6",
+   "got": "15.6",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL08-HUGE",
+   "what": "no exponent in fl08 displays",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-ATMOST-MASS",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-ATMOST-OF",
+   "what": "extended.molar.of",
+   "want": "reagent",
+   "got": "reagent",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-COMPUTED",
+   "what": "extended.molar.rounding",
+   "want": "half-away",
+   "got": "half-away",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-MOLTGT-ATMOST",
+   "what": "extended.molar.unit",
+   "want": "µM",
+   "got": "µM",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-NOUNIT",
+   "what": "extended.molar.status",
+   "want": "unit-not-selected",
+   "got": "unit-not-selected",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R7-VOL-ATMOST",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-ATMOST-MASS",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-ATMOST-OF",
+   "what": "extended.molar.of",
+   "want": "protein",
+   "got": "protein",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-COMPUTED",
+   "what": "extended.molar.rounding",
+   "want": "half-away",
+   "got": "half-away",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-MOLTGT-ATMOST",
+   "what": "extended.molar.unit",
+   "want": "µM",
+   "got": "µM",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-NOUNIT",
+   "what": "extended.molar.status",
+   "want": "unit-not-selected",
+   "got": "unit-not-selected",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R8-VOL-ATMOST",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-ATMOST-MASS",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-ATMOST-OF",
+   "what": "extended.molar.of",
+   "want": "conjugate",
+   "got": "conjugate",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-COMPUTED",
+   "what": "extended.molar.rounding",
+   "want": "half-away",
+   "got": "half-away",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-MOLTGT-ATMOST",
+   "what": "extended.molar.unit",
+   "want": "µM",
+   "got": "µM",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-NOUNIT",
+   "what": "extended.molar.status",
+   "want": "unit-not-selected",
+   "got": "unit-not-selected",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R9-VOL-ATMOST",
+   "what": "extended.molar.rounding",
+   "want": "up",
+   "got": "up",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R10-WITHHELD",
+   "what": "extended.molar.status",
+   "want": "withheld",
+   "got": "withheld",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R6-WITHHELD-NULLS",
+   "what": "extended.molar.display",
+   "want": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-R3-IU",
+   "what": "extended.molar.status",
+   "want": "withheld",
+   "got": "withheld",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-MOL-DEP-ATMOST",
+   "what": "extended.departure.isUpperBound",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-1p25-ON",
+   "what": "displayed.final",
+   "want": "1.25",
+   "got": "1.25",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-1p25-BELOW",
+   "what": "displayed.final",
+   "want": "1.24",
+   "got": "1.24",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-1p25-ABOVE",
+   "what": "displayed.final",
+   "want": "1.25",
+   "got": "1.25",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-0p5-ON",
+   "what": "displayed.final",
+   "want": "0.500",
+   "got": "0.500",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-0p5-BELOW",
+   "what": "displayed.final",
+   "want": "0.499",
+   "got": "0.499",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FAGRID-0p5-ABOVE",
+   "what": "displayed.final",
+   "want": "0.500",
+   "got": "0.500",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-DEPCARRY-1",
+   "what": "extended.departure.display",
+   "want": "+0.100 %",
+   "got": "+0.100 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-DEPCARRY-2",
+   "what": "extended.departure.display",
+   "want": "+0.100 %",
+   "got": "+0.100 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-DEPCARRY-3",
+   "what": "extended.departure.display",
+   "want": "+0.100 %",
+   "got": "+0.100 %",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-CA100CARRY-1",
+   "what": "displayed.concentration",
+   "want": "100.000",
+   "got": "100.000",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-CA100CARRY-2",
+   "what": "displayed.concentration",
+   "want": "100.000",
+   "got": "100.000",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-CA100CARRY-3",
+   "what": "displayed.concentration",
+   "want": "100.000",
+   "got": "100.000",
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-TGT-ON",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-TGT-BELOW",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-TGT-ABOVE",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-DIL-ON",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-DIL-BELOW",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-DIL-ABOVE",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-FIN-ON",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-FIN-BELOW",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": true,
+   "got": true,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05THR-FIN-ABOVE",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05REG-ON",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05REG-BELOW",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "id": "ADV-DR-FL05REG-ABOVE",
+   "what": "extended.fl05.exceedsThreshold",
+   "want": true,
+   "got": true,
+   "ok": true
+  }
+ ],
+ "determinism": {
+  "cases": 1959,
+  "runs": 3,
+  "shuffle_seed": 777,
+  "differing": [],
+  "duplicate_ids": [
+   "ADV-IV01-computed-000-T",
+   "ADV-IV01-computed-000-B"
+  ]
+ },
+ "kept": 1507,
+ "total_run": 1959
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ligant-reconstitution",
+  "version": "0.1.0",
+  "description": "Reconstitution, a Ligant Bench Tool: the diluent volume for a target concentration, or the concentration a stated volume gives, with the content basis, provenance, carrier, conjugate state and displacement recorded. Entirely in the browser.",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite --port 5177",
+    "build": "vite build",
+    "preview": "vite preview --port 5177",
+    "test": "node --test tests/*.test.js",
+    "test:reimpl": "node --test tests/reimpl.test.js",
+    "fixture-record": "node tests/fixture-record.mjs > docs/fixture-record.md",
+    "mutation-record": "node tests/mutation-record.mjs > docs/iv-02-mutation-record.md",
+    "verify:cases": "node verification/export-cases.mjs",
+    "verify:fixtures": "node verification/check-fixtures.mjs",
+    "verify:cleanroom": "node verification/export-cases.mjs && node verification/compare.mjs --cmd \"python3 verification/cleanroom/impl.py\"",
+    "verify:harness-selftest": "node verification/compare.mjs --cmd \"python3 verification/harness-selftest.py\" --core-only --cases verification/builder-cases.json --out verification/harness-selftest.md",
+    "verify:deploy": "node verification/deploy/check-headers.mjs"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

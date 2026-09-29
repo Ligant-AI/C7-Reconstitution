@@ -1,0 +1,30 @@
+# Citation metadata, read by GitHub ("Cite this repository") and by Zenodo.
+# At each release, set version and date-released; add the DOI once archived.
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: Reconstitution
+abstract: >-
+  A deterministic browser tool that determines the volume of diluent to add to
+  a vial for a target concentration, or the concentration a stated volume
+  gives. It requires the user to declare what the stated content is the content
+  of, where the figure came from, the conjugate state, carrier presence, the
+  volume basis and whole-vial reconstitution, corrects for the volume the dry
+  solids occupy, and reports an upper bound where only the reagent's own volume
+  can be corrected. No model and no inference is applied to any reported value,
+  and no data entered by a user leaves the browser.
+authors:
+  - family-names: Modi
+    given-names: A.B.
+    affiliation: Ligant AI Incorporated
+version: v0.1.0
+license: Apache-2.0
+repository-code: https://github.com/Ligant-ai/C7-Reconstitution
+url: https://benchtools.ligant.ai/reconstitution/
+keywords:
+  - reconstitution
+  - lyophilised
+  - displacement volume
+  - partial specific volume
+  - laboratory calculator
+  - reproducible research

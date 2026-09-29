@@ -1,0 +1,1761 @@
+[
+ {
+  "id": "C7-FX-01",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.7318",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.407",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.4631",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-05",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "80",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-06a",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "80",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-06b",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1.00",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-06c",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.942",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-06d",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1.0044",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-06e",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1e6",
+   "unit": "IU"
+  },
+  "target": {
+   "value": "1e4",
+   "unit": "IU/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-07a",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1000000",
+   "unit": "IU"
+  },
+  "target": {
+   "value": "10000",
+   "unit": "IU/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-07b",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1000000",
+   "unit": "IU"
+  },
+  "target": {
+   "value": "10000",
+   "unit": "IU/mL"
+  },
+  "totalSolids": {
+   "value": "5",
+   "unit": "mg"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-08",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.2537",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.13",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.317",
+   "unit": "mg/mL"
+  },
+  "capacity": {
+   "value": "2",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-08v",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "0.2537",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.13",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.800",
+   "unit": "mL"
+  },
+  "capacity": {
+   "value": "2",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-13a",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "50",
+   "unit": "µg"
+  },
+  "totalSolids": {
+   "value": "2.5",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-13b",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "50",
+   "unit": "µg"
+  },
+  "totalSolids": {
+   "value": "2.5",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-13c",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "50",
+   "unit": "µg"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-13d",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "50",
+   "unit": "µg"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-14",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "final",
+  "content": {
+   "value": "1.0049",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "119.59",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-17",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1.0054",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.2",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-04",
+  "provenance": "nominal",
+  "contentBasis": "total-vial-contents",
+  "conjugate": "none",
+  "carrier": "present",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r7t",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.25",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.3",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 148.3,
+    "unit": "kDa"
+   },
+   "massBasis": "assembled",
+   "flagCodes": []
+  },
+  "target": {
+   "value": "3.17",
+   "unit": "µM"
+  },
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r8m",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "protein",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.25",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.3",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 148.3,
+    "unit": "kDa"
+   },
+   "massBasis": "assembled",
+   "flagCodes": []
+  },
+  "target": {
+   "value": "0.5",
+   "unit": "mg/mL"
+  },
+  "molarUnit": "µM",
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r9t",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "conjugate",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.25",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.3",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 151.2,
+    "unit": "kDa"
+   },
+   "massBasis": "conjugate",
+   "flagCodes": [
+    "C1-FL-08"
+   ]
+  },
+  "target": {
+   "value": "2.5",
+   "unit": "µM"
+  },
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r10t",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "protein",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.25",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 151.2,
+    "unit": "kDa"
+   },
+   "massBasis": "conjugate",
+   "flagCodes": [
+    "C1-FL-08"
+   ]
+  },
+  "target": {
+   "value": "2.5",
+   "unit": "µM"
+  },
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r11m",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "conjugate",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.25",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.3",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 148.3,
+    "unit": "kDa"
+   },
+   "massBasis": "assembled",
+   "flagCodes": []
+  },
+  "target": {
+   "value": "0.5",
+   "unit": "mg/mL"
+  },
+  "molarUnit": "µM",
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-09-r1m",
+  "provenance": "coa",
+  "contentBasis": "total-vial-contents",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "c1": {
+   "mw": {
+    "value": 148.3,
+    "unit": "kDa"
+   },
+   "massBasis": "assembled",
+   "flagCodes": []
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "molarUnit": "nM",
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-hi08-on",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.00073",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-hi08-below",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.0007299999999999999",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-hi08-above",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.0007300000000000001",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-hi08-dmin-on",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.00073",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-hi08-dmin-above",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.0007300000000000001",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-min-on",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "500",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.9",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.500",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-10-min-below",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "500.000000001",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "1",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.9",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.500",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-11-final",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-11-diluent",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "0.927",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-11-fmin-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "80",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-11-fmin-volume",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "mg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1.00",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-15a",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "5000",
+   "unit": "U"
+  },
+  "target": {
+   "value": "100",
+   "unit": "IU/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-15b",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "U/mL",
+  "content": {
+   "value": "5000",
+   "unit": "IU"
+  },
+  "volume": {
+   "value": "1",
+   "unit": "mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-16a",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "present",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "10",
+   "unit": "µg"
+  },
+  "totalSolids": {
+   "value": "0.51",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-16b",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "present",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "10",
+   "unit": "µg"
+  },
+  "target": {
+   "value": "0.1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "C7-FX-16c",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "not-recorded",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "10",
+   "unit": "µg"
+  },
+  "totalSolids": {
+   "value": "0.51",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-0-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.7318",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.407",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.4631",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-0-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "0.7318",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.407",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-0-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "0.7318",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.407",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-1-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "80",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-1-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-1-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "80",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "100",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-2-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "1.0054",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.2",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "1",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-2-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "1.0054",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.2",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-2-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "1.0054",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "1.2",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-3-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.0503",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.1117",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-3-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "0.0503",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-3-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "0.0503",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "totalSolids": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-4-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "12.77",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "19.1",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "37.3",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-4-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "12.77",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "19.1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-4-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "12.77",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "19.1",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-5-target",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "target",
+  "volumeBasis": "diluent",
+  "content": {
+   "value": "0.00931",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "0.513",
+   "unit": "mg"
+  },
+  "target": {
+   "value": "0.00647",
+   "unit": "mg/mL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-5-final-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "final",
+  "reportUnit": "µg/mL",
+  "content": {
+   "value": "0.00931",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "0.513",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "1370",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ },
+ {
+  "id": "IV-5-diluent-µL",
+  "provenance": "coa",
+  "contentBasis": "reagent-alone",
+  "conjugate": "none",
+  "carrier": "absent",
+  "wholeVial": true,
+  "minTransfer": {
+   "value": "2",
+   "unit": "µL"
+  },
+  "direction": "volume",
+  "volumeBasis": "diluent",
+  "reportUnit": "ng/mL",
+  "content": {
+   "value": "0.00931",
+   "unit": "mg"
+  },
+  "totalSolids": {
+   "value": "0.513",
+   "unit": "mg"
+  },
+  "volume": {
+   "value": "713",
+   "unit": "µL"
+  },
+  "c1": null,
+  "molarUnit": null,
+  "capacity": null,
+  "threshold": 0.006
+ }
+]

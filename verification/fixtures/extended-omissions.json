@@ -1,0 +1,357 @@
+[
+ {
+  "id": "IND-FX-01c-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000199 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-01d-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000118 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-03-rev-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.00000101 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-03-rev-unrounded",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-04a-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000270 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-04b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000475 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-05-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-05-T-finalbasis",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-06-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000400 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-06d-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000400 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-06e-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-07b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000365 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-07b6-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000438 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-07c-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000385 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-08b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000206 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-14a-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000149 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-14b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000399 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-16b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000346 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-16c-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000130 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-16e-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000346 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FL-02-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FL-05a-T",
+  "path": "departure",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-FL-06a-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000130 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FL-06b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000130 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FL-06c-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000346 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FL-all-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000500 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FL-all2-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-HI-08b-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000400 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-HI-08e-T",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.0000400 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-HI-08i-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-HI-08j-T",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-09-r2-mass",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-09-r2b-mass",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-09-r3-mass",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-09-r3b-mass",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-09-r9-molar",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000258 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-09-r9-molar",
+  "path": "molar",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-FX-09-r9-molar-VD",
+  "path": "molar",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-FX-10a-T-on",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-10b-T-below",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000337 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-10b-T-on",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000337 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-10b-T-above",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000337 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-FX-10c-TD-below",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-10c-TDmin-below",
+  "path": "departure",
+  "why": "exactly zero in both chains (Fa = F exactly): '0 %' asserted, isUpperBound true; the boundary of the grid, direction immaterial"
+ },
+ {
+  "id": "IND-FX-10c-TDmin-below",
+  "path": "departure.unrounded",
+  "why": "float/decimal numbers disagree"
+ },
+ {
+  "id": "IND-FX-10c-TDmin-below",
+  "path": "departure.display",
+  "why": "float/decimal disagree: '0 %' vs '+0.0000000000000000398 %'"
+ },
+ {
+  "id": "IND-FX-10d-T-below",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-10d-T-on",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-FX-10d-T-above",
+  "path": "departure",
+  "why": "omitted: |departure| 0 below 1e-9 (mathematically zero or double noise)"
+ },
+ {
+  "id": "IND-DR-a3",
+  "path": "fl05.Dmin.display",
+  "why": "float/decimal disagree: '0.0474' vs '0.0475'"
+ },
+ {
+  "id": "IND-DR-a3",
+  "path": "fl05.Dmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DR-c1-T",
+  "path": "departure",
+  "why": "exactly zero in both chains (Fa = F exactly): '0 %' asserted, isUpperBound true; the boundary of the grid, direction immaterial"
+ },
+ {
+  "id": "IND-DR-c2-T",
+  "path": "departure",
+  "why": "exactly zero in both chains (Fa = F exactly): '0 %' asserted, isUpperBound true; the boundary of the grid, direction immaterial"
+ },
+ {
+  "id": "IND-DR-c3-T",
+  "path": "departure",
+  "why": "exactly zero in both chains (Fa = F exactly): '0 %' asserted, isUpperBound true; the boundary of the grid, direction immaterial"
+ },
+ {
+  "id": "IND-DR-c3-T",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '9.12 %' vs '9.13 %'"
+ },
+ {
+  "id": "IND-DR-c3-T",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DR-c3-VD",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '9.12 %' vs '9.13 %'"
+ },
+ {
+  "id": "IND-DR-c3-VD",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DR-c3-VF",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '9.12 %' vs '9.13 %'"
+ },
+ {
+  "id": "IND-DR-c3-VF",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-pos1",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '0.694 %' vs '0.693 %'"
+ },
+ {
+  "id": "IND-DEP-pos1",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-neg2",
+  "path": "fl05.Dmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-neg2",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '0.694 %' vs '0.693 %'"
+ },
+ {
+  "id": "IND-DEP-neg2",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-neg3",
+  "path": "fl05.fmin.display",
+  "why": "float/decimal disagree: '0.0620 %' vs '0.0621 %'"
+ },
+ {
+  "id": "IND-DEP-neg3",
+  "path": "fl05.fmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-negpos-ug",
+  "path": "fl05.Dmin.display",
+  "why": "float/decimal disagree: '0.0182' vs '0.0183'"
+ },
+ {
+  "id": "IND-DEP-negpos-ug",
+  "path": "fl05.Dmin",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ },
+ {
+  "id": "IND-DEP-molar",
+  "path": "departure.unrounded",
+  "why": "omitted: |departure| 0.000364 < 5e-4, relative 1e-12 not attainable through the subtraction"
+ },
+ {
+  "id": "IND-DEP-molar",
+  "path": "molar",
+  "why": "display omitted: within 0.01 of a rounding critical point / ambiguous reading"
+ }
+]

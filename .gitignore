@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+.wrangler/
+deploy/router/.wrangler/
+# regenerable bundles of other tools' source (verification/contract/README reproduction steps rebuild them)
+verification/contract/build/

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Every resource from the page's own origin (C7-NF-12, §14.1 claim 3). No
+       analytics beacon is allowed through, unlike C3 1.0.1: the verbatim privacy
+       statement says no third-party code of any kind runs on this page. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <!-- frame-ancestors cannot be set from a meta element; it is set in the response header, public/_headers. -->
+  <link rel="icon" id="favicon" href="data:,">
+  <meta name="referrer" content="no-referrer">
+  <title>Ligant · Reconstitution</title>
+  <meta name="description" content="The volume of diluent to add to a lyophilised vial for a target concentration, or the concentration a stated volume gives, correct for what the vial's number is the amount of and for the volume the dry solids occupy. A free, deterministic bench tool. Runs entirely in your browser.">
+  <link rel="canonical" href="https://benchtools.ligant.ai/reconstitution/">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benchtools.ligant.ai/reconstitution/">
+  <meta property="og:site_name" content="Ligant Bench Tools">
+  <meta property="og:title" content="Ligant · Reconstitution">
+  <meta property="og:description" content="Reconstitute a vial with the content basis, its provenance, carrier, conjugate state and displacement recorded beside the volume. Free, deterministic, runs entirely in your browser.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ligant · Reconstitution">
+  <meta name="twitter:description" content="Vial reconstitution that records what the number on the vial is the amount of. Free bench tool.">
+  <link rel="stylesheet" href="./src/tokens.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead" id="site-header"></header>
+
+  <div id="system-error" class="system-error" hidden role="alert"></div>
+
+  <main id="main">
+    <div class="layout">
+    <div class="stack">
+      <form id="recon-form" class="stack" autocomplete="off" novalidate>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="titles"><span class="step">1</span><h2>Direction</h2></div>
+          </div>
+          <div class="panel-body stack">
+            <div class="field">
+              <span class="label">What do you know, and what do you want computed?</span>
+              <div class="radios stacked">
+                <label><input type="radio" name="direction" value="target"> <span><strong>target → volumes</strong> — enter a target concentration; the diluent and final volumes are computed</span></label>
+                <label><input type="radio" name="direction" value="volume"> <span><strong>volume → concentration</strong> — enter a volume, such as the datasheet's "reconstitute in 1 mL"; the concentration is computed</span></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="titles"><span class="step">2</span><h2>The vial</h2></div>
+          </div>
+          <div class="panel-body stack">
+            <div class="field-row">
+              <div class="field">
+                <label for="content-value">Stated vial content</label>
+                <input id="content-value" type="text" inputmode="decimal" class="num" aria-describedby="content-help">
+              </div>
+              <div class="field">
+                <label for="content-unit">Unit</label>
+                <select id="content-unit" class="num"></select>
+              </div>
+            </div>
+            <p class="help" id="content-help">Required. Not inferred, defaulted or suggested, including for named reagents. Activity content (IU, U) accepts scientific notation, e.g. 1e6.</p>
+
+            <div class="field" id="basis-field">
+              <span class="label">What the stated content is the content of</span>
+              <div class="radios stacked">
+                <label><input type="radio" name="content-basis" value="reagent-alone"> <span><strong>the reagent alone</strong> — the amount of the protein or molecule of interest, exclusive of carrier and excipient</span></label>
+                <label><input type="radio" name="content-basis" value="total-vial-contents"> <span><strong>the total vial contents</strong> — including carrier protein, excipient and buffer salts, as in "1 mg total protein"</span></label>
+                <label><input type="radio" name="content-basis" value="not-recorded"> <span><strong>not recorded</strong></span></label>
+              </div>
+            </div>
+            <p class="help" id="basis-activity" hidden>Content basis: <strong>the reagent (activity)</strong>. Activity is of the active reagent and of nothing else, so no other basis is offered.</p>
+
+            <div class="field">
+              <label for="provenance">Source of the stated content</label>
+              <select id="provenance">
+                <option value="">— select —</option>
+                <option value="coa">lot-specific certificate of analysis</option>
+                <option value="nominal">vial label or datasheet (nominal)</option>
+                <option value="weighed">weighed, from bulk</option>
+                <option value="not-recorded">not recorded</option>
+              </select>
+              <p class="help">A portion taken from a bulk solid is weighed and entered as the content itself: "weighed, from bulk".</p>
+            </div>
+
+            <div class="field" id="conjugate-field">
+              <span class="label">Conjugate state</span>
+              <div class="radios stacked">
+                <label><input type="radio" name="conjugate" value="none"> <span><strong>not a conjugate</strong></span></label>
+                <label><input type="radio" name="conjugate" value="protein"> <span><strong>a conjugate — the stated mass is of the protein alone</strong>, exclusive of label or payload</span></label>
+                <label><input type="radio" name="conjugate" value="conjugate"> <span><strong>a conjugate — the stated mass is of the conjugate</strong>, including label or payload</span></label>
+                <label><input type="radio" name="conjugate" value="not-recorded"> <span><strong>not recorded</strong></span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="label">Carrier protein</span>
+              <div class="radios">
+                <label><input type="radio" name="carrier" value="present"> present</label>
+                <label><input type="radio" name="carrier" value="absent"> absent</label>
+                <label><input type="radio" name="carrier" value="not-recorded"> not recorded</label>
+              </div>
+              <p class="help attention" id="carrier-note" hidden>Carrier is present and the content is the reagent alone: the total solids mass below is the only route to a computable displacement. Without it, only the reagent's own volume is corrected and the concentration is reported as "at most".</p>
+            </div>
+
+            <div id="solids-block">
+              <div class="field-row">
+                <div class="field">
+                  <label for="solids-value">Total solids mass in the vial <span class="optional">optional</span></label>
+                  <input id="solids-value" type="text" inputmode="decimal" class="num" aria-describedby="solids-help">
+                </div>
+                <div class="field">
+                  <label for="solids-unit">Unit</label>
+                  <select id="solids-unit" class="num"></select>
+                </div>
+              </div>
+              <p class="help" id="solids-help">Reagent, carrier, excipient and salts together, where the certificate states it. Used for the volume the dry solids occupy. Without it, displacement is not computable.</p>
+            </div>
+            <p class="help" id="solids-total" hidden>Total solids mass: the stated content, since it is the total vial contents.</p>
+            <p class="help" id="solids-unoffered" hidden>Total solids mass: not offered while the content basis is not recorded.</p>
+
+            <label class="check whole-vial"><input type="checkbox" id="whole-vial"> <span>The <strong>whole vial</strong> is reconstituted. No fraction of a cake is accepted; a previously reconstituted vial is a liquid stock and belongs in the Dilution Planner.</span></label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="titles"><span class="step">3</span><h2 id="step3-title">Target and volume</h2></div>
+          </div>
+          <div class="panel-body stack">
+            <div class="dir-target" hidden>
+              <div class="field-row">
+                <div class="field">
+                  <label for="target-value">Target concentration</label>
+                  <input id="target-value" type="text" inputmode="decimal" class="num">
+                </div>
+                <div class="field">
+                  <label for="target-unit">Unit</label>
+                  <select id="target-unit" class="num"></select>
+                </div>
+              </div>
+              <p class="help">The concentration of the final solution — the reconstituted vial as it will exist — and of nothing else. A molar target needs a molecular weight imported from C1.</p>
+            </div>
+            <div class="dir-volume" hidden>
+              <div class="field-row">
+                <div class="field">
+                  <label for="volume-value">Volume</label>
+                  <input id="volume-value" type="text" inputmode="decimal" class="num">
+                </div>
+                <div class="field">
+                  <label for="volume-unit">Unit</label>
+                  <select id="volume-unit" class="num"></select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="report-unit">Report the concentration in</label>
+                <select id="report-unit" class="num"></select>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="vb-label">Which volume is meant</span>
+              <div class="radios stacked">
+                <label><input type="radio" name="volume-basis" value="diluent"> <span><strong>volume of diluent to add</strong> — the volume drawn up and injected into the vial</span></label>
+                <label><input type="radio" name="volume-basis" value="final"> <span><strong>final volume of solution</strong> — the volume the reconstituted vial will contain</span></label>
+              </div>
+              <p class="help" id="vb-help">Choose a direction first.</p>
+            </div>
+            <div class="field" id="molar-unit-field" hidden>
+              <label for="molar-unit">Molar form shown in</label>
+              <select id="molar-unit" class="num"></select>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="titles"><span class="step">4</span><h2>Capability and vessel</h2></div>
+          </div>
+          <div class="panel-body stack">
+            <div class="field-row">
+              <div class="field">
+                <label for="min-value">Minimum reliable transfer volume</label>
+                <input id="min-value" type="text" inputmode="decimal" class="num" value="2" aria-describedby="min-suggested">
+              </div>
+              <div class="field">
+                <label for="min-unit">Unit</label>
+                <select id="min-unit" class="num"></select>
+              </div>
+            </div>
+            <p class="help" id="min-suggested"><span class="suggested-dot" aria-hidden="true"></span>suggested, not chosen: 2 µL, carried from C4. Replace it with your syringe's or pipette's value.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="capacity-value">Vial working capacity <span class="optional">optional, no default</span></label>
+                <input id="capacity-value" type="text" inputmode="decimal" class="num">
+              </div>
+              <div class="field">
+                <label for="capacity-unit">Unit</label>
+                <select id="capacity-unit" class="num"></select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="import-panel">
+          <div class="panel-head">
+            <div class="titles"><h2>Molecular weight from C1</h2></div>
+            <span class="optional">optional, for a molar target or molar form</span>
+          </div>
+          <div class="panel-body stack">
+            <div class="field">
+              <label for="import-text">Paste the C1 transport link or envelope</label>
+              <textarea id="import-text" rows="2" class="num" placeholder="https://benchtools.ligant.ai/…#c1=…"></textarea>
+              <p class="help" id="import-status"></p>
+            </div>
+          </div>
+        </section>
+        <p class="hint">Nothing entered here is stored or transmitted. Reloading the page clears every field.</p>
+      </form>
+
+      <section class="panel method-panel" id="page-content" aria-labelledby="about-heading">
+        <div class="panel-head">
+          <div class="titles"><h2 id="about-heading">Method, register and limits</h2></div>
+        </div>
+        <div class="panel-body prose" id="page-content-body"></div>
+      </section>
+
+      <section class="panel" id="privacy" aria-labelledby="privacy-heading">
+        <div class="panel-head">
+          <div class="titles"><h2 id="privacy-heading">Privacy</h2></div>
+          <span class="optional num" id="privacy-version"></span>
+        </div>
+        <div class="panel-body prose" id="privacy-body"></div>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="panel panel-series" aria-labelledby="output-heading">
+        <div class="panel-head">
+          <div class="titles"><h2 id="output-heading">The stock</h2></div>
+          <div class="button-row" id="result-actions" hidden>
+            <button type="button" id="copy-notebook">Copy for notebook</button>
+            <button type="button" id="copy-envelope">Copy stock envelope</button>
+          </div>
+        </div>
+        <div class="panel-body" id="stock-body">
+          <div class="series-sticky" id="kept-in-view">
+            <div class="rail-declarations" aria-label="declarations the result was computed under">
+              <div id="declarations-content" class="declarations-content"></div>
+            </div>
+            <ul id="flag-summary" class="flag-summary" aria-label="flags raised" hidden></ul>
+          </div>
+          <div id="result-region" class="result-region" aria-live="polite"></div>
+          <p id="copy-status" class="hint" aria-live="polite" hidden></p>
+          <div id="notebook-fallback" hidden>
+            <p class="hint">Copy the text below into your notebook.</p>
+            <textarea id="notebook-text" rows="14" readonly class="num"></textarea>
+          </div>
+          <!-- The derivation and the object repeat result values, so they sit inside
+               this panel, under the sticky declarations and flags: the result is
+               never readable apart from them at any scroll position (C7-NF-04). -->
+          <div class="subsection" id="derivation-panel" hidden>
+            <h3 class="sub-h">Derivation</h3>
+            <div id="derivation" class="derivation"></div>
+          </div>
+          <div class="subsection" id="object-panel" hidden>
+            <h3 class="sub-h">Structured result</h3>
+            <p class="hint" id="object-hint"></p>
+            <details class="options">
+              <summary>Show the object</summary>
+              <pre id="object-text"></pre>
+            </details>
+          </div>
+          <div id="keep-spacer" aria-hidden="true"></div>
+        </div>
+      </section>
+
+    </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <p class="disclaimer" id="disclaimer"></p>
+  <div class="colophon" id="colophon"></div>
+</div>
+
+  <script type="module" src="./src/ui/app.js"></script>
+</body>
+</html>

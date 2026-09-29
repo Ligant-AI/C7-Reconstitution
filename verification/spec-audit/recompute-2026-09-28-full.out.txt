@@ -1,0 +1,160 @@
+=== §0.1, §1 worked arithmetic
+  1 | §0.1 | F = content ÷ target, 1e6 IU ÷ 1e4 IU/mL | exact=100 | double=100 | disp(3sf)=100 mL | chain=100.0 -> 100 | stated=100 | agrees 
+  2 | §0.1 | F = 1 mg ÷ 1 mg/mL | exact=1 | double=1 | disp(3sf)=1.00 mL | chain=1.0 -> 1.00 | stated=1 | agrees 
+  3 | §1 | F = 1 mg ÷ 1 mg/mL (naive, displacement ignored) | exact=1 | double=1 | disp(3sf)=1.00 mL | chain=1.0 -> 1.00 | stated=1 | agrees 
+  4 | §1 | C = 1 mg ÷ 1 mL (naive) | exact=1 | double=1 | disp(6sf)=1.00000 mg/mL | chain=1.0 -> 1.00000 | stated=1 | agrees C7's own relation (Dmin applied) gives at most 1 ÷ 1.00073 = 0.999271 mg/mL; §1 is stated as the naive arithmetic
+  C7 own result for §1 case, diluent 1 mL entered, reagent alone, no solids: 0.999271
+=== §0.3 method note: 7.3 % against 7.9 %
+  5 | §0.3 | D ÷ F = 0.073 ÷ 1 | exact=7.300 | double=7.29999999999999982236431605997495353221893310546875 | disp(2sf)=7.3 % | chain=7.3 -> 7.3 | stated=7.3 | agrees 
+  6 | §0.3 | D ÷ Vd = 0.073 ÷ 0.927 | exact=7.87486515641855447680690399137001078748651564185544768069040 | double=7.874865156418554335004955646581947803497314453125 | disp(2sf)=7.9 % | chain=7.8748651564185534 -> 7.9 | stated=7.9 | agrees 
+=== §4 C7-UN-04 / §11 displayed-volume resolution: half-step 0.005 on mantissa 1.00..9.99
+  7 | §4 UN-04, §11 | lower end 0.005 ÷ 9.99 | exact=0.0500500500500500500500500500500500500500500500500500500500501 | double=0.050050050050050053085382018025484285317361354827880859375 | disp(1sf)=0.05 % | chain=0.050050050050050046 -> 0.05 | stated=0.05 | agrees 
+  8 | §4 UN-04, §11 | upper end 0.005 ÷ 1.00 | exact=0.500 | double=0.5 | disp(1sf)=0.5 % | chain=0.5 -> 0.5 | stated=0.5 | agrees 
+  9 | §5 On C7-DT-07 | sup |target/Ca - 1| from 3-sf diluent rounding (Vd->1.005-, D->0) | exact=0.499999900 | double=0.499999899999999997124433548378874547779560089111328125 | disp(1sf)=0.5 % | chain=None -> None | stated=0.5 | agrees supremum, approached not reached
+=== §6 additivity example 9.93 + 0.0730 = 10.003 against 10.0
+ 10 | §6 | Vd' + displayed D | exact=10.0030 | double=10.0030000000000001136868377216160297393798828125 | disp(5sf)=10.003 mL | chain=10.003 -> 10.003 | stated=10.003 | agrees 
+ 11 | §6 | displayed final 10.0 for any D that displays 0.0730 | Fa in [10.00295, 10.00305) -> 10.0..10.0 | agrees
+ 12 | §6 | disagreement |9.93 + 0.0730 - 10.0| | exact=0.0030 | double=0.003000000000000000062450045135165055398829281330108642578125 | disp(1sf)=0.003 mL | chain=None -> None | stated=0.003 | agrees 
+ 13 | §6 | 0.003 <= one unit of the coarsest place (0.1) | places: 9.93 -> 0.01, 0.0730 -> 0.0001, 10.0 -> 0.1 | agrees
+ 14 | §6 | sup = u(D)/2 + u(F)/2, approached not reached | (dD - D) attains +u(D)/2 at a tie; -(dF - Fa) needs dF - Fa = -u(F)/2, which half-away-from-zero never produces on positives | agrees
+=== §7 / §11 C7-HI-08 boundary
+ 15 | §7 On C7-HI-08 | 1 ÷ v̄ | exact=1369.86301369863013698630136986301369863013698630136986301370 | double=1369.863013698630084036267362534999847412109375 | disp(3sf)=1.37E+3 mg/mL | chain=1369.86301369863 -> 1.37E+3 | stated=1370 | agrees 
+ 16 | §11 HI-08 row | 1 ÷ v̄ | exact=1369.86301369863013698630136986301369863013698630136986301370 | double=1369.863013698630084036267362534999847412109375 | disp(3sf)=1.37E+3 mg/mL | chain=1369.86301369863 -> 1.37E+3 | stated=1370 | agrees 
+ 17 | §7 C7-HI-08 | target form: D >= F <=> (solids ÷ F) >= 1 ÷ v̄; Dmin >= F <=> target >= 1 ÷ v̄ | D = s·v̄, F = content ÷ target; s·v̄ >= F <=> (s/F)·v̄ >= 1; with s = content, F = content ÷ target -> target·v̄ >= 1 | agrees
+ 18 | §7 On C7-HI-08, §11 row | 'cannot fire with a diluent entered' (F = entered + D > D) | float: D = 1.0, entered = 1e-17 -> fl(entered + D) = 1.0, so D >= F evaluates True on computed values | DISAGREES
+=== §8 C7-FL-08 and §10 C7-FX-11 at f = 7.3 %
+ 19 | §8 FL-08 | shortfall f ÷ (1 + f) | exact=6.80335507921714818266542404473438956197576887232059645852749 | double=6.80335507921714821577552356757223606109619140625 | disp(3sf)=6.80 % | chain=6.803355079217148 -> 6.80 | stated=6.80 | agrees 
+ 20 | §8 FL-08 | overstatement f ÷ (1 − f) | exact=7.87486515641855447680690399137001078748651564185544768069040 | double=7.874865156418554335004955646581947803497314453125 | disp(3sf)=7.87 % | chain=7.8748651564185534 -> 7.87 | stated=7.88 | DISAGREES 
+ 21 | §10 FX-11 | shortfall f ÷ (1 + f) | exact=6.80335507921714818266542404473438956197576887232059645852749 | double=6.80335507921714821577552356757223606109619140625 | disp(3sf)=6.80 % | chain=6.803355079217148 -> 6.80 | stated=6.80 | agrees 
+ 22 | §10 FX-11 | overstatement f ÷ (1 − f) | exact=7.87486515641855447680690399137001078748651564185544768069040 | double=7.874865156418554335004955646581947803497314453125 | disp(3sf)=7.87 % | chain=7.8748651564185534 -> 7.87 | stated=7.88 | DISAGREES 
+  mirror path: round6(1/(1-f)) = 1.07875 -> minus 1 = 0.07875 -> 3 sf % = 7.88
+  gap of 7.8748651...% below tie 7.875 %: 0.00013484358144552319309600862998921251348435814455231930960  flip f where f/(1-f) = 0.07875: 7.30011587485515643105446118192352259559675550405561993047509 %
+  1/(1+f) = 0.931966449207828518173345759552656104380242311276794035414725  1/(1-f) = 1.07874865156418554476806903991370010787486515641855447680690
+ 23 | §5 notation, FL-08 | final known: content ÷ (F + D) = (content ÷ F) ÷ (1 + f); diluent known: content ÷ Vd = (content ÷ F) ÷ (1 − f) | F + D = F(1 + f); Vd = F − D = F(1 − f) | agrees
+=== C7-FX-05
+ 24 | FX-05 | total-solids conc = solids ÷ F | exact=100 | double=100 | disp(6sf)=100.000 mg/mL | chain=100.0 -> 100.000 | stated=100 | agrees 
+ 25 | FX-05 | F = content ÷ target | exact=1 | double=1 | disp(3sf)=1.00 mL | chain=1.0 -> 1.00 | stated=1.000 | agrees (stated at 4 sf; see finding on precision)
+ 26 | FX-05 | D = solids × v̄ | exact=0.073 | double=0.07299999999999999544808559903685818426311016082763671875 | disp(3sf)=0.0730 mL | chain=0.073 -> 0.0730 | stated=0.0730 | agrees 
+ 27 | FX-05 | f = D ÷ F | exact=7.300 | double=7.29999999999999982236431605997495353221893310546875 | disp(3sf)=7.30 % | chain=7.3 -> 7.30 | stated=7.30 | agrees 
+ 28 | FX-05 | Vd' = round3(F − D) | exact=0.927 | double=0.927000000000000046185277824406512081623077392578125 | disp(3sf)=0.927 mL | chain=0.927 -> 0.927 | stated=0.927 | agrees 
+ 29 | FX-05 | Fa = Vd' + D | exact=1.000 | double=1 | disp(3sf)=1.00 mL | chain=1.0 -> 1.00 | stated=1.000 | agrees (stated at 4 sf)
+ 30 | FX-05 | shortfall f ÷ (1 + f) | exact=6.80335507921714818266542404473438956197576887232059645852749 | double=6.80335507921714821577552356757223606109619140625 | disp(3sf)=6.80 % | chain=6.803355079217148 -> 6.80 | stated=6.80 | agrees 
+ 31 | FX-05 | Ca = content ÷ Fa | exact=8E+1 | double=80 | disp(6sf)=80.0000 mg/mL | chain=80.0 -> 80.0000 | stated=80.0000 | agrees 
+ 32 | FX-05 | additivity |Vd' + disp D − disp Fa| <= 1 unit coarsest | |0.927 + 0.0730 − 1.00| = 0.0000 | agrees
+ 33 | FX-05 | diluent smaller than content ÷ target by the displacement | 1 − 0.927 = 0.073 | agrees
+=== C7-FX-06
+ 34 | FX-06 | Dmin = content × v̄ | exact=0.0584 | double=0.058400000000000000521804821573823573999106884002685546875 | disp(3sf)=0.0584 mL | chain=0.0584 -> 0.0584 | stated=0.0584 | agrees 
+ 35 | FX-06 | diluent Vd' = round3(F − Dmin) | exact=0.9416 | double=0.9415999999999999925393012745189480483531951904296875 | disp(3sf)=0.942 mL | chain=0.9416 -> 0.942 | stated=0.942 | agrees 
+ 36 | FX-06 | at most Ca = content ÷ (Vd' + Dmin) | exact=79.9680127948820471811275489804078368652538984406237504998001 | double=79.968012794882042726385407149791717529296875 | disp(6sf)=79.9680 mg/mL | chain=79.96801279488206 -> 79.9680 | stated=79.9680 | agrees 
+ 37 | FX-06 | fmin = v̄ × content ÷ F | exact=5.8400 | double=5.839999999999999857891452847979962825775146484375 | disp(3sf)=5.84 % | chain=5.84 -> 5.84 | stated=5.84 | agrees 
+ 38 | FX-06 | fmin 5.84 % exceeds the material threshold (every candidate 0.6/0.8/1 %) | 5.84 > 1 | agrees
+ 39 | FX-06 | 1.00 mL entered: at most content ÷ (1.00 + Dmin) | exact=75.5857898715041572184429327286470143613000755857898715041572 | double=75.5857898715041613968423916958272457122802734375 | disp(6sf)=75.5858 mg/mL | chain=75.58578987150416 -> 75.5858 | stated=75.5858 | agrees 
+ 40 | FX-06 | 1.00 mL entered: fmin = Dmin ÷ (1.00 + Dmin) | exact=5.51776266061980347694633408919123204837490551776266061980348 | double=5.5177626606198035830175285809673368930816650390625 | disp(3sf)=5.52 % | chain=5.517762660619804 -> 5.52 | stated=5.52 | agrees 
+ 41 | FX-06 | 0.942 mL entered: at most content ÷ (0.942 + Dmin) | exact=79.9680127948820471811275489804078368652538984406237504998001 | double=79.968012794882042726385407149791717529296875 | disp(6sf)=79.9680 mg/mL | chain=79.96801279488206 -> 79.9680 | stated=79.9680 | agrees 
+ 42 | FX-06 | 1.0044 mg at 1 mg/mL: diluent round3(F − Dmin) | exact=1.003666788 | double=1.0036667880000000874218812896288000047206878662109375 | disp(3sf)=1.00 mL | chain=1.0036667879999999 -> 1.00 | stated=1.00 | agrees 
+ 43 | FX-06 | the 1.0044 mg diluent rounds down | 1.003666788 -> 1.00 | agrees
+ 44 | FX-06 | 1.0044 mg: at most content ÷ (Vd' + Dmin) | exact=1.00366410143685727900074930260234033283987780751299777987182 | double=1.003664101436857247762191036599688231945037841796875 | disp(6sf)=1.00366 mg/mL | chain=1.0036641014368572 -> 1.00366 | stated=1.00366 | agrees 
+ 45 | FX-06 | unrounded diluent F − Dmin (80 mg case) | exact=0.9416 | double=0.9415999999999999925393012745189480483531951904296875 | disp(6sf)=0.941600 mL | chain=0.9416 -> 0.941600 | stated=0.941600 | agrees 
+ 46 | FX-06 | gap of 0.9416 above 3-sf tie | exact=0.0001 | double=0.000100000000000000004792173602385929598312941379845142364501953125 | disp(3sf)=0.000100 mL | chain=Decimal('0.0000999999999999925393012745189480483531951904296875') -> 0.000100 | stated=1.00e-4 | agrees 
+ 47 | FX-06 | nearest 3-sf tie is 0.9415 | nearest tie 0.9415 | agrees
+  FX-06 1.0044 case fmin (not stated in the spec): 0.0730 %
+=== C7-FX-17
+ 48 | FX-17 | D = solids × v̄ | exact=0.000876 | double=0.00087600000000000004252154184314349549822509288787841796875 | disp(3sf)=0.000876 mL | chain=0.0008759999999999999 -> 0.000876 | stated=0.000876 | agrees 
+ 49 | FX-17 | unrounded diluent F − D | exact=1.004524 | double=1.004523999999999972487785271368920803070068359375 | disp(7sf)=1.004524 mL | chain=1.004524 -> 1.004524 | stated=1.004524 | agrees 
+ 50 | FX-17 | displayed diluent | exact=1.004524 | double=1.004523999999999972487785271368920803070068359375 | disp(3sf)=1.00 mL | chain=1.004524 -> 1.00 | stated=1.00 | agrees 
+ 51 | FX-17 | Fa = Vd' + D (stated unrounded) | exact=1.000876 | double=1.0008760000000000989217596725211478769779205322265625 | disp(7sf)=1.000876 mL | chain=1.000876 -> 1.000876 | stated=1.000876 | agrees 
+ 52 | FX-17 | nearest 3-sf tie to the diluent is 1.005 mL | nearest tie 1.005 | agrees
+ 53 | FX-17 | gap 1.005 − 1.004524 | exact=0.000476 | double=0.0004760000000000000233528474335997771049733273684978485107421875 | disp(3sf)=0.000476 mL | chain=Decimal('0.000476000000000027512214728631079196929931640625') -> 0.000476 | stated=4.76e-4 | agrees 
+ 54 | FX-17 | f = D ÷ F | exact=0.0871295006962403023672170280485378953650288442410980704197334 | double=0.08712950069624030013937243666077847592532634735107421875 | disp(3sf)=0.0871 % | chain=0.08712950069624029 -> 0.0871 | stated=0.0871 | agrees 
+ 55 | FX-17 | f below the material threshold (every candidate) | 0.0871 < 0.6 | agrees
+ 56 | FX-17 | Ca = content ÷ Fa | exact=1.00452004044457055619277512898700738153377641186320782994097 | double=1.00452004044457066100903830374591052532196044921875 | disp(6sf)=1.00452 mg/mL | chain=1.0045200404445704 -> 1.00452 | stated=1.00452 | agrees 
+ 57 | FX-17 | target at 6 sf | exact=1 | double=1 | disp(6sf)=1.00000 mg/mL | chain=1.0 -> 1.00000 | stated=1.00000 | agrees 
+ 58 | FX-17 | departure Ca ÷ target − 1 | exact=0.45200404445705561927751289870073815337764118632078299409700 | double=0.452004044457055609296247666861745528876781463623046875 | disp(3sf)=0.452 % | chain=0.4520040444570439 -> 0.452 | stated=0.452 | agrees 
+ 59 | FX-17 | above target because the diluent rounds down | 1.004524 -> 1.00; Ca 1.00452004044457055619277512898700738153377641186320782994097 | agrees
+ 60 | FX-17 | hand reproduction 1.0054 ÷ (1.00 + 1.2 × 0.73 × 10^-3) | exact=1.00452004044457055619277512898700738153377641186320782994097 | double=1.00452004044457066100903830374591052532196044921875 | disp(6sf)=1.00452 mg/mL | chain=1.0045200404445704 -> 1.00452 | stated=1.00452 | agrees 
+ 61 | FX-17 | no flags: every §8 condition false under the stated declarations | FL-01/02 basis reagent alone; FL-03/04 certificate; FL-05 solids declared; FL-06 no capacity; FL-07 1.00 mL >> 2 µL; FL-08 0.0871 % < 0.6 %; FL-09/10 no C1 import; FL-11/12 carrier absent; FL-13/14 not a conjugate | agrees
+ 62 | FX-17 additivity | |1.00 + 0.000876 − 1.00| <= 0.01 | 0.000876 | agrees
+=== §11 scope-error bound of v̄
+ 63 | §11 scope-error | first order ε = (0.73 − 0.3) × 0.1 g/mL | exact=4.300 | double=4.29999999999999982236431605997495353221893310546875 | disp(3sf)=4.30 % | chain=4.300000000000001 -> 4.30 | stated=4.30 | agrees 
+ 64 | §11 scope-error | exact excess ε ÷ (1 − ε) | exact=4.49320794148380355276907001044932079414838035527690700104493 | double=4.49320794148380375787610319093801081180572509765625 | disp(3sf)=4.49 % | chain=4.493207941483804 -> 4.49 | stated=4.49 | agrees 
+ 65 | §11 scope-error | below 10 mg/mL, under 0.5 % for any v̄ >= 0.3 | at 10 mg/mL, v̄ 0.3: first order 0.4300 %, exact 0.432 % | agrees
+ 66 | §11 scope-error | ε exact as fractional final-volume error, both directions | final known: true final = F − (0.73 − v)s = F(1 − ε); diluent known: computed F = Vd + 0.73s, true = Vd + vs = F(1 − ε); ε = (0.73 − v)s/F | agrees
+ 67 | §11 scope-error, §11 assumption 1 | volume crossover |0.73 − v| = v | exact=0.365 | double=0.3649999999999999911182158029987476766109466552734375 | disp(3sf)=0.365 mL/g | chain=0.365 -> 0.365 | stated=0.365 | agrees 
+  crossover v̄ at which corrected and uncorrected concentration errors are equal:
+   final known   | true/reported − 1 (spec's 'concentration excess') | 1 mg/mL 0.365 | 10 mg/mL 0.366 | 100 mg/mL 0.378
+   final known   | reported/true − 1                                | 1 mg/mL 0.365 | 10 mg/mL 0.365 | 100 mg/mL 0.365
+   final known   | |ln(true/reported)|                              | 1 mg/mL 0.365 | 10 mg/mL 0.366 | 100 mg/mL 0.372
+   diluent known | true/reported − 1 (spec's 'concentration excess') | 1 mg/mL 0.365 | 10 mg/mL 0.365 | 100 mg/mL 0.365
+   diluent known | reported/true − 1                                | 1 mg/mL 0.365 | 10 mg/mL 0.364 | 100 mg/mL 0.351
+   diluent known | |ln(true/reported)|                              | 1 mg/mL 0.365 | 10 mg/mL 0.364 | 100 mg/mL 0.358
+ 68 | §11 scope-error | concentration crossover at 1 mg/mL (every grid cell) | exact=0.365133224982251104104192996414470585169616302997856709665000 | double=0.36513322498225109224989637368707917630672454833984375 | disp(3sf)=0.365 mL/g | chain=None -> None | stated=0.365 | agrees 
+ 69 | §11 scope-error | concentration crossover at 100 mg/mL, final known, spec's excess measure | exact=0.378304798234394206081648594404428394888154717181476083944866 | double=0.37830479823439422393249742526677437126636505126953125 | disp(3sf)=0.378 mL/g | chain=None -> None | stated=0.378 | agrees 
+=== §11 material threshold (orientation values) and handoff / §17 repeats
+ 70 | §11 | c = f ÷ v̄ at f = 0.01 | exact=13.6986301369863013698630136986301369863013698630136986301370 | double=13.6986301369863010535254943533800542354583740234375 | disp(3sf)=13.7 mg/mL | chain=13.698630136986303 -> 13.7 | stated=13.7 | agrees 
+ 71 | §11 | c = f ÷ v̄ at f = 0.008 | exact=10.9589041095890410958904109589041095890410958904109589041096 | double=10.9589041095890404875490276026539504528045654296875 | disp(3sf)=11.0 mg/mL | chain=10.95890410958904 -> 11.0 | stated=11.0 | agrees 
+ 72 | §11 | c = f ÷ v̄ at f = 0.006 | exact=8.21917808219178082191780821917808219178082191780821917808219 | double=8.21917808219178169792940025217831134796142578125 | disp(2sf)=8.2 mg/mL | chain=8.219178082191782 -> 8.2 | stated=8.2 | agrees (8.22 at 3 sf)
+ 73 | §17 item 1 | c = f ÷ v̄ at f = 0.01 | exact=13.6986301369863013698630136986301369863013698630136986301370 | double=13.6986301369863010535254943533800542354583740234375 | disp(3sf)=13.7 mg/mL | chain=13.698630136986303 -> 13.7 | stated=13.7 | agrees 
+ 74 | §17 item 1 | c = f ÷ v̄ at f = 0.008 | exact=10.9589041095890410958904109589041095890410958904109589041096 | double=10.9589041095890404875490276026539504528045654296875 | disp(3sf)=11.0 mg/mL | chain=10.95890410958904 -> 11.0 | stated=11.0 | agrees 
+ 75 | §17 item 1 | c = f ÷ v̄ at f = 0.006 | exact=8.21917808219178082191780821917808219178082191780821917808219 | double=8.21917808219178169792940025217831134796142578125 | disp(2sf)=8.2 mg/mL | chain=8.219178082191782 -> 8.2 | stated=8.2 | agrees (8.22 at 3 sf)
+ 76 | handoff | c = f ÷ v̄ at f = 0.01 | exact=13.6986301369863013698630136986301369863013698630136986301370 | double=13.6986301369863010535254943533800542354583740234375 | disp(3sf)=13.7 mg/mL | chain=13.698630136986303 -> 13.7 | stated=13.7 | agrees 
+ 77 | handoff | c = f ÷ v̄ at f = 0.008 | exact=10.9589041095890410958904109589041095890410958904109589041096 | double=10.9589041095890404875490276026539504528045654296875 | disp(3sf)=11.0 mg/mL | chain=10.95890410958904 -> 11.0 | stated=11.0 | agrees 
+ 78 | handoff | c = f ÷ v̄ at f = 0.006 | exact=8.21917808219178082191780821917808219178082191780821917808219 | double=8.21917808219178169792940025217831134796142578125 | disp(2sf)=8.2 mg/mL | chain=8.219178082191782 -> 8.2 | stated=8.2 | agrees (8.22 at 3 sf)
+=== §11 Dmin row
+ 79 | §11 Dmin row | fmin = v̄ × target, 100 mg/mL | exact=7.300 | double=7.29999999999999982236431605997495353221893310546875 | disp(2sf)=7.3 % | chain=7.3 -> 7.3 | stated=7.3 | agrees 
+ 80 | §11 Dmin row | fmin = v̄ × target, 10 mg/mL | exact=0.7300 | double=0.729999999999999982236431605997495353221893310546875 | disp(2sf)=0.73 % | chain=0.73 -> 0.73 | stated=0.73 | agrees 
+ 81 | §11 Dmin row | fmin = v̄ × target, 13.7 mg/mL | exact=1.000100 | double=1.0000999999999999889865875957184471189975738525390625 | disp(1sf)=1 % | chain=1.0001 -> 1 | stated=1 | agrees 
+ 82 | §5 notation / FL-05 | fmin = v̄ × content ÷ F = v̄ × target in the target direction | F = content ÷ target | agrees
+=== §11 Dmin assumption rows
+ 83 | §11 assumption 3 | 0.70 ÷ 0.73 | exact=0.958904109589041095890410958904109589041095890410958904109589 | double=0.95890410958904104266053991523222066462039947509765625 | disp(3sf)=0.959 | chain=0.958904109589041 -> 0.959 | stated=0.959 | agrees 
+ 84 | §11 assumption 3 | Dmin exceeds own displacement: 0.73 ÷ 0.70 − 1 | exact=4.28571428571428571428571428571428571428571428571428571428600 | double=4.28571428571428558740308289998210966587066650390625 | disp(1sf)=4 % | chain=4.285714285714293 -> 4 | stated=4 | agrees (4.29 %; 1 − 0.959 gives 4.11 %; both ≈ 4 %)
+ 85 | §11 assumption 3 | over-correction (0.73 − 0.70) × 0.1 g/mL | exact=0.300 | double=0.299999999999999988897769753748434595763683319091796875 | disp(1sf)=0.3 % | chain=0.30000000000000027 -> 0.3 | stated=0.3 | agrees (exact conc excess 0.003/0.997 = 0.301 %)
+=== §6 invariance departure table — simulation (target direction; see report for assumptions)
+  log-uniform content 1e-3..1e3 mg, target 1..316 mg/mL, ratio 1..50 | seed 20260928 | kept 52000, rejected by HI-08 8000 | worst ulp/rel {'6sf': 5, '7sf': 1, 'D6': 4, 'relD3': Decimal('0.00450323317802850113007595293967693256644459668920749013886392'), 'relD3_f': 0.9722} | miss rate {'6sf': 30.18, '7sf': 3.57, 'D6': 5.84} % | first differing sf (3-sf D) {'4th': 15132, '5th': 20620, '6th': 9544, '<=3rd sf': 1611}
+  log-uniform content 1e-3..1e3 mg, target 1..316 mg/mL, ratio 1..50 | seed 7 | kept 52122, rejected by HI-08 7878 | worst ulp/rel {'6sf': 5, '7sf': 1, 'D6': 3, 'relD3': Decimal('0.00444906147012465969336581172087691646367674451927210202034675'), 'relD3_f': 0.9158} | miss rate {'6sf': 30.0, '7sf': 3.46, 'D6': 5.54} % | first differing sf (3-sf D) {'4th': 14952, '5th': 20677, '6th': 9624, '<=3rd sf': 1690}
+  log content/target, ratio uniform 1..50 | seed 20260928 | kept 43654, rejected by HI-08 16346 | worst ulp/rel {'6sf': 4, '7sf': 1, 'D6': 3, 'relD3': Decimal('0.00455296547039322202009972765556659936195971302773245649677958'), 'relD3_f': 0.9598} | miss rate {'6sf': 29.37, '7sf': 3.36, 'D6': 7.86} % | first differing sf (3-sf D) {'4th': 16754, '5th': 18073, '6th': 4716, '<=3rd sf': 2087}
+  log content/target, ratio uniform 1..50 | seed 7 | kept 43893, rejected by HI-08 16107 | worst ulp/rel {'6sf': 5, '7sf': 1, 'D6': 3, 'relD3': Decimal('0.00459517734465046544797657098195685824896676935615817628328919'), 'relD3_f': 0.9536} | miss rate {'6sf': 29.36, '7sf': 3.37, 'D6': 7.83} % | first differing sf (3-sf D) {'4th': 16769, '5th': 18151, '6th': 4829, '<=3rd sf': 2103}
+  uniform target 1..316, log content, ratio uniform 1..50 | seed 20260928 | kept 16834, rejected by HI-08 43166 | worst ulp/rel {'6sf': 5, '7sf': 1, 'D6': 4, 'relD3': Decimal('0.00458925458237681407507262413862320324671420987688285275564155'), 'relD3_f': 0.9616} | miss rate {'6sf': 30.85, '7sf': 3.68, 'D6': 15.17} % | first differing sf (3-sf D) {'4th': 9994, '5th': 4037, '6th': 561, '<=3rd sf': 2086}
+  uniform target 1..316, log content, ratio uniform 1..50 | seed 7 | kept 16902, rejected by HI-08 43098 | worst ulp/rel {'6sf': 5, '7sf': 1, 'D6': 4, 'relD3': Decimal('0.00448585572144219273370419042161115337871886331973084865671347'), 'relD3_f': 0.9433} | miss rate {'6sf': 31.56, '7sf': 3.79, 'D6': 15.61} % | first differing sf (3-sf D) {'4th': 10096, '5th': 3994, '6th': 539, '<=3rd sf': 2086}
+=== displayed-value tie gaps (C7-FX-12 / FX-06 'closest approach')
+  FX-05 TS conc 100.000 mg/mL                   | exact 100 | nearest tie 99.99995 | gap 5.000E-5 | per own step 0.050 | relative 5.000E-7
+  FX-05 F 1.00 mL                               | exact 1 | nearest tie 0.9995 | gap 5.000E-4 | per own step 0.050 | relative 5.000E-4
+  FX-05 D 0.0730 mL                             | exact 0.073 | nearest tie 0.07295 | gap 5.000E-5 | per own step 0.500 | relative 6.849E-4
+  FX-05 f 7.30 %                                | exact 7.3 | nearest tie 7.295 | gap 5.000E-3 | per own step 0.500 | relative 6.849E-4
+  FX-05 Vd' 0.927 mL (unrounded 0.927)          | exact 0.927 | nearest tie 0.9275 | gap 5.000E-4 | per own step 0.500 | relative 5.394E-4
+  FX-05 Fa 1.00 mL                              | exact 1 | nearest tie 0.9995 | gap 5.000E-4 | per own step 0.050 | relative 5.000E-4
+  FX-05 Ca 80.0000 mg/mL                        | exact 80 | nearest tie 79.99995 | gap 5.000E-5 | per own step 0.500 | relative 6.250E-7
+  FX-05 shortfall 6.80 %                        | exact 6.80335507921714818266542404473438956197576887232059645852749 | nearest tie 6.805 | gap 1.645E-3 | per own step 0.164 | relative 2.418E-4
+  FX-06 Dmin 0.0584 mL                          | exact 0.0584 | nearest tie 0.05845 | gap 5.000E-5 | per own step 0.500 | relative 8.562E-4
+  FX-06 diluent 0.942 mL (unrounded 0.9416)     | exact 0.9416 | nearest tie 0.9415 | gap 1.000E-4 | per own step 0.100 | relative 1.062E-4
+  FX-06 Fa 1.00 mL (1.0004)                     | exact 1.0004 | nearest tie 0.9995 | gap 9.000E-4 | per own step 0.090 | relative 8.996E-4
+  FX-06 Ca at most 79.9680                      | exact 79.9680127948820471811275489804078368652538984406237504998001 | nearest tie 79.96805 | gap 3.721E-5 | per own step 0.372 | relative 4.653E-7
+  FX-06 fmin 5.84 %                             | exact 5.8400 | nearest tie 5.835 | gap 5.000E-3 | per own step 0.500 | relative 8.562E-4
+  FX-06 1.00 entered: Ca 75.5858                | exact 75.5857898715041572184429327286470143613000755857898715041572 | nearest tie 75.58575 | gap 3.987E-5 | per own step 0.399 | relative 5.275E-7
+  FX-06 1.00 entered: fmin 5.52 %               | exact 5.51776266061980347694633408919123204837490551776266061980348 | nearest tie 5.515 | gap 2.763E-3 | per own step 0.276 | relative 5.007E-4
+  FX-06 1.00 entered: Fa 1.06 (1.0584)          | exact 1.0584 | nearest tie 1.055 | gap 3.400E-3 | per own step 0.340 | relative 3.212E-3
+  FX-06 1.0044: Dmin 0.000733 mL                | exact 0.000733212 | nearest tie 0.0007335 | gap 2.880E-7 | per own step 0.288 | relative 3.928E-4
+  FX-06 1.0044: diluent 1.00 (1.003666788)      | exact 1.003666788 | nearest tie 1.005 | gap 1.333E-3 | per own step 0.133 | relative 1.328E-3
+  FX-06 1.0044: Fa 1.00 (1.000733212)           | exact 1.000733212 | nearest tie 0.9995 | gap 1.233E-3 | per own step 0.123 | relative 1.232E-3
+  FX-06 1.0044: Ca at most 1.00366              | exact 1.00366410143685727900074930260234033283987780751299777987182 | nearest tie 1.003665 | gap 8.986E-7 | per own step 0.090 | relative 8.953E-7
+  FX-06 1.0044: fmin 0.0730 % (not stated)      | exact 0.07300 | nearest tie 0.07295 | gap 5.000E-5 | per own step 0.500 | relative 6.849E-4
+  FX-17 D 0.000876 mL                           | exact 0.000876 | nearest tie 0.0008765 | gap 5.000E-7 | per own step 0.500 | relative 5.708E-4
+  FX-17 diluent 1.00 (1.004524)                 | exact 1.004524 | nearest tie 1.005 | gap 4.760E-4 | per own step 0.048 | relative 4.739E-4
+  FX-17 Fa 1.00 (1.000876)                      | exact 1.000876 | nearest tie 0.9995 | gap 1.376E-3 | per own step 0.138 | relative 1.375E-3
+  FX-17 Ca 1.00452                              | exact 1.00452004044457055619277512898700738153377641186320782994097 | nearest tie 1.004525 | gap 4.960E-6 | per own step 0.496 | relative 4.937E-6
+  FX-17 target 1.00000                          | exact 1 | nearest tie 0.9999995 | gap 5.000E-7 | per own step 0.050 | relative 5.000E-7
+  FX-17 f 0.0871 %                              | exact 0.0871295006962403023672170280485378953650288442410980704197334 | nearest tie 0.08715 | gap 2.050E-5 | per own step 0.205 | relative 2.353E-4
+  FX-17 departure 0.452 %                       | exact 0.45200404445705561927751289870073815337764118632078299409700 | nearest tie 0.4525 | gap 4.960E-4 | per own step 0.496 | relative 1.097E-3
+  FL-08/FX-11 overstatement (7.87 %)            | exact 7.87486515641855447680690399137001078748651564185544768069040 | nearest tie 7.875 | gap 1.348E-4 | per own step 0.013 | relative 1.712E-5
+  FL-08/FX-11 shortfall 6.80 %                  | exact 6.80335507921714818266542404473438956197576887232059645852749 | nearest tie 6.805 | gap 1.645E-3 | per own step 0.164 | relative 2.418E-4
+=== derived, not stated (FX-04, FX-07 carry no expected values)
+  FX-04 (1 mg total, target 1 mg/mL): D 0.00073  Vd 0.99927 -> 0.999  Fa 0.99973 -> 1.00  Ca (total solids) 1.00027  f 0.0730 %  diluent tie gap 0.00023
+  FX-07 second case (1e6 IU, 1e4 IU/mL, 5 mg solids): D 0.00365  f 0.00365 %  Vd 99.99635 -> 100  Fa 100.00365 -> 100  Ca 9999.64 IU/mL
+=== direction pass: labelled bounds against their displayed figures
+  FX-06 80 mg target: Ca 'at most'     unrounded 79.9680127948820471811275489804078368652538984406237504998001 displayed 79.9680 -> displayed figure is NOT a valid upper bound on the unrounded bound (diff -1.279E-5)
+  FX-06 80 mg target: Fa 'at least'    unrounded 1.0004 displayed 1.00 -> displayed figure is a valid lower bound on the unrounded bound (diff -4.000E-4)
+  FX-06 1.00 entered: Ca 'at most'     unrounded 75.5857898715041572184429327286470143613000755857898715041572 displayed 75.5858 -> displayed figure is a valid upper bound on the unrounded bound (diff +1.013E-5)
+  FX-06 1.00 entered: Fa 'at least'    unrounded 1.0584 displayed 1.06 -> displayed figure is NOT a valid lower bound on the unrounded bound (diff +1.600E-3)
+  FX-06 1.0044: Ca 'at most'           unrounded 1.00366410143685727900074930260234033283987780751299777987182 displayed 1.00366 -> displayed figure is NOT a valid upper bound on the unrounded bound (diff -4.101E-6)
+  FX-06 1.0044: Fa 'at least'          unrounded 1.000733212 displayed 1.00 -> displayed figure is a valid lower bound on the unrounded bound (diff -7.332E-4)
+=== summary
+  script rows: 85; DISAGREES: [18, 20, 22]
