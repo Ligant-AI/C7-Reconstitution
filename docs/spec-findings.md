@@ -437,3 +437,30 @@ Pages project `ligant-reconstitution` (Ligant.ai account) behind router Worker
   1366 × 650. A top-level sweep (`verification/ui/sweep-toplevel.js`) now exists;
   it refuses to measure at any other viewport. Logic-tested on the dev server
   (not a measurement). The 349 px register figure stays marked "development build".
+
+## 23. NADIRA's production note under the new data policy (29 September 2026)
+
+Policy (A. Modi, via NADIRA): entered data never leaves the browser, no exceptions;
+usage analytics are collected. Done on C7, deployed and pushed:
+- **Item 1:** the privacy sentence production contradicts is withdrawn on the page
+  ("no tracking … no cookies for advertising, no analytics scripts, and no third
+  party code of any kind runs on this page"); the page states "tool-set text v1.0,
+  one sentence withdrawn … pending version 2". Version 2 wording is A. Modi's with
+  THERON; the other live pages are their tools' own repositories.
+- **Item 3 (URL):** C7 writes no entered value into any URL; a C1 transport envelope
+  read from `#c1=` is now removed from the address once in the import field.
+- **Item 5:** sentinel test run on C7 at the deployed address — pass, trivially
+  (no outbound connection is possible under the current CSP); procedure written
+  for re-running once analytics can report (verification/deploy/sentinel-test.md).
+- **Item 6:** amended acceptances 16 and 17 drafted for review
+  (spec/proposed-amendment-privacy-2026-09-29.md), with the C7-NF-12 conflict and
+  the fragment-transport caveat.
+Checked: the repository is public and **Apache-2.0** when viewed logged out (the
+"MIT" observation is not what the repository shows); ligant.ai's homepage currently
+loads no Google Analytics or Contentsquare script, so the `_ga`/`_cs_*` cookies are
+`.ligant.ai`-scoped and set by something not loading today; `adc.state.v1` is the
+Antigen Density Calculator's and `c4.state.v1` the titration planner's;
+`cyto.state.v1` is in no local source — the older `ligant-bench-tools` Worker or the
+`ligant-tools` Pages project are the likely origins (owner to confirm).
+Owner decisions: which analytics run, the CSP endpoints, Contentsquare and GA4 on
+tool pages, the cookies' scope, and the other tools' localStorage.
