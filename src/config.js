@@ -19,8 +19,8 @@ export const CONFIG = Object.freeze({
   suiteLabel: 'Bench Tools',
   // §14.1 claim 5: the repository is public under the stated licence at go-live.
   // Named on the sibling pattern; it must exist before the page is published.
-  repositoryUrl: 'https://github.com/Ligant-ai/C7-Reconstitution',
-  repositoryLabel: 'github.com/Ligant-ai/C7-Reconstitution',
+  repositoryUrl: 'https://github.com/Ligant-AI/C7-Reconstitution',
+  repositoryLabel: 'github.com/Ligant-AI/C7-Reconstitution',
   contactEmail: 'hello@ligant.ai',
   address: ['3675 Market Street', 'Suite 200', 'Philadelphia PA 19104'],
   doi: null,
