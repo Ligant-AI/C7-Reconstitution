@@ -11,7 +11,8 @@ import { C1_MASS_BASIS, C1_MW_PROVENANCE } from '../engine/declarations.js';
 import { renderDeclarations, renderFlagSummary, renderResult, renderDerivation } from './render.js';
 import { renderPageContent, escapeHtml as esc } from './page-content.js';
 import { PRIVACY_STATEMENT, PRIVACY_DATE } from './privacy.js';
-import { markDataUri } from './mark.js';
+import '@ligant/bench-chrome/chrome.css';
+import { bindCopy, markDataUri } from '@ligant/bench-chrome';
 import { renderHeader, renderFooter, renderDisclaimer, renderColophon } from './chrome.js';
 
 const $ = (id) => document.getElementById(id);
@@ -192,7 +193,7 @@ function init() {
   $('privacy-version').textContent = PRIVACY_DATE;
   $('object-hint').textContent = `The machine-readable object (${SCHEMA.name} ${SCHEMA.version}), carrying the unrounded value of every quantity with its unit, every flag with its reason code and every declaration the result rests on. The result above is rendered from it, so the two cannot disagree.`;
 
-  $('copy-citation').addEventListener('click', () => copyText($('citation-text').textContent, $('copy-citation'), 'Copy'));
+  bindCopy($('site-footer'));
 
   fillUnits($('content-unit'), [['mass', CONTENT_UNITS.filter((u) => u.family === FAMILY.MASS)], ['activity', CONTENT_UNITS.filter((u) => u.family !== FAMILY.MASS)]]);
   fillUnits($('solids-unit'), [['', SOLIDS_UNITS]]);
