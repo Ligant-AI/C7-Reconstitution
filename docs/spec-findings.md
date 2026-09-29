@@ -464,3 +464,22 @@ Antigen Density Calculator's and `c4.state.v1` the titration planner's;
 `ligant-tools` Pages project are the likely origins (owner to confirm).
 Owner decisions: which analytics run, the CSP endpoints, Contentsquare and GA4 on
 tool pages, the cookies' scope, and the other tools' localStorage.
+
+## 24. Cloudflare Web Analytics allowed and disclosed (A. Modi's decision, 29 September 2026)
+
+"Cloudflare analytics; we don't have Contentsquare running; the only thing we use is
+Cloudflare traffic analytics." Implemented and deployed: the CSP allows exactly the
+beacon script and `https://benchtools.ligant.ai/cdn-cgi/rum`, nothing else (the
+Dilution Planner's allowance, verbatim); the privacy statement's third paragraph now
+names it, in A. Modi's own wording as published on the Dilution Planner since 24
+September, pending version 2; `check-headers.mjs` now fails on any undisclosed
+source. **Sentinel test with the analytics live: pass** — the beacon works (report
+204), and no report carries any entered value or the transport fragment (its
+`cleanLocation` strips fragment and query). **C7-NF-12** ("every script … from the
+page's own origin") now conflicts with the decision; the proposed amendment
+(spec/proposed-amendment-privacy-2026-09-29.md) carries the exception for the
+owner to adopt. **For THERON:** the report also carries browser and OS version and
+the cleaned referrer, which the wording does not name. **Open for the owner:** the
+`_ga`/`_cs_*` cookies — not set by any current page — are still present on
+`.ligant.ai`; if Contentsquare and GA are not used, they are leftovers whose setter
+should be found and removed.
