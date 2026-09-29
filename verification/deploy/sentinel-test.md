@@ -71,3 +71,25 @@ be read, not only URLs.
 **For THERON (disclosure):** the report also carries browser engine and version, OS
 version and the (cleaned) referrer; the page's wording names page, frequency,
 approximate location and load speed, but not those.
+
+## C7, 29 September 2026, 22:39 UTC: after Google Analytics went live behind the banner (engine 0.1.1)
+
+Deployed commit `260829a`, https://benchtools.ligant.ai/reconstitution/.
+Chrome (Playwright), bench-chrome `scripts/check-consent.mjs`, run once on a fresh
+load and once arriving through a `#c1=` transport link carrying a sentinel.
+
+- First load: the privacy banner shown; no request to Google, no cookie, no
+  storage.
+- Sentinels typed into all 4 editable fields before and after clicking Allow,
+  each field left so change and blur fired; the transport link's payload was a
+  sentinel too. Every request URL and body searched for each sentinel in
+  plain, URL-encoded, base64 and base64url form: **0 hits.**
+- After Allow the Google tag loaded, and its hits were recorded and aborted by
+  the check. GA cookies `_ga` and `_ga_9V1GYE3KRX`, host-only. Withdrawal
+  through Privacy choices deleted them; the next load made no Google request.
+  With a Global Privacy Control signal: no banner, no Google.
+- `check-headers.mjs` at the same address: no server-side failure
+  (`report-2026-09-29-ga.md`).
+- **Analytics endpoints observed:** the Cloudflare Web Analytics beacon script,
+  for every visitor; and only after Allow, `www.googletagmanager.com/gtag/js`,
+  `www.google-analytics.com/g/collect` and `www.google.com/g/collect`.
