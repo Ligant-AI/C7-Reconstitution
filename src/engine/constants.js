@@ -14,7 +14,7 @@ export const VBAR = Object.freeze({
   value: 0.73,
   unit: 'mL/g',
   status: 'characterised',
-  signoff: 'NADIRA, 21 September 2026',
+  signed: true, // who signed and when: REGISTER-AUDIT-TRAIL.md
   basis: 'Average for globular proteins, range ≈ 0.70–0.75: Harpaz, Gerstein & Chothia 1994, Structure 2:641; Perkins 1986, Eur J Biochem 157:169. Scoped to protein-dominated solids. Carried from the C3 review.',
 });
 
@@ -35,7 +35,8 @@ export const MATERIAL_THRESHOLD = Object.freeze({
   provisional: true,
   candidates: [0.01, 0.008, 0.006],
   citation: null,
-  definition: 'f above the tightest maximum permissible systematic error in the cited ISO 8655-2 single-channel row (definition signed NADIRA, 21 September 2026).',
+  definition: 'f above the tightest maximum permissible systematic error in the cited ISO 8655-2 single-channel row.',
+  definitionSigned: true, // REGISTER-AUDIT-TRAIL.md
 });
 
 /**

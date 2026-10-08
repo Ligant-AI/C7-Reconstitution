@@ -31,7 +31,7 @@ export const PRECISION_STATEMENT = 'Volumes are displayed to 3 significant figur
 const A_ADDITIVE = 'Volumes are additive: final volume = diluent volume + solids mass × v̄. The correction beats no correction for solids whose mass-weighted v̄ exceeds 0.365 mL/g — protein-, sugar- and polyol-dominated solids; for salt-dominated solids it is not guaranteed.';
 const A_DMIN_POLICY = 'Where the total solids mass is not known, mass-based reagent-alone content is corrected for the reagent\'s own volume only (Dmin) and its concentration is reported as an upper bound; for activity content or content basis not recorded no correction is applied and no bound is available.';
 const A_PROTEIN = 'The reagent is a protein, within the scope of v̄. Dmin is a lower bound only to within v̄\'s scope error: a reagent whose true v̄ is 0.70 mL/g displaces 0.959 × Dmin.';
-const A_NO_SHRINK = 'The solids other than the reagent do not reduce the solution volume. Whether any common lyophilisation excipient has a small or negative apparent volume at the relevant concentrations is not established (outstanding item 2).';
+const A_NO_SHRINK = 'The solids other than the reagent do not reduce the solution volume. Whether any common lyophilisation excipient has a small or negative apparent volume at the relevant concentrations is not established here.';
 const A_DISSOLVE = 'The solids dissolve completely into the diluent.';
 
 const UPPER_BOUND_REASON = 'The total solids mass is not declared, so only the reagent\'s own volume (Dmin = content × v̄) has been applied as displacement; carrier and excipient displacement is not included. The concentration obtained is below the reported value by an amount that cannot be computed from the declared inputs.';

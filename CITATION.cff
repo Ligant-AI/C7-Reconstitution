@@ -17,7 +17,7 @@ authors:
   - family-names: Modi
     given-names: A.B.
     affiliation: Ligant AI Incorporated
-version: v0.1.1
+version: v0.1.2
 license: Apache-2.0
 repository-code: https://github.com/Ligant-AI/C7-Reconstitution
 url: https://benchtools.ligant.ai/reconstitution/

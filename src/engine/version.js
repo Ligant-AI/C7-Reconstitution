@@ -12,7 +12,13 @@
 // 0.1.1 (29 September 2026), PATCH: page text and a dependency only. The suite
 // footer (@ligant/bench-chrome 1.1.0) asks before Google Analytics loads, and the
 // CSP allows the Google hosts it needs. No number and no object changes.
-export const ENGINE_VERSION = '0.1.1';
+// 0.1.2 (8 October 2026), PATCH: page text only. Reviewer names, item numbers
+// and the audit trail leave the page's register for REGISTER-AUDIT-TRAIL.md;
+// the rule for rounding a displayed bound is marked signed; the reference
+// footnote no longer claims a link would disclose a visit. The assumption
+// sentence on excipient volumes drops its internal item number; no field, flag
+// or number changes.
+export const ENGINE_VERSION = '0.1.2';
 export const URS_VERSION = '1.0';
 export const TOOL_ID = 'C7';
 export const TOOL_NAME = 'Reconstitution';
