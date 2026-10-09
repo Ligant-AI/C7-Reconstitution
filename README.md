@@ -52,7 +52,7 @@ Requires Node 22+ and, for the reimplementation test, Python 3.9+.
 
 ## Status
 
-Engine 0.1.2, pre-release. Outstanding before public release (URS §17): the
+Engine 0.1.3, pre-release. Outstanding before public release (URS §17): the
 tolerance derivation memo (the three tolerance-gated tests skip, stating their
 measured discrepancy — 0 on the current cases), the ISO 8655-2 citation, the
 excipient v̄ values, the shared format version, and the deployed-address

@@ -34,8 +34,10 @@ if (!csp) fail.push('no Content-Security-Policy response header (frame-ancestors
 // allow exactly the Cloudflare beacon and reporting endpoint, and the Google
 // Analytics hosts @ligant/bench-chrome 1.1.0 documents. Google is never loaded by
 // the served HTML, so a Google resource in the HTML is still a failure below.
+// @ligant/bench-chrome 1.3.0 adds the footer's newsletter signup, which posts
+// same-origin to /api/subscribe only when a visitor submits an email address.
 const GOOGLE_CONNECT = ['https://*.google-analytics.com', 'https://*.analytics.google.com', 'https://*.googletagmanager.com', 'https://www.google.com', 'https://*.g.doubleclick.net'];
-const DISCLOSED = { script: ['https://static.cloudflareinsights.com/beacon.min.js', 'https://static.cloudflareinsights.com/beacon.min.js/', 'https://www.googletagmanager.com'], connect: [`${origin}/cdn-cgi/rum`, ...GOOGLE_CONNECT] };
+const DISCLOSED = { script: ['https://static.cloudflareinsights.com/beacon.min.js', 'https://static.cloudflareinsights.com/beacon.min.js/', 'https://www.googletagmanager.com'], connect: [`${origin}/cdn-cgi/rum`, `${origin}/api/subscribe`, ...GOOGLE_CONNECT] };
 for (const d of ["default-src 'self'", "frame-ancestors 'none'"]) if (csp && !csp.includes(d)) fail.push(`CSP header lacks ${d}`);
 const directive = (name) => ((new RegExp(`${name}\\s+([^;]*)`).exec(csp) || [])[1] || '').trim().split(/\s+/).filter(Boolean);
 const scriptSrc = directive('script-src'); const connectSrc = directive('connect-src');

@@ -12,12 +12,12 @@ abstract: >-
   volume basis and whole-vial reconstitution, corrects for the volume the dry
   solids occupy, and reports an upper bound where only the reagent's own volume
   can be corrected. No model and no inference is applied to any reported value,
-  and no data entered by a user leaves the browser.
+  and no data entered into the tool's fields leaves the browser.
 authors:
   - family-names: Modi
     given-names: A.B.
     affiliation: Ligant AI Incorporated
-version: v0.1.2
+version: v0.1.3
 license: Apache-2.0
 repository-code: https://github.com/Ligant-AI/C7-Reconstitution
 url: https://benchtools.ligant.ai/reconstitution/
