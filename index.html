@@ -6,10 +6,11 @@
   <!-- Every resource from the page's own origin (C7-NF-12), except the analytics
        A. Modi decided on 29 September 2026: Cloudflare Web Analytics for every visitor,
        and Google Analytics only after Allow in the suite footer's banner. The CSP allows
-       exactly the Cloudflare beacon and reporting endpoint and the Google Analytics
-       hosts, and nothing else; no user-entered data is ever sent (C7-NF-01), which the
-       sentinel test verifies. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js/ https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://benchtools.ligant.ai/cdn-cgi/rum https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'none'">
+       exactly the Cloudflare beacon and reporting endpoint, the Google Analytics hosts,
+       and the suite footer's newsletter signup endpoint (/api/subscribe, used only when a
+       visitor submits an email address there), and nothing else; nothing entered into the
+       tool's fields is ever sent (C7-NF-01), which the sentinel test verifies. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js/ https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://benchtools.ligant.ai/cdn-cgi/rum https://benchtools.ligant.ai/api/subscribe https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'none'">
   <!-- frame-ancestors cannot be set from a meta element; it is set in the response header, public/_headers. -->
   <link rel="icon" id="favicon" href="data:,">
   <meta name="referrer" content="no-referrer">
@@ -227,7 +228,7 @@
             </div>
           </div>
         </section>
-        <p class="hint">Nothing entered here is stored or transmitted. Reloading the page clears every field.</p>
+        <p class="hint">Nothing entered into this tool's fields is stored or transmitted. Reloading the page clears every field.</p>
       </form>
 
       <section class="panel method-panel" id="page-content" aria-labelledby="about-heading">

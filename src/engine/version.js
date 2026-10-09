@@ -18,7 +18,12 @@
 // footnote no longer claims a link would disclose a visit. The assumption
 // sentence on excipient volumes drops its internal item number; no field, flag
 // or number changes.
-export const ENGINE_VERSION = '0.1.2';
+// 0.1.3 (9 October 2026), PATCH: page text and a dependency only. The suite
+// footer (@ligant/bench-chrome 1.3.0) adds a newsletter signup, posting
+// same-origin to /api/subscribe, which the CSP now allows; the privacy statement
+// is the suite's new standard one, and the form hint's claim is scoped to the
+// tool's own fields. No number and no object changes.
+export const ENGINE_VERSION = '0.1.3';
 export const URS_VERSION = '1.0';
 export const TOOL_ID = 'C7';
 export const TOOL_NAME = 'Reconstitution';
