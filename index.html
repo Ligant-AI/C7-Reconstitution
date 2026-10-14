@@ -45,8 +45,8 @@
             <div class="field">
               <span class="label">What do you know, and what do you want computed?</span>
               <div class="radios stacked">
-                <label><input type="radio" name="direction" value="target"> <span><strong>target → volumes</strong> — enter a target concentration; the diluent and final volumes are computed</span></label>
-                <label><input type="radio" name="direction" value="volume"> <span><strong>volume → concentration</strong> — enter a volume, such as the datasheet's "reconstitute in 1 mL"; the concentration is computed</span></label>
+                <label><input type="radio" name="direction" value="target"> <span><strong>target → volumes</strong>: enter a target concentration; the diluent and final volumes are computed</span></label>
+                <label><input type="radio" name="direction" value="volume"> <span><strong>volume → concentration</strong>: enter a volume, such as the datasheet's "reconstitute in 1 mL"; the concentration is computed</span></label>
               </div>
             </div>
           </div>
@@ -72,8 +72,8 @@
             <div class="field" id="basis-field">
               <span class="label">What the stated content is the content of</span>
               <div class="radios stacked">
-                <label><input type="radio" name="content-basis" value="reagent-alone"> <span><strong>the reagent alone</strong> — the amount of the protein or molecule of interest, exclusive of carrier and excipient</span></label>
-                <label><input type="radio" name="content-basis" value="total-vial-contents"> <span><strong>the total vial contents</strong> — including carrier protein, excipient and buffer salts, as in "1 mg total protein"</span></label>
+                <label><input type="radio" name="content-basis" value="reagent-alone"> <span><strong>the reagent alone</strong>: the amount of the protein or molecule of interest, exclusive of carrier and excipient</span></label>
+                <label><input type="radio" name="content-basis" value="total-vial-contents"> <span><strong>the total vial contents</strong>: the whole dry mass in the vial (reagent, carrier protein, excipient and buffer salts together)</span></label>
                 <label><input type="radio" name="content-basis" value="not-recorded"> <span><strong>not recorded</strong></span></label>
               </div>
             </div>
@@ -82,7 +82,7 @@
             <div class="field">
               <label for="provenance">Source of the stated content</label>
               <select id="provenance">
-                <option value="">— select —</option>
+                <option value="">select</option>
                 <option value="coa">lot-specific certificate of analysis</option>
                 <option value="nominal">vial label or datasheet (nominal)</option>
                 <option value="weighed">weighed, from bulk</option>
@@ -95,8 +95,8 @@
               <span class="label">Conjugate state</span>
               <div class="radios stacked">
                 <label><input type="radio" name="conjugate" value="none"> <span><strong>not a conjugate</strong></span></label>
-                <label><input type="radio" name="conjugate" value="protein"> <span><strong>a conjugate — the stated mass is of the protein alone</strong>, exclusive of label or payload</span></label>
-                <label><input type="radio" name="conjugate" value="conjugate"> <span><strong>a conjugate — the stated mass is of the conjugate</strong>, including label or payload</span></label>
+                <label><input type="radio" name="conjugate" value="protein"> <span><strong>a conjugate: the stated mass is of the protein alone</strong>, exclusive of label or payload</span></label>
+                <label><input type="radio" name="conjugate" value="conjugate"> <span><strong>a conjugate: the stated mass is of the conjugate</strong>, including label or payload</span></label>
                 <label><input type="radio" name="conjugate" value="not-recorded"> <span><strong>not recorded</strong></span></label>
               </div>
             </div>
@@ -147,7 +147,7 @@
                   <select id="target-unit" class="num"></select>
                 </div>
               </div>
-              <p class="help">The concentration of the final solution — the reconstituted vial as it will exist — and of nothing else. A molar target needs a molecular weight imported from C1.</p>
+              <p class="help">The concentration of the final solution: the reconstituted vial as it will exist, and of nothing else. A molar target needs a molecular weight imported from the Molarity Converter.</p>
             </div>
             <div class="dir-volume" hidden>
               <div class="field-row">
@@ -168,8 +168,8 @@
             <div class="field">
               <span class="label" id="vb-label">Which volume is meant</span>
               <div class="radios stacked">
-                <label><input type="radio" name="volume-basis" value="diluent"> <span><strong>volume of diluent to add</strong> — the volume drawn up and injected into the vial</span></label>
-                <label><input type="radio" name="volume-basis" value="final"> <span><strong>final volume of solution</strong> — the volume the reconstituted vial will contain</span></label>
+                <label><input type="radio" name="volume-basis" value="diluent"> <span><strong>volume of diluent to add</strong>: the volume drawn up and injected into the vial</span></label>
+                <label><input type="radio" name="volume-basis" value="final"> <span><strong>final volume of solution</strong>: the volume the reconstituted vial will contain</span></label>
               </div>
               <p class="help" id="vb-help">Choose a direction first.</p>
             </div>
@@ -195,7 +195,7 @@
                 <select id="min-unit" class="num"></select>
               </div>
             </div>
-            <p class="help" id="min-suggested"><span class="suggested-dot" aria-hidden="true"></span>suggested, not chosen: 2 µL, carried from C4. Replace it with your syringe's or pipette's value.</p>
+            <p class="help" id="min-suggested"><span class="suggested-dot" aria-hidden="true"></span>suggested, not chosen: 2 µL. Replace it with your syringe's or pipette's value.</p>
             <div class="field-row">
               <div class="field">
                 <label for="capacity-value">Vial working capacity <span class="optional">optional, no default</span></label>
@@ -211,12 +211,12 @@
 
         <section class="panel" id="import-panel">
           <div class="panel-head">
-            <div class="titles"><h2>Molecular weight from C1</h2></div>
+            <div class="titles"><h2>Molecular weight from the Molarity Converter</h2></div>
             <span class="optional">optional, for a molar target or molar form</span>
           </div>
           <div class="panel-body stack">
             <div class="field">
-              <label for="import-text">Paste the C1 transport link or envelope</label>
+              <label for="import-text">Molarity Converter transport link (not yet available from the Molarity Converter)</label>
               <textarea id="import-text" rows="2" class="num" placeholder="https://benchtools.ligant.ai/…#c1=…"></textarea>
               <p class="help" id="import-status"></p>
             </div>
@@ -227,7 +227,7 @@
 
       <section class="panel method-panel" id="page-content" aria-labelledby="about-heading">
         <div class="panel-head">
-          <div class="titles"><h2 id="about-heading">Method, register and limits</h2></div>
+          <div class="titles"><h2 id="about-heading">About this calculator</h2></div>
         </div>
         <div class="panel-body prose" id="page-content-body"></div>
       </section>

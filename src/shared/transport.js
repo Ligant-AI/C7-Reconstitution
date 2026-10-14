@@ -35,7 +35,7 @@ const MESSAGES = {
     'not-decodable': 'The imported object could not be decoded. The link is incomplete or was altered in transit; ask for it again rather than repairing it by hand.',
     'not-an-envelope': 'The imported data is not a result object from this tool set. It carries no envelope and no integrity check, so there is nothing to check it against; a bare object pasted without its envelope is not accepted.',
     'unsupported-version': 'The imported object uses a transport version this tool does not read. The tool that produced it is newer than this one.',
-    'wrong-kind': 'The imported object is not of the kind this tool expected. A C1 molecular weight was expected and something else arrived.',
+    'wrong-kind': 'The imported object is not of the kind this tool expected. A Molarity Converter molecular weight was expected and something else arrived.',
     'checksum-mismatch': 'The imported object failed its integrity check: it was truncated, corrupted, or had fields removed after it was produced. It has not been used. This check detects accidental damage; it cannot detect a deliberate edit, because anyone editing the object can recompute the check.',
     'flags-missing': 'The imported object carries no flag list at all. An absent list is not the same as an empty one, and a value that arrived stripped of what qualifies it cannot be accepted.',
 };
@@ -74,13 +74,13 @@ export function readC1(payload) {
     const fail = (m) => ({ ok: false, message: m });
     const toolId = typeof payload.tool === 'object' && payload.tool ? payload.tool.id : payload.tool;
     if (toolId !== 'C1')
-        return fail('The imported object is not from C1: a molecular weight enters this tool only inside a C1 result object.');
+        return fail('The imported object is not from the Molarity Converter: a molecular weight enters this tool only inside a Molarity Converter result object.');
     const mw = payload.quantities?.molecularWeight;
     if (!mw || typeof mw.value !== 'number' || !(mw.value > 0) || !['g/mol', 'kDa', 'Da'].includes(mw.unit))
-        return fail('The C1 object carries no positive molecular weight with a unit (g/mol or kDa).');
+        return fail('The Molarity Converter object carries no positive molecular weight with a unit (g/mol or kDa).');
     const massBasis = payload.declarations?.massBasis;
     if (!['assembled', 'monomer', 'conjugate', 'not-recorded'].includes(massBasis))
-        return fail('The C1 object carries no mass-basis declaration; it cannot be paired with the content (§8).');
+        return fail('The Molarity Converter object carries no mass-basis declaration; it cannot be paired with the content (§8).');
     const provenance = payload.declarations?.molecularWeightProvenance || 'not-recorded';
     const mwGperMol = mw.unit === 'kDa' ? mw.value * 1e3 : mw.value;
     return {

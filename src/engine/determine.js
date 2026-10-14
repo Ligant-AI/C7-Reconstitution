@@ -2,13 +2,13 @@ import * as U from './units.js';
 import { parseEntered, roundDec, sig, sigDirected, pct, signedPct, signedPctUp, Dec } from './numfmt.js';
 import { VBAR, MATERIAL_THRESHOLD, PRECISION, SUGGESTED_MIN_TRANSFER, TOLERANCES } from './constants.js';
 import { DIRECTION, CONTENT_BASIS, PROVENANCE, CONJUGATE, CARRIER, VOLUME_BASIS, C1_MASS_BASIS, C1_MW_PROVENANCE, pairing } from './declarations.js';
-import { ENGINE_VERSION, URS_VERSION, TOOL_ID, TOOL_NAME } from './version.js';
+import { ENGINE_VERSION, TOOL_ID, TOOL_NAME } from './version.js';
 import { SCHEMA } from '../shared/result-object.js';
-export const PRIVACY_SCOPE = 'Ligant Bench Tools are free and open source. Research use only, not qualified for GxP decision-making.';
+export const PRIVACY_SCOPE = 'Ligant Bench Tools are free and open source. Research use only. Not qualified for GxP decision-making.';
 export const DETERMINES_NOT_VERIFIES = 'This tool determines a volume or a concentration. It does not verify what was delivered or whether the solids dissolved.';
-export const HI08_SENTENCE = 'The unattainable-volume rejection (C7-HI-08) is a sign-change guard at about 1370 mg/mL of total solids; it will not fire on any real reconstitution, and its silence is not a plausibility check.';
+export const HI08_SENTENCE = 'The unattainable-volume rejection is a sign-change guard at about 1370 mg/mL of total solids; it will not fire on any real reconstitution, and its silence is not a plausibility check.';
 export const PRECISION_STATEMENT = 'Volumes are displayed to 3 significant figures and concentrations to 6; fractions and percentages to 3. Rounding is half away from zero, on the exact binary value, except for a bound: an "at most" concentration is rounded up and an "at least" final volume down, so that the figure shown is itself a bound. The final volume shown is rounded. The concentration is computed from the diluent volume as displayed and the displacement applied, not from the rounded final volume.';
-const A_ADDITIVE = 'Volumes are additive: final volume = diluent volume + solids mass × v̄. The correction beats no correction for solids whose mass-weighted v̄ exceeds 0.365 mL/g — protein-, sugar- and polyol-dominated solids; for salt-dominated solids it is not guaranteed.';
+const A_ADDITIVE = 'Volumes are additive: final volume = diluent volume + solids mass × v̄. The correction beats no correction for solids whose mass-weighted v̄ exceeds 0.365 mL/g: protein-, sugar- and polyol-dominated solids; for salt-dominated solids it is not guaranteed.';
 const A_DMIN_POLICY = 'Where the total solids mass is not known, mass-based reagent-alone content is corrected for the reagent\'s own volume only (Dmin) and its concentration is reported as an upper bound; for activity content or content basis not recorded no correction is applied and no bound is available.';
 const A_PROTEIN = 'The reagent is a protein, within the scope of v̄. Dmin is a lower bound only to within v̄\'s scope error: a reagent whose true v̄ is 0.70 mL/g displaces 0.959 × Dmin.';
 const A_NO_SHRINK = 'The solids other than the reagent do not reduce the solution volume. Whether any common lyophilisation excipient has a small or negative apparent volume at the relevant concentrations is not established here.';
@@ -139,13 +139,13 @@ export function determine(input, opts = {}) {
     if (molarTarget) {
         if (isActivity) {
             const p = pairing({ c1Basis: c1?.massBasis || 'not-recorded', c7Basis: 'reagent-activity', conjugate: null });
-            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration, and the content is ${content.text} ${cUnit}. ${p.reason}. A molar target requires a molecular weight imported from C1 and a mass-based content.`);
+            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration, and the content is ${content.text} ${cUnit}. ${p.reason}. A molar target requires a molecular weight imported from the Molarity Converter and a mass-based content.`);
         }
         else if (!c1) {
-            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration, and no molecular weight has been imported. A molar target requires a molecular weight imported from C1 and a mass-based content.`);
+            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration, and no molecular weight has been imported. A molar target requires a molecular weight imported from the Molarity Converter and a mass-based content.`);
         }
         else if (!pair.permitted) {
-            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration. Declared bases: molecular weight — ${pair.bases.c1MassBasis}; content — ${pair.bases.contentBasis}; conjugate — ${pair.bases.conjugate}. ${pair.reason} (§8 pairing table, row ${pair.row}).`);
+            reject('C7-HI-04', `The target is ${target.text} ${targetUnit.symbol}, a molar concentration. Declared bases: molecular weight: ${pair.bases.c1MassBasis}; content: ${pair.bases.contentBasis}; conjugate: ${pair.bases.conjugate}. ${pair.reason}.`);
         }
     }
     if (solids && contentBasis === 'reagent-alone') {
@@ -210,7 +210,7 @@ export function determine(input, opts = {}) {
         if (Dguard !== null && Dguard >= F) {
             const which = direction === 'target' ? `the target ${target.text} ${targetUnit.symbol}` : `the entered final volume ${entered.text} ${volUnit}`;
             const mass = D !== null ? `the total solids mass (${solidsSource === 'the declared total solids mass' ? `${solids.text} ${solidsUnit.symbol}` : `${content.text} ${cUnit}`})` : `the reagent mass (${content.text} ${cUnit}; total solids not declared)`;
-            reject('C7-HI-08', `At ${which}, ${mass} alone would occupy ${sig(U.fromBase(Dguard, volUnit), 3)} ${volUnit} at v̄ = ${VBAR.value} ${VBAR.unit} — the whole of the ${sig(U.fromBase(F, volUnit), 3)} ${volUnit} final volume — so no volume of diluent reaches it.`);
+            reject('C7-HI-08', `At ${which}, ${mass} alone would occupy ${sig(U.fromBase(Dguard, volUnit), 3)} ${volUnit} at v̄ = ${VBAR.value} ${VBAR.unit}, the whole of the ${sig(U.fromBase(F, volUnit), 3)} ${volUnit} final volume, so no volume of diluent reaches it.`);
             return done('rejected', { declarations, incomplete: [], rejections, c1 });
         }
         Vd = mut('Vd', F - Dapp, {});
@@ -238,7 +238,7 @@ export function determine(input, opts = {}) {
     const overFactor = D !== null && knownVolume === 'diluent' ? F / VdPrimeBase : null;
     const overFrac = D !== null && knownVolume === 'diluent' ? D / VdPrimeBase : null;
     if (overFactor !== null && !(Number.isFinite(overFactor) && Number.isFinite(overFrac)))
-        return unrepresentable(declarations, c1, threshold, 'the C7-FL-08 overstatement factor 1 ÷ (1 − f)');
+        return unrepresentable(declarations, c1, threshold, 'the overstatement factor 1 ÷ (1 − f)');
     const volDisp = (x) => sig(U.fromBase(x, volUnit), PRECISION.volumes);
     const VdPrimeDisplay = VdEntered ? entered.text : Dec.toString(VdPrimeDec);
     const faIsLowerBound = treatment === 'reagent-own-volume-only';
@@ -269,17 +269,17 @@ export function determine(input, opts = {}) {
     }
     else if (treatment === 'reagent-own-volume-only') {
         concLabel = 'at-most';
-        concLabelText = `at most — ${at}`;
+        concLabelText = `at most: ${at}`;
     }
     else {
         concLabel = 'uncorrected-for-displacement';
         concLabelText = 'uncorrected for displacement';
     }
-    const concOf = contentBasis === 'total-vial-contents' ? 'total solids — reagent, carrier and excipient together'
+    const concOf = contentBasis === 'total-vial-contents' ? 'total solids: reagent, carrier and excipient together'
         : contentBasis === 'not-recorded' ? 'the stated content (basis not recorded)'
             : contentBasis === 'reagent-activity' ? 'the reagent (activity)'
-                : conjugate === 'protein' ? 'the reagent — the protein alone, exclusive of label or payload'
-                    : conjugate === 'conjugate' ? 'the reagent — the conjugate, including label or payload'
+                : conjugate === 'protein' ? 'the reagent: the protein alone, exclusive of label or payload'
+                    : conjugate === 'conjugate' ? 'the reagent: the conjugate, including label or payload'
                         : 'the reagent';
     let targetOut = null;
     if (direction === 'target') {
@@ -312,22 +312,22 @@ export function determine(input, opts = {}) {
     const flag = (code, title, message, evaluatedOn, payload = {}) => flags.push({ code, title, message, evaluatedOn, payload });
     const known = knownVolume === 'final';
     if (contentBasis === 'total-vial-contents')
-        flag('C7-FL-01', 'Concentration is of total solids, not the reagent', 'The concentration computed is of total solids — reagent, carrier and excipient together — and is not the concentration of the reagent. Where a carrier protein is present, the reagent\'s concentration may be lower by a large factor. This tool cannot determine it.', 'the content declaration');
+        flag('C7-FL-01', 'Concentration is of total solids, not the reagent', 'The concentration computed is of total solids: reagent, carrier and excipient together, and is not the concentration of the reagent. Where a carrier protein is present, the reagent\'s concentration may be lower by a large factor. This tool cannot determine it.', 'the content declaration');
     if (contentBasis === 'not-recorded')
         flag('C7-FL-02', 'Content basis not recorded', 'Whether the stated content refers to the reagent alone or to the total vial contents is not recorded; the resulting concentration cannot be interpreted and should not be carried into a method record without it.', 'the content declaration');
     if (provenance === 'nominal')
         flag('C7-FL-03', 'Nominal fill, not the lot\'s measured content', 'The content figure is the nominal fill, not the lot\'s measured content. A lot-specific certificate, where one exists, states what the vial actually held.', 'the provenance declaration');
     if (provenance === 'not-recorded')
         flag('C7-FL-04', 'Content provenance not recorded', 'Content provenance not recorded; the stock cannot be traced to a source.', 'the provenance declaration');
-    const thresholdText = `${pct(threshold)} %${threshold === MATERIAL_THRESHOLD.value && MATERIAL_THRESHOLD.provisional ? ' (provisional placeholder; the ISO 8655-2 citation is outstanding)' : threshold !== MATERIAL_THRESHOLD.value ? ' (configured for this determination)' : ''}`;
+    const thresholdText = `${pct(threshold)} %${threshold !== MATERIAL_THRESHOLD.value ? ' (configured for this determination)' : ''}`;
     if (treatment !== 'computed') {
         if (treatment === 'reagent-own-volume-only') {
             const exceeds = fmin > threshold;
             const fminRelation = direction === 'target' ? 'v̄ × target' : 'v̄ × content ÷ F';
-            flag('C7-FL-05', 'Displacement not computable — reagent\'s own volume only; concentration is at most', `The volume the dissolved solids occupy cannot be computed because the total solids mass is not known. The displacement has been corrected for the reagent's own volume only (Dmin = content × v̄ = ${volDisp(Dmin)} ${volUnit}); the displacement of carrier and excipient is not included. The concentration reported is therefore an upper bound — "at most" — under the stated assumptions for Dmin, to within v̄'s scope error, and the concentration obtained is below it by an amount that cannot be computed from the declared inputs. The minimum displacement fraction fmin = Dmin ÷ final volume (${fminRelation}) is ${pct(fmin)} %, which ${exceeds ? 'exceeds' : 'does not exceed'} the material threshold of C7-FL-08, ${thresholdText}.`, 'the available inputs; Dmin', { Dmin: q(volDisp(Dmin), volUnit, U.fromBase(Dmin, volUnit)), fmin: { display: `${pct(fmin)} %`, ratioOf: 'Dmin ÷ final volume of the determination', unrounded: fmin }, exceedsThreshold: exceeds, threshold });
+            flag('C7-FL-05', 'Displacement not computable: reagent\'s own volume only; concentration is at most', `The volume the dissolved solids occupy cannot be computed because the total solids mass is not known. The displacement has been corrected for the reagent's own volume only (Dmin = content × v̄ = ${volDisp(Dmin)} ${volUnit}); the displacement of carrier and excipient is not included. The concentration reported is therefore an upper bound ("at most") under the stated assumptions for Dmin, to within v̄'s scope error, and the concentration obtained is below it by an amount that cannot be computed from the declared inputs. The minimum displacement fraction fmin = Dmin ÷ final volume (${fminRelation}) is ${pct(fmin)} %, which ${exceeds ? 'exceeds' : 'does not exceed'} the material threshold, ${thresholdText}.`, 'the available inputs; Dmin', { Dmin: q(volDisp(Dmin), volUnit, U.fromBase(Dmin, volUnit)), fmin: { display: `${pct(fmin)} %`, ratioOf: 'Dmin ÷ final volume of the determination', unrounded: fmin }, exceedsThreshold: exceeds, threshold });
         }
         else {
-            flag('C7-FL-05', 'Displacement not computable — no correction applied', `The volume the dissolved solids occupy cannot be computed because the total solids mass is not known. ${isActivity ? 'The content is stated in activity units, so there is no reagent mass from which a minimum displacement could be computed' : 'The content basis is not recorded, so the stated mass may be total solids, for which the reagent\'s own volume is not a lower bound'}. No correction is applied and no bound is available: the reported concentration overstates the one obtained by an amount that cannot be computed.`, 'the available inputs');
+            flag('C7-FL-05', 'Displacement not computable: no correction applied', `The volume the dissolved solids occupy cannot be computed because the total solids mass is not known. ${isActivity ? 'The content is stated in activity units, so there is no reagent mass from which a minimum displacement could be computed' : 'The content basis is not recorded, so the stated mass may be total solids, for which the reagent\'s own volume is not a lower bound'}. No correction is applied and no bound is available: the reported concentration overstates the one obtained by an amount that cannot be computed.`, 'the available inputs');
         }
     }
     if (cap) {
@@ -339,7 +339,7 @@ export function determine(input, opts = {}) {
     const vdUl = Dec.shift(VdPrimeDec, U.volumeExponentToMicrolitres(volUnit));
     const minUl = Dec.shift(minT.dec, U.volumeExponentToMicrolitres(minUnit.symbol));
     if (Dec.cmp(vdUl, minUl) < 0) {
-        flag('C7-FL-07', 'Diluent below the declared minimum transfer volume', `The diluent volume, ${VdPrimeDisplay} ${volUnit}, is below the declared minimum reliable transfer volume of ${minT.text} ${minUnit.symbol} and cannot be delivered reliably. A lower target concentration, or a vial of different content, is required.`, 'the diluent volume as delivered, Vd′', { diluent: { display: VdPrimeDisplay, unit: volUnit }, minimum: { value: minT.text, unit: minUnit.symbol } });
+        flag('C7-FL-07', 'Diluent below the declared minimum transfer volume', `The diluent volume, ${VdPrimeDisplay} ${volUnit}, is below the declared minimum reliable transfer volume of ${minT.text} ${minUnit.symbol} and cannot be delivered reliably. A lower target concentration (or a larger entered volume), a device that delivers this volume reliably, or a vial with more content is required.`, 'the diluent volume as delivered, Vd′', { diluent: { display: VdPrimeDisplay, unit: volUnit }, minimum: { value: minT.text, unit: minUnit.symbol } });
     }
     if (treatment === 'computed' && f > threshold) {
         const payload = { f: { display: `${pct(f)} %`, ratioOf: 'displacement volume ÷ final volume of the determination', unrounded: f }, threshold, knownVolume };
@@ -349,7 +349,7 @@ export function determine(input, opts = {}) {
             const shortfall = f / (1 + f);
             payload.factor = { display: sig(factor, 3), ratioOf: 'concentration obtained by delivering the final volume as diluent ÷ intended concentration', relation: '1 ÷ (1 + f)', unrounded: factor };
             payload.shortfall = { display: `${pct(shortfall)} %`, ratioOf: 'shortfall of that concentration below the intended one, f ÷ (1 + f)', unrounded: shortfall };
-            msg += `The diluent to add is smaller than the final volume by the displacement. Delivering the final volume as diluent instead gives (content ÷ F) ÷ (1 + f)${direction === 'target' ? ' — the target ÷ (1 + f)' : ''}: a factor of ${sig(factor, 3)}, a shortfall of ${pct(shortfall)} %.`;
+            msg += `The diluent to add is smaller than the final volume by the displacement. Delivering the final volume as diluent instead gives (content ÷ F) ÷ (1 + f)${direction === 'target' ? ' (the target ÷ (1 + f))' : ''}: a factor of ${sig(factor, 3)}, a shortfall of ${pct(shortfall)} %.`;
         }
         else {
             const factor = overFactor;
@@ -361,17 +361,17 @@ export function determine(input, opts = {}) {
         flag('C7-FL-08', `Displacement is material: ${pct(f)} % of the final volume`, msg, 'f on the determination', payload);
     }
     if (c1 && molar.status === 'withheld') {
-        flag('C7-FL-09', 'Molar form withheld', `The molar form is withheld: ${molar.reason} (§8 pairing table, row ${molar.pairingRow}). Declared bases: molecular weight — ${molar.bases.c1MassBasis}; content — ${molar.bases.contentBasis}; conjugate — ${molar.bases.conjugate}. The mass-based result stands.`, 'the declarations', { pairingRow: molar.pairingRow });
+        flag('C7-FL-09', 'Molar form withheld', `The molar form is withheld: ${molar.reason}. Declared bases: molecular weight: ${molar.bases.c1MassBasis}; content: ${molar.bases.contentBasis}; conjugate: ${molar.bases.conjugate}. The mass-based result stands.`, 'the declarations', { pairingRow: molar.pairingRow });
     }
     if (c1 && c1.flags.length) {
-        flag('C7-FL-10', `Imported C1 value carries ${c1.flags.length} flag${c1.flags.length === 1 ? '' : 's'}`, `The imported molecular weight's flags, restated in full: ${c1.flags.map((x) => `${x.code}: ${x.message}`).join(' ')}`, 'the imported result object', { c1Flags: c1.flags.map((x) => x.code) });
+        flag('C7-FL-10', `Imported Molarity Converter value carries ${c1.flags.length} flag${c1.flags.length === 1 ? '' : 's'}`, `The imported molecular weight's flags, restated in full: ${c1.flags.map((x) => `From the Molarity Converter: ${x.message}`).join(' ')}`, 'the imported result object', { c1Flags: c1.flags.map((x) => x.code) });
     }
     if (carrier === 'present')
-        flag('C7-FL-11', 'Carrier protein present — a protein assay reports carrier', `The stock contains carrier protein — ${D !== null && solidsSource === 'the declared total solids mass' ? `within the declared total solids mass of ${solids.text} ${solidsUnit.symbol}` : 'at a mass not stated'}. A protein assay of this stock reports carrier, not the reagent. The reagent's concentration is the computed one only on the declared content basis.`, 'the carrier declaration');
+        flag('C7-FL-11', 'Carrier protein present: a protein assay reports carrier', `The stock contains carrier protein: ${D !== null && solidsSource === 'the declared total solids mass' ? `within the declared total solids mass of ${solids.text} ${solidsUnit.symbol}` : 'at a mass not stated'}. A protein assay of this stock reports carrier, not the reagent. The reagent's concentration is the computed one only on the declared content basis.`, 'the carrier declaration');
     if (carrier === 'not-recorded')
         flag('C7-FL-12', 'Carrier presence not recorded', 'Whether the stock contains carrier protein is not recorded; a protein assay of it cannot be interpreted against the computed concentration.', 'the carrier declaration');
     if (conjugate === 'protein' || conjugate === 'conjugate')
-        flag('C7-FL-13', `Conjugate — concentration is of the ${conjugate === 'protein' ? 'protein alone' : 'conjugate'}`, `The concentration is of the ${conjugate === 'protein' ? 'protein alone, exclusive of label or payload' : 'conjugate, including label or payload'}, as declared; the tool does not correct for degree of labelling. Carried onward with the stock.`, 'the conjugate declaration');
+        flag('C7-FL-13', `Conjugate: concentration is of the ${conjugate === 'protein' ? 'protein alone' : 'conjugate'}`, `The concentration is of the ${conjugate === 'protein' ? 'protein alone, exclusive of label or payload' : 'conjugate, including label or payload'}, as declared; the tool does not correct for degree of labelling. Carried onward with the stock.`, 'the conjugate declaration');
     if (conjugate === 'not-recorded')
         flag('C7-FL-14', 'Conjugate state not recorded', 'Whether the stated mass includes a label or payload is not recorded; the concentration cannot be paired with a molecular weight and should not be carried into a method record without it.', 'the conjugate declaration');
     const primary = volumeBasis;
@@ -411,7 +411,7 @@ export function determine(input, opts = {}) {
     if (Dmin !== null)
         relations.push(`Dmin = content × v̄ = ${fmtG(U.toGrams(content.value, cUnit))} g × ${VBAR.value} mL/g = ${volDisp(Dmin)} ${volUnit} (reagent's own volume only; applied as a partial correction)`);
     if (Dapp === 0)
-        relations.push('Dapp = 0 — no displacement correction applied');
+        relations.push('Dapp = 0: no displacement correction applied');
     if (direction === 'target') {
         relations.push(`F = content ÷ target = ${content.text} ${cUnit} ÷ ${target.text} ${targetUnit.symbol}${molarTarget ? ` (× ${sigMw(mwGperMol)} g/mol = ${sig(targetBase, 6)} mg/mL)` : ''} = ${volDisp(F)} mL`);
         relations.push(`Vd = F − Dapp; Vd′ = Vd rounded to 3 sf from its own value = ${VdPrimeDisplay} mL`);
@@ -425,7 +425,7 @@ export function determine(input, opts = {}) {
         relations.push(`F = Vd′ + Dapp`);
     }
     relations.push(`Fa = Vd′ + Dapp (Dapp unrounded) = ${FaDisplay} ${volUnit}`);
-    relations.push(`Ca = content ÷ Fa = ${CaDisplay} ${concDisplayUnit} — ${concLabelText}`);
+    relations.push(`Ca = content ÷ Fa = ${CaDisplay} ${concDisplayUnit}: ${concLabelText}`);
     if (f !== null)
         relations.push(`f = D ÷ F = ${pct(f)} %`);
     if (fmin !== null)
@@ -436,18 +436,18 @@ export function determine(input, opts = {}) {
     const dl = declarations;
     const applied = [
         { declaration: 'Direction', value: dl.direction.label, effect: direction === 'target' ? 'F = content ÷ target; the diluent is computed and rounded from its own value' : knownVolume === 'diluent' ? 'the entered diluent is used as entered; F = Vd′ + Dapp' : 'the entered final volume is F; the diluent is computed from it and rounded from its own value, and Fa is reported beside the entered final' },
-        { declaration: 'Content basis', value: dl.contentBasis.label, effect: `the concentration is of ${concOf}; Dmin is ${Dmin !== null ? 'defined and applied' : contentBasis === 'reagent-alone' ? 'defined but not needed (solids declared)' : 'not defined'}${contentBasis === 'total-vial-contents' ? '; the total solids mass is the stated content; the reagent\'s concentration is not computable' : ''}${flagged('C7-FL-01') ? ' (C7-FL-01)' : flagged('C7-FL-02') ? ' (C7-FL-02)' : ''}` },
-        { declaration: 'Source of the content', value: dl.contentProvenance.label, effect: `recorded, not corrected: no fill tolerance is applied${flagged('C7-FL-03') ? ' (C7-FL-03)' : flagged('C7-FL-04') ? ' (C7-FL-04)' : ''}` },
-        { declaration: 'Conjugate state', value: dl.conjugate.label, effect: isActivity ? 'not asked: activity content has no molar route' : `${conjugate === 'protein' || conjugate === 'conjugate' ? `the concentration is of the ${conjugate === 'protein' ? 'protein alone' : 'conjugate'}; no degree-of-labelling correction (C7-FL-13)` : conjugate === 'not-recorded' ? 'the concentration cannot be paired with a molecular weight (C7-FL-14)' : 'no label or payload in the stated mass'}${pair ? `; §8 pairing row ${pair.row}, molar form ${pair.permitted ? 'permitted' : 'not permitted'}` : ''}` },
-        { declaration: 'Carrier', value: dl.carrier.label, effect: carrier === 'present' ? 'carried onward; a protein assay of this stock reports carrier (C7-FL-11)' : carrier === 'not-recorded' ? 'carried onward as not recorded (C7-FL-12)' : 'carried onward' },
+        { declaration: 'Content basis', value: dl.contentBasis.label, effect: `the concentration is of ${concOf}; Dmin is ${Dmin !== null ? 'defined and applied' : contentBasis === 'reagent-alone' ? 'defined but not needed (solids declared)' : 'not defined'}${contentBasis === 'total-vial-contents' ? '; the total solids mass is the stated content; the reagent\'s concentration is not computable' : ''}` },
+        { declaration: 'Source of the content', value: dl.contentProvenance.label, effect: `recorded, not corrected: no fill tolerance is applied` },
+        { declaration: 'Conjugate state', value: dl.conjugate.label, effect: isActivity ? 'not asked: activity content has no molar route' : `${conjugate === 'protein' || conjugate === 'conjugate' ? `the concentration is of the ${conjugate === 'protein' ? 'protein alone' : 'conjugate'}; no degree-of-labelling correction` : conjugate === 'not-recorded' ? 'the concentration cannot be paired with a molecular weight' : 'no label or payload in the stated mass'}${pair ? `; molar form ${pair.permitted ? 'permitted' : 'not permitted'}` : ''}` },
+        { declaration: 'Carrier', value: dl.carrier.label, effect: carrier === 'present' ? 'carried onward; a protein assay of this stock reports carrier' : carrier === 'not-recorded' ? 'carried onward as not recorded' : 'carried onward' },
         { declaration: 'Whole vial', value: 'confirmed', effect: 'the whole stated content is divided by the achieved final volume; no fraction is taken' },
         { declaration: 'Volume basis', value: dl.volumeBasis.label, effect: VdEntered ? 'the diluent is the entered volume' : direction === 'volume' ? 'the final volume is the entered volume' : `the ${volumeBasis === 'diluent' ? 'diluent' : 'final volume'} is shown first and handed onward first; the concentration does not depend on this choice` },
-        { declaration: 'Displacement treatment', value: treatment === 'computed' ? 'computed' : treatment === 'reagent-own-volume-only' ? 'reagent\'s own volume only' : 'none', effect: treatment === 'computed' ? `D = ${volDisp(D)} ${volUnit} from ${solidsSource}, applied in full` : treatment === 'reagent-own-volume-only' ? `Dmin = ${volDisp(Dmin)} ${volUnit} applied as a partial correction; the concentration is an upper bound (C7-FL-05)` : 'not computable; no correction applied and no bound available (C7-FL-05)' },
-        { declaration: 'Minimum transfer volume', value: `${minT.text} ${minUnit.symbol} (${dl.minTransfer.source})`, effect: `Vd′ = ${VdPrimeDisplay} ${volUnit} compared against it: ${flagged('C7-FL-07') ? 'below it (C7-FL-07)' : 'not below it'}` },
-        { declaration: 'Vial working capacity', value: cap ? `${cap.text} ${capUnit.symbol}` : 'not declared', effect: cap ? `Fa = ${FaDisplay} ${volUnit} compared against it: ${flagged('C7-FL-06') ? 'exceeds it (C7-FL-06)' : 'within it'}` : 'C7-FL-06 not evaluated' },
+        { declaration: 'Displacement treatment', value: treatment === 'computed' ? 'computed' : treatment === 'reagent-own-volume-only' ? 'reagent\'s own volume only' : 'none', effect: treatment === 'computed' ? `D = ${volDisp(D)} ${volUnit} from ${solidsSource}, applied in full` : treatment === 'reagent-own-volume-only' ? `Dmin = ${volDisp(Dmin)} ${volUnit} applied as a partial correction; the concentration is an upper bound` : 'not computable; no correction applied and no bound available' },
+        { declaration: 'Minimum transfer volume', value: `${minT.text} ${minUnit.symbol} (${dl.minTransfer.source})`, effect: `Vd′ = ${VdPrimeDisplay} ${volUnit} compared against it: ${flagged('C7-FL-07') ? 'below it' : 'not below it'}` },
+        { declaration: 'Vial working capacity', value: cap ? `${cap.text} ${capUnit.symbol}` : 'not declared', effect: cap ? `Fa = ${FaDisplay} ${volUnit} compared against it: ${flagged('C7-FL-06') ? 'exceeds it' : 'within it'}` : 'no capacity declared, so not checked' },
     ];
     if (c1)
-        applied.push({ declaration: 'Molecular weight (C1)', value: `${c1.mw.value} ${c1.mw.unit}`, effect: molar.status === 'withheld' ? `molar form withheld (§8 row ${molar.pairingRow}, C7-FL-09)` : `molar form of the concentration, molarity of ${molar.molarityOf}` });
+        applied.push({ declaration: 'Molecular weight (Molarity Converter)', value: `${c1.mw.value} ${c1.mw.unit}`, effect: molar.status === 'withheld' ? 'molar form withheld' : `molar form of the concentration, molarity of ${molar.molarityOf}` });
     const assumptions = [A_DISSOLVE];
     if (treatment === 'computed')
         assumptions.unshift(A_ADDITIVE);
@@ -484,7 +484,7 @@ function buildDeclarations(d) {
         wholeVial: { confirmed: d.wholeVial },
         contentBasis: lab(CONTENT_BASIS, d.contentBasis),
         contentProvenance: lab(PROVENANCE, d.provenance),
-        conjugate: d.contentUnit && d.contentUnit.family !== U.FAMILY.MASS ? { value: 'not-applicable', label: 'not asked — activity content has no molar route' } : lab(CONJUGATE, d.conjugate),
+        conjugate: d.contentUnit && d.contentUnit.family !== U.FAMILY.MASS ? { value: 'not-applicable', label: 'not asked: activity content has no molar route' } : lab(CONJUGATE, d.conjugate),
         carrier: lab(CARRIER, d.carrier),
         volumeBasis: lab(VOLUME_BASIS, d.volumeBasis),
         totalSolids: d.contentBasis === 'total-vial-contents'
@@ -493,7 +493,7 @@ function buildDeclarations(d) {
                 ? (d.solids && !d.solids.invalid && d.solidsUnit ? { declared: true, value: d.solids.text, unit: d.solidsUnit.symbol } : { declared: false })
                 : { declared: false, offered: false, note: 'not offered: the content basis is not recorded' },
         minTransfer: d.minT && !d.minT.invalid && d.minUnit ? { value: d.minT.text, unit: d.minUnit.symbol, source: d.minIsDefault ? 'default' : 'entered' } : null,
-        capacity: d.cap && !d.cap.invalid && d.capUnit ? { declared: true, value: d.cap.text, unit: d.capUnit.symbol } : { declared: false, note: 'no capacity declared; C7-FL-06 not evaluated' },
+        capacity: d.cap && !d.cap.invalid && d.capUnit ? { declared: true, value: d.cap.text, unit: d.capUnit.symbol } : { declared: false, note: 'no capacity declared; not checked' },
         target: d.direction === 'target' && d.target && !d.target.invalid && d.targetUnit ? { value: d.target.text, unit: d.targetUnit.symbol } : null,
         enteredVolume: d.direction === 'volume' && d.entered && !d.entered.invalid && d.enteredUnit ? { value: d.entered.text, unit: d.enteredUnit.symbol, is: d.volumeBasis ? VOLUME_BASIS[d.volumeBasis] : null } : null,
         reportUnit: d.reportUnit ? d.reportUnit.symbol : null,
@@ -504,7 +504,6 @@ function shell(status, parts) {
     const r = {
         schema: { name: SCHEMA.name, version: SCHEMA.version },
         tool: { id: TOOL_ID, name: TOOL_NAME, engineVersion: ENGINE_VERSION },
-        ursVersion: URS_VERSION,
         publisher: 'Ligant',
         status,
         declarations: parts.declarations,
@@ -521,9 +520,9 @@ function shell(status, parts) {
         assumptions: parts.assumptions || [],
         precision: { volumes: PRECISION.volumes, concentrations: PRECISION.concentrations, fractions: PRECISION.fractions, rounding: PRECISION.rounding, boundRounding: PRECISION.boundRounding },
         constants: {
-            vbar: { value: VBAR.value, unit: VBAR.unit, status: VBAR.status },
-            materialThreshold: parts.threshold === undefined || parts.threshold === MATERIAL_THRESHOLD.value ? { value: MATERIAL_THRESHOLD.value, status: MATERIAL_THRESHOLD.status, provisional: MATERIAL_THRESHOLD.provisional } : { value: parts.threshold, status: 'configured', provisional: false, registered: MATERIAL_THRESHOLD.value },
-            tolerances: { roundTrip: TOLERANCES.roundTrip, unitNormalisation: TOLERANCES.unitNormalisation, status: 'open' },
+            vbar: { value: VBAR.value, unit: VBAR.unit },
+            materialThreshold: parts.threshold === undefined || parts.threshold === MATERIAL_THRESHOLD.value ? { value: MATERIAL_THRESHOLD.value } : { value: parts.threshold, registered: MATERIAL_THRESHOLD.value },
+            tolerances: { roundTrip: TOLERANCES.roundTrip, unitNormalisation: TOLERANCES.unitNormalisation },
         },
         statements: { scope: PRIVACY_SCOPE, determinesNotVerifies: DETERMINES_NOT_VERIFIES, precision: PRECISION_STATEMENT, hi08: HI08_SENTENCE },
         unrounded: parts.unrounded || null,

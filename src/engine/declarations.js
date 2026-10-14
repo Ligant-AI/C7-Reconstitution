@@ -16,8 +16,8 @@ export const PROVENANCE = Object.freeze({
 });
 export const CONJUGATE = Object.freeze({
     none: 'not a conjugate',
-    protein: 'a conjugate — the stated mass is of the protein alone',
-    conjugate: 'a conjugate — the stated mass is of the conjugate',
+    protein: 'a conjugate: the stated mass is of the protein alone',
+    conjugate: 'a conjugate: the stated mass is of the conjugate',
     'not-recorded': 'not recorded',
 });
 export const CARRIER = Object.freeze({
@@ -31,7 +31,7 @@ export const VOLUME_BASIS = Object.freeze({
 });
 export const C1_MASS_BASIS = Object.freeze({
     assembled: 'assembled molecule',
-    monomer: 'monomer or single chain',
+    monomer: 'subunit of a larger molecule',
     conjugate: 'conjugate including label or payload',
     'not-recorded': 'not recorded',
 });
@@ -48,7 +48,7 @@ export const PAIRING_ROWS = Object.freeze([
     { row: 3, match: (p) => p.c7Basis === 'reagent-activity', permitted: false, reason: 'The content is stated in activity units; there is no mass to divide by a molecular weight' },
     { row: 4, match: (p) => p.c7Basis === 'reagent-alone' && p.conjugate === 'not-recorded', permitted: false, reason: 'Whether the stated mass includes a label or payload is not recorded' },
     { row: 5, match: (p) => p.c1Basis === 'not-recorded', permitted: false, reason: 'Molecular-weight mass basis not recorded' },
-    { row: 6, match: (p) => p.c1Basis === 'monomer', permitted: false, reason: 'The molecular weight is declared as a monomer or single chain; the molar value would be of that unit, not of the whole reagent, unless the reagent is itself a single chain — which the tool cannot determine' },
+    { row: 6, match: (p) => p.c1Basis === 'monomer', permitted: false, reason: 'The molecular weight is declared as a subunit of a larger molecule; the molar value would count subunits, not whole reagent molecules' },
     { row: 7, match: (p) => p.c1Basis === 'assembled' && p.c7Basis === 'reagent-alone' && p.conjugate === 'none', permitted: true, molarityOf: 'the reagent' },
     { row: 8, match: (p) => p.c1Basis === 'assembled' && p.c7Basis === 'reagent-alone' && p.conjugate === 'protein', permitted: true, molarityOf: 'the protein, not of the conjugate' },
     { row: 9, match: (p) => p.c1Basis === 'conjugate' && p.c7Basis === 'reagent-alone' && p.conjugate === 'conjugate', permitted: true, molarityOf: 'the conjugate' },

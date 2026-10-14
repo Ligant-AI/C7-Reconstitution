@@ -1,5 +1,5 @@
 import { escapeHtml as esc } from './page-content.js';
-import { displacementSentence } from '../engine/format.js';
+import { displacementSentence, shortCode } from '../engine/format.js';
 const n = (s) => `<span class="num">${esc(s)}</span>`;
 export function renderDeclarations(r) {
     const d = r.declarations;
@@ -32,7 +32,7 @@ export function renderDeclarations(r) {
         decl('Min transfer', `${n(d.minTransfer.value)} ${esc(d.minTransfer.unit)}${d.minTransfer.source === 'default' ? ' (default)' : ''}`);
     decl('Capacity', d.capacity.declared ? `${n(d.capacity.value)} ${esc(d.capacity.unit)}` : 'not declared', d.capacity.declared ? '' : 'absent');
     if (d.molecularWeight)
-        decl('MW (C1)', `${n(String(d.molecularWeight.value))} ${esc(d.molecularWeight.unit)}`);
+        decl('MW (Molarity Converter)', `${n(String(d.molecularWeight.value))} ${esc(d.molecularWeight.unit)}`);
     return items.join('');
 }
 export function renderFlagSummary(r) {
@@ -40,17 +40,17 @@ export function renderFlagSummary(r) {
         return '';
     if (!r.flags.length)
         return '<li class="none">No flags raised.</li>';
-    return r.flags.map((f) => `<li><a href="#flag-${esc(f.code)}"><span class="code">${esc(f.code)}</span>${esc(f.title)}</a></li>`).join('');
+    return r.flags.map((f) => `<li><a href="#flag-${esc(f.code)}"><span class="code">${esc(shortCode(f.code))}</span>${esc(f.title)}</a></li>`).join('');
 }
 export function renderResult(r) {
     if (r.status === 'incomplete') {
-        return `<div class="state-block incomplete"><h3>No result yet — declarations incomplete</h3><ul>${r.incomplete.map((i) => `<li>${esc(i.message)}</li>`).join('')}</ul></div>`;
+        return `<div class="state-block incomplete"><h3>No result yet: declarations incomplete</h3><ul>${r.incomplete.map((i) => `<li>${esc(i.message)}</li>`).join('')}</ul></div>`;
     }
     if (r.status === 'not-representable') {
-        return `<div class="state-block withheld" role="status"><h3>Not computed — outside the range of the arithmetic</h3><ul><li><span class="code">${esc(r.notRepresentable.code)}</span>${esc(r.notRepresentable.message)}</li></ul></div>`;
+        return `<div class="state-block withheld" role="status"><h3>Not computed: outside the range of the arithmetic</h3><ul><li>${esc(r.notRepresentable.message)}</li></ul></div>`;
     }
     if (r.status === 'rejected') {
-        return `<div class="state-block rejected" role="status"><h3>Not computed — rejected for a stated physical reason</h3><ul>${r.rejections.map((x) => `<li><span class="code">${esc(x.code)}</span>${esc(x.message)}</li>`).join('')}</ul></div>`;
+        return `<div class="state-block rejected" role="status"><h3>Not computed: rejected for a stated physical reason</h3><ul>${r.rejections.map((x) => `<li>${esc(x.message)}</li>`).join('')}</ul></div>`;
     }
     const v = r.volumes;
     const c = r.concentration;
@@ -73,7 +73,7 @@ export function renderResult(r) {
     const concCell = `<div class="figure conc ${upper ? 'upper' : ''}">
       <span class="k">Concentration <span class="role">${esc(c.reported.labelText)}</span></span>
       <span class="v">${upper ? '<span class="bound">at most</span> ' : ''}${n(c.reported.display)} <span class="u">${esc(c.reported.unit)}</span></span>
-      <span class="sub">of ${esc(c.reported.of)}${c.reported.label === 'uncorrected-for-displacement' ? ' — uncorrected for displacement; overstates the concentration obtained by an unknown amount' : ''}</span></div>`;
+      <span class="sub">of ${esc(c.reported.of)}${c.reported.label === 'uncorrected-for-displacement' ? ', uncorrected for displacement; overstates the concentration obtained by an unknown amount' : ''}</span></div>`;
     const targetCell = r.target ? `<div class="figure">
       <span class="k">Target <span class="role">entered</span></span>
       <span class="v">${n(r.target.display)} <span class="u">${esc(r.target.unit)}</span></span>
@@ -81,19 +81,19 @@ export function renderResult(r) {
     const dispCell = disp.treatment === 'computed'
         ? `<div class="figure small"><span class="k">Displacement</span><span class="v">${n(disp.computed.D.display)} <span class="u">${esc(disp.computed.D.unit)}</span></span><span class="sub">f = D ÷ final volume = ${n(disp.computed.f.display)}; from ${esc(disp.solidsSource)}</span></div>`
         : disp.treatment === 'reagent-own-volume-only'
-            ? `<div class="figure small partial"><span class="k">Displacement <span class="role">partial</span></span><span class="v">Dmin ${n(disp.Dmin.display)} <span class="u">${esc(disp.Dmin.unit)}</span></span><span class="sub">not computable — ${esc(disp.notComputable.reason)}. Reagent's own volume only, fmin = ${n(disp.Dmin.fmin.display)}</span></div>`
+            ? `<div class="figure small partial"><span class="k">Displacement <span class="role">partial</span></span><span class="v">Dmin ${n(disp.Dmin.display)} <span class="u">${esc(disp.Dmin.unit)}</span></span><span class="sub">not computable: ${esc(disp.notComputable.reason)}. Reagent's own volume only, fmin = ${n(disp.Dmin.fmin.display)}</span></div>`
             : `<div class="figure small notcomputable"><span class="k">Displacement</span><span class="v">not computable</span><span class="sub">${esc(disp.notComputable.reason)}; no correction applied</span></div>`;
     const reagentCell = c.reagent.computable ? '' : `<div class="figure small notcomputable"><span class="k">Concentration of the reagent alone</span><span class="v">not computable</span><span class="sub">${esc(c.reagent.reason)}</span></div>`;
     let molarCell = '';
     const m = c.molar;
     if (m && m.status === 'reported')
-        molarCell = `<div class="figure small"><span class="k">Molar form <span class="role">molarity of ${esc(m.molarityOf)}</span></span><span class="v">${m.label === 'at-most' ? '<span class="bound">at most</span> ' : ''}${n(m.display)} <span class="u">${esc(m.unit)}</span></span><span class="sub">carries the C1 object's flags</span></div>`;
+        molarCell = `<div class="figure small"><span class="k">Molar form <span class="role">molarity of ${esc(m.molarityOf)}</span></span><span class="v">${m.label === 'at-most' ? '<span class="bound">at most</span> ' : ''}${n(m.display)} <span class="u">${esc(m.unit)}</span></span><span class="sub">carries the Molarity Converter object's flags</span></div>`;
     if (m && m.status === 'unit-not-selected')
         molarCell = `<div class="figure small notcomputable"><span class="k">Molar form</span><span class="v">no unit selected</span><span class="sub">${esc(m.reason)}</span></div>`;
     if (m && m.status === 'withheld')
-        molarCell = `<div class="figure small withheld"><span class="k">Molar form <span class="role">withheld</span></span><span class="v">withheld</span><span class="sub">${esc(m.reason)} (§8 row ${m.pairingRow}). The mass-based result stands.</span></div>`;
+        molarCell = `<div class="figure small withheld"><span class="k">Molar form <span class="role">withheld</span></span><span class="v">withheld</span><span class="sub">${esc(m.reason)} The mass-based result stands.</span></div>`;
     const flags = r.flags.length
-        ? `<ul class="result-flags" aria-label="flags, in full">${r.flags.map((f) => `<li id="flag-${esc(f.code)}"><span class="code">${esc(f.code)}</span><strong>${esc(f.title)}.</strong> ${esc(f.message)}</li>`).join('')}</ul>`
+        ? `<ul class="result-flags" aria-label="flags, in full">${r.flags.map((f) => `<li id="flag-${esc(f.code)}"><span class="code">${esc(shortCode(f.code))}</span><strong>${esc(f.title)}.</strong> ${esc(f.message)}</li>`).join('')}</ul>`
         : '<p class="plan-summary">No flags raised: a whole-vial reconstitution with every declaration recorded, displacement computed and below the material threshold, and every volume inside the declared bounds.</p>';
     const add = v.additivity ? `<p class="plan-summary">Diluent + displacement − final, as displayed: ${n(v.additivity.disagreement)} ${esc(v.additivity.unit)}, within ${esc(v.additivity.boundRule)} (${n(v.additivity.bound)} ${esc(v.additivity.unit)}). The final volume shown is rounded${v.final.isLowerBound ? ' down, as a lower bound' : ''}; the concentration is computed from the diluent as displayed and the unrounded displacement.</p>` : '';
     return `<div class="result-grid volumes">${volumeCells}</div>
@@ -118,20 +118,20 @@ export function renderDerivation(r) {
     if (d.target)
         row('Target', `${n(d.target.value)} ${esc(d.target.unit)}`);
     if (d.enteredVolume)
-        row('Entered volume', `${n(d.enteredVolume.value)} ${esc(d.enteredVolume.unit)} — ${esc(d.enteredVolume.is)}`);
+        row('Entered volume', `${n(d.enteredVolume.value)} ${esc(d.enteredVolume.unit)}: ${esc(d.enteredVolume.is)}`);
     if (d.reportUnit)
         row('Report unit', esc(d.reportUnit));
-    row('Minimum transfer', `${n(d.minTransfer.value)} ${esc(d.minTransfer.unit)} — ${d.minTransfer.source === 'default' ? 'suggested default, unchanged' : 'entered'}`);
-    row('Vial capacity', d.capacity.declared ? `${n(d.capacity.value)} ${esc(d.capacity.unit)}` : 'not declared; C7-FL-06 not evaluated');
+    row('Minimum transfer', `${n(d.minTransfer.value)} ${esc(d.minTransfer.unit)}: ${d.minTransfer.source === 'default' ? 'suggested default, unchanged' : 'entered'}`);
+    row('Vial capacity', d.capacity.declared ? `${n(d.capacity.value)} ${esc(d.capacity.unit)}` : 'not declared; not checked');
     if (d.molecularWeight)
-        row('Molecular weight', `${n(String(d.molecularWeight.value))} ${esc(d.molecularWeight.unit)} from C1; source ${esc(d.molecularWeight.source.label)}; mass basis ${esc(d.molecularWeight.massBasis.label)}`);
+        row('Molecular weight', `${n(String(d.molecularWeight.value))} ${esc(d.molecularWeight.unit)} from the Molarity Converter; source ${esc(d.molecularWeight.source.label)}; mass basis ${esc(d.molecularWeight.massBasis.label)}`);
     return `
     <h3>Declarations applied</h3>
-    <dl class="echo applied">${r.declarationsApplied.map((a) => `<dt>${esc(a.declaration)}</dt><dd><strong>${esc(a.value)}</strong> — ${esc(a.effect)}</dd>`).join('')}</dl>
+    <dl class="echo applied">${r.declarationsApplied.map((a) => `<dt>${esc(a.declaration)}</dt><dd><strong>${esc(a.value)}</strong>: ${esc(a.effect)}</dd>`).join('')}</dl>
     <h3>Relations applied</h3>
     <ul>${r.relations.map((s) => `<li class="num-ish">${esc(s)}</li>`).join('')}</ul>
     <p>${esc(displacementSentence(r))}</p>
-    <p>Both volumes differ by the volume the dissolved solids occupy${r.displacement.treatment === 'reagent-own-volume-only' ? ' — here only the reagent\'s own volume, the rest not included' : r.displacement.treatment === 'computed' ? '' : ' — here none is applied'}. Every concentration reported is that of the final volume.</p>
+    <p>Both volumes differ by the volume the dissolved solids occupy${r.displacement.treatment === 'reagent-own-volume-only' ? ', here only the reagent\'s own volume, the rest not included' : r.displacement.treatment === 'computed' ? '' : ', here none is applied'}. Every concentration reported is that of the final volume.</p>
     <h3>Assumptions</h3>
     <ul>${r.assumptions.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
     <h3>Inputs as entered</h3>

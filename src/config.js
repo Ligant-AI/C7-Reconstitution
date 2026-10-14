@@ -17,5 +17,5 @@ export const CONFIG = Object.freeze({
     citationAuthor: 'Modi, A.B.',
     citationYear: '2026',
     tagline: 'The volume of diluent to add to a vial for a target concentration, or the concentration a stated volume gives, in either direction. Every value is computed deterministically by arithmetic you can read. No model and no inference is applied to any reported number.',
-    standfirst: 'The arithmetic of reconstitution is trivial. What is not trivial is what the number on the vial is the amount of, what else is in the vial, and how much volume the dry solids take up, and nothing in the resulting solution reveals any of them. This tool asks for each and puts it in the result.',
+    standfirst: 'The arithmetic of reconstitution is simple. What is not trivial is what the number on the vial is the amount of, what else is in the vial, and how much volume the dry solids take up, and nothing in the resulting solution reveals any of them. This tool asks for each and puts it in the result.',
 });

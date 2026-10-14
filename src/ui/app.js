@@ -17,7 +17,7 @@ function fillUnits(select, groups, { preferred = '', keep = true } = {}) {
     select.innerHTML = '';
     const o = document.createElement('option');
     o.value = '';
-    o.textContent = '— select —';
+    o.textContent = 'select';
     select.appendChild(o);
     for (const [label, units] of groups) {
         const parent = label ? document.createElement('optgroup') : select;
@@ -68,7 +68,7 @@ function syncImport() {
     const status = $('import-status');
     if (!text) {
         c1State = null;
-        status.textContent = `The Molarity Converter (C1) does not yet offer a transport link, so there is nothing to paste until it does; the mass-based determination needs none. Nothing is fetched; the object is read here and nowhere else. It supplies the molecular weight, its source, its mass-basis declaration and every flag raised on it. ${INTEGRITY_SCOPE_STATEMENT}`;
+        status.textContent = `The Molarity Converter does not offer a transport link, so there is nothing to paste; the mass-based determination needs none. Nothing is fetched; the object is read here and nowhere else. It supplies the molecular weight, its source, its mass-basis declaration and every flag raised on it. ${INTEGRITY_SCOPE_STATEMENT}`;
         return;
     }
     const decoded = decodeEnvelope(text, 'c1-conversion');
@@ -85,7 +85,7 @@ function syncImport() {
     }
     c1State = { c1: read.c1 };
     const c = read.c1;
-    status.textContent = `Imported from C1: molecular weight ${c.mw.value} ${c.mw.unit}; source ${C1_MW_PROVENANCE[c.provenance] || c.provenance}; mass basis ${C1_MASS_BASIS[c.massBasis]}; ${c.flags.length} flag${c.flags.length === 1 ? '' : 's'} carried. The integrity check passed.`;
+    status.textContent = `Imported from the Molarity Converter: molecular weight ${c.mw.value} ${c.mw.unit}; source ${C1_MW_PROVENANCE[c.provenance] || c.provenance}; mass basis ${C1_MASS_BASIS[c.massBasis]}; ${c.flags.length} flag${c.flags.length === 1 ? '' : 's'} carried. The integrity check passed.`;
 }
 function syncConditionalFields() {
     const dir = checked('direction');
@@ -174,7 +174,7 @@ function init() {
     bindCopy($('site-footer'));
     fillUnits($('content-unit'), [['mass', CONTENT_UNITS.filter((u) => u.family === FAMILY.MASS)], ['activity', CONTENT_UNITS.filter((u) => u.family !== FAMILY.MASS)]]);
     fillUnits($('solids-unit'), [['', SOLIDS_UNITS]]);
-    fillUnits($('target-unit'), [['mass concentration', MASS_CONC_UNITS], ['activity concentration', ACTIVITY_CONC_UNITS], ['molar (needs a C1 molecular weight)', MOLAR_UNITS]]);
+    fillUnits($('target-unit'), [['mass concentration', MASS_CONC_UNITS], ['activity concentration', ACTIVITY_CONC_UNITS], ['molar (needs a Molarity Converter molecular weight)', MOLAR_UNITS]]);
     fillUnits($('molar-unit'), [['', MOLAR_UNITS]]);
     fillUnits($('volume-unit'), [['', VOLUME_UNITS]]);
     fillUnits($('capacity-unit'), [['', VOLUME_UNITS]]);
