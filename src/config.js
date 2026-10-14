@@ -1,0 +1,21 @@
+import { ENGINE_VERSION } from './engine/version.js';
+export const CONFIG = Object.freeze({
+    toolTitle: 'Reconstitution',
+    toolId: 'C7',
+    productLine: 'Ligant Bench Tools',
+    publisher: 'Ligant',
+    legalEntity: 'Ligant AI Incorporated',
+    version: ENGINE_VERSION,
+    slug: 'reconstitution',
+    publicBase: 'https://benchtools.ligant.ai/',
+    repositoryUrl: 'https://github.com/Ligant-AI/C7-Reconstitution',
+    repositoryLabel: 'github.com/Ligant-AI/C7-Reconstitution',
+    privacyUrl: 'https://ligant.ai/privacy',
+    contactEmail: 'hello@ligant.ai',
+    address: ['3675 Market Street', 'Suite 200', 'Philadelphia PA 19104'],
+    doi: null,
+    citationAuthor: 'Modi, A.B.',
+    citationYear: '2026',
+    tagline: 'The volume of diluent to add to a vial for a target concentration, or the concentration a stated volume gives, in either direction. Every value is computed deterministically by arithmetic you can read. No model and no inference is applied to any reported number.',
+    standfirst: 'The arithmetic of reconstitution is trivial. What is not trivial is what the number on the vial is the amount of, what else is in the vial, and how much volume the dry solids take up, and nothing in the resulting solution reveals any of them. This tool asks for each and puts it in the result.',
+});
