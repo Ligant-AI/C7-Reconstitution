@@ -24,7 +24,7 @@ export function renderFooter() {
     });
 }
 export function renderDisclaimer(statement) {
-    return `<strong>${esc(SCOPE_STATEMENT)}</strong> ${esc(statement)}`;
+    return `${esc(statement)}`;
 }
 export function renderColophon() {
     return `${markSvg({ size: 16 })}<span>${esc(CONFIG.publisher)} · ${esc(CONFIG.toolTitle)} v${esc(CONFIG.version)}</span>`;

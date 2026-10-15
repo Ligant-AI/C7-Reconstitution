@@ -58,7 +58,7 @@ export function renderPageContent(config) {
     const esc = escapeHtml;
     return `
 <h3>What it does</h3>
-<p>This tool answers one bench question in either direction: how much diluent to add to a vial to reach a target concentration, or what concentration a stated volume gives. It also records what the stated content is the content of, where the figure came from, whether carrier is present, the conjugate state, and whether the volume taken up by the dry solids was accounted for. <strong>Research use only. Not qualified for GxP decision-making.</strong></p>
+<p>This tool answers one bench question in either direction: how much diluent to add to a vial to reach a target concentration, or what concentration a stated volume gives. It also records what the stated content is the content of, where the figure came from, whether carrier is present, the conjugate state, and whether the volume taken up by the dry solids was accounted for.</p>
 <p>${esc(config.standfirst)}</p>
 
 <h3>How to use it</h3>
@@ -115,8 +115,7 @@ export function renderPageContent(config) {
 <li>Dilution of the resulting stock (Dilution Planner), titration series design (Antibody Titration Planner), multi-component cocktails.</li>
 <li>Conversion between activity units and mass through a specific activity; molecular-weight lookup or protein identification; buffer or diluent selection, carrier addition, aliquoting or storage guidance; correction for incomplete dissolution or handling loss; reconstitution of a fraction of a vial; degree-of-labelling correction.</li>
 </ul>
-<p>The stock envelope carries the full result for use by another tool; the Dilution Planner does not read it, so the notebook copy is the record. ${esc(INTEGRITY_SCOPE_STATEMENT)}</p>
-<p><strong>Research use only. Not qualified for GxP decision-making.</strong></p>`;
+<p>The stock envelope carries the full result for use by another tool; the Dilution Planner does not read it, so the notebook copy is the record. ${esc(INTEGRITY_SCOPE_STATEMENT)}</p>`;
 }
 export function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

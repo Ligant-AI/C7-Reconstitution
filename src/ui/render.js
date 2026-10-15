@@ -136,5 +136,5 @@ export function renderDerivation(r) {
     <ul>${r.assumptions.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
     <h3>Inputs as entered</h3>
     <dl class="echo">${echo.join('')}</dl>
-    <p>${esc(r.statements.precision)} Engine ${n(r.tool.engineVersion)}. ${esc(r.statements.scope)} ${esc(r.statements.determinesNotVerifies)}</p>`;
+    <p>${esc(r.statements.precision)} Engine ${n(r.tool.engineVersion)}. ${esc(r.statements.determinesNotVerifies)}</p>`;
 }
