@@ -24,7 +24,7 @@ npm run build   # writes the site to dist/
 npm run preview # serves dist/ locally
 ```
 
-Everything runs in your browser. Nothing you enter is sent anywhere.
+Everything runs in your browser. Nothing you enter into the calculator, and no result, is sent anywhere.
 
 ## Cite
 
@@ -34,4 +34,4 @@ If you use Reconstitution in your work, please cite it. The citation is in [CITA
 
 Apache License 2.0, see [LICENSE](LICENSE). The bundled fonts (Inter, IBM Plex Mono) are under the SIL Open Font License 1.1.
 
-Reconstitution v0.1.3. © Ligant AI Incorporated.
+Reconstitution v0.1.4. © Ligant AI Incorporated.
