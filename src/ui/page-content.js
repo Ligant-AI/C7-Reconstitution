@@ -4,6 +4,7 @@ import { HI08_SENTENCE, PRECISION_STATEMENT, DETERMINES_NOT_VERIFIES } from '../
 import { INTEGRITY_SCOPE_STATEMENT } from '../shared/transport.js';
 import { SCHEMA } from '../shared/result-object.js';
 import { pct } from '../engine/numfmt.js';
+import { relatedHtml } from './seo.js';
 export const FAILURE_CLASSES = [
     '<strong>A stated content that is wrong</strong>: mislabelled, or a vial from a different lot than the certificate consulted.',
     '<strong>Incomplete dissolution.</strong> The tool assumes the solids dissolve fully. A cake that has not fully gone into solution gives a lower concentration than computed, and the solution may look clear.',
@@ -12,7 +13,7 @@ export const FAILURE_CLASSES = [
     '<strong>Loss of activity</strong> before reconstitution: storage, temperature excursion, or age. A correct mass of inactive protein reconstitutes to the computed concentration and does not work.',
     '<strong>The wrong diluent.</strong> Datasheets frequently specify the diluent: dilute acid for some growth factors, buffer with carrier for others. The tool computes a correct concentration in the wrong solvent and cannot know.',
     '<strong>A collapsed, discoloured or partially melted cake</strong>, which indicates a compromised vial. The tool sees only the numbers.',
-    '<strong>Vial vacuum.</strong> Many lyophilised vials are stoppered under vacuum, which draws diluent in and can leave delivered volume differing from the volume drawn up.',
+    '<strong>Vial vacuum.</strong> Many lyophilized vials are stoppered under vacuum, which draws diluent in and can leave delivered volume differing from the volume drawn up.',
     '<strong>Whether the built-in partial specific volume applies.</strong> The value is for protein-dominated solids; a cake that is mostly excipient has a lower value, and the correction then overshoots by a bounded amount in a stated direction (see the constants table). The tool cannot know the excipient fraction.',
     '<strong>Whether a specific activity used elsewhere is the lot\'s.</strong> This tool does not convert between activity and mass, so it never holds one; a user who converts by hand before entering a value brings that risk with them.',
     'Any error in the <strong>execution</strong>. The tool states the volume; it does not observe what was delivered.',
@@ -35,7 +36,7 @@ const ASSUMPTIONS = [
     ['Volumes are additive: final volume = diluent volume + solids mass × v̄. The correction beats no correction for solids whose mass-weighted v̄ exceeds 0.365 mL/g: protein-, sugar- and polyol-dominated solids. For salt-dominated solids it is not guaranteed.', 'Every result where displacement is computable'],
     ['Where the total solids mass is not known: mass-based reagent-alone content is corrected for the reagent\'s own volume only (Dmin), and its concentration is reported as an upper bound. For activity content or content basis not recorded, no correction is applied and no bound is available.', 'Every result where the displacement-not-computable flag is raised'],
     ['The reagent is a protein, within the scope of v̄. Even then Dmin is a lower bound only to within v̄\'s scope error: a reagent whose true v̄ is 0.70 mL/g displaces 0.959 × Dmin: an over-correction of a few tenths of a percent of the volume where the solids are almost entirely reagent, about 0.3 % at 100 mg/mL.', 'Every result reporting Dmin'],
-    ['The solids other than the reagent do not reduce the solution volume. Whether any common lyophilisation excipient has a small or negative apparent volume at the relevant concentrations is not established here.', 'Every result reporting Dmin'],
+    ['The solids other than the reagent do not reduce the solution volume. Whether any common lyophilization excipient has a small or negative apparent volume at the relevant concentrations is not established here.', 'Every result reporting Dmin'],
     ['The solids dissolve completely into the diluent.', 'Every result (see "What it does not do")'],
 ];
 const FLAG_LEGEND = [
@@ -44,7 +45,7 @@ const FLAG_LEGEND = [
     ['FL-03', 'The content is the nominal fill from the label or datasheet, not the lot\'s measured content.', 'The actual fill can differ from the nominal. Use the lot-specific certificate of analysis where one exists.'],
     ['FL-04', 'The source of the stated content was not recorded.', 'Record where the figure came from before using the stock.'],
     ['FL-05', 'The total solids mass is not known, so the volume of the solids cannot be computed in full; the concentration is "at most", or uncorrected.', 'Enter the total solids mass if the certificate gives it. Otherwise treat the concentration as an upper bound.'],
-    ['FL-06', 'The final volume exceeds the vial\'s declared working capacity.', 'The solution will not fit in this vial. Reconstitute to a higher concentration whose final volume fits, then dilute that stock in a separate tube (the Dilution Planner plans this).'],
+    ['FL-06', 'The final volume exceeds the vial\'s declared working capacity.', 'The solution will not fit in this vial. Reconstitute to a higher concentration whose final volume fits, then dilute that stock in a separate tube (the Dilution Planner plans this for mass and molar concentrations).'],
     ['FL-07', 'The diluent volume is below your declared minimum reliable transfer volume.', 'You cannot deliver it reliably. Choose a lower target concentration (or, if you entered a volume, a larger one) so that more diluent is added, use a syringe or pipette that delivers this volume reliably and declare its minimum, or reconstitute a vial with more content.'],
     ['FL-08', 'The dry solids take up a material fraction of the final volume.', 'Do not add the final volume as diluent. Add the diluent volume shown.'],
     ['FL-09', 'The molar form is withheld because the declarations do not pair safely with the imported molecular weight.', 'Use the mass-based result, or correct the declarations or the imported molecular weight.'],
@@ -75,6 +76,7 @@ export function renderPageContent(config) {
 <li><strong>For a molar target or molar form,</strong> the molecular weight must come from the Molarity Converter as a transport link, which carries its source, its mass-basis declaration and its flags. The Molarity Converter does not produce that link yet, so molar targets cannot be computed here for now; every mass-based result is unaffected.</li>
 <li><strong>Read the result and every flag</strong>, then choose "Copy for notebook". The copy records the declarations, the constants applied, the flags and the engine version.</li>
 </ol>
+${relatedHtml()}
 
 <h3>How it works</h3>
 <p>Dry solute occupies volume. Adding 1 mL of diluent to 100 mg of protein does not give 1 mL of solution, and there is no mark on a sealed vial to bring it to. Where the total solids mass is known, the displacement is <span class="num">D = solids × v̄</span> and the diluent to add is smaller than the final volume by D. Where it is not, mass-based reagent-alone content is corrected for the reagent's own volume only and its concentration is reported as <strong>at most</strong>; activity content and content basis not recorded are not corrected.</p>

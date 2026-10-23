@@ -34,4 +34,4 @@ If you use Reconstitution in your work, please cite it. The citation is in [CITA
 
 Apache License 2.0, see [LICENSE](LICENSE). The bundled fonts (Inter, IBM Plex Mono) are under the SIL Open Font License 1.1.
 
-Reconstitution v0.1.4. © Ligant AI Incorporated.
+Reconstitution v0.1.5. © Ligant AI Incorporated.

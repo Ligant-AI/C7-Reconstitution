@@ -40,6 +40,7 @@ strong, b { font-weight: 700; }
   .layout > .stack { display: contents; }
   .layout > .rail { order: 1; }
   .layout .method-panel { order: 2; }
+  .layout #faq { order: 2; }
 }
 .stack { display: flex; flex-direction: column; gap: 16px; }
 
@@ -205,3 +206,9 @@ label.check.whole-vial input { margin-top: 2px; }
 .subsection { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
 .sub-h { font-size: 13px; margin-bottom: 10px; }
 .derivation .echo.applied { border-top: none; padding-top: 0; margin-top: 0; }
+
+.prose .related { margin-top: 10px; }
+.prose .related a, #faq a { color: var(--text-primary); }
+#faq h3 { font-size: 13px; margin: 0 0 6px; color: var(--text-primary); }
+#faq h3:not(:first-child) { margin-top: 14px; }
+#faq p { max-width: 110ch; }

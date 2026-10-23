@@ -8,8 +8,8 @@
   
   <link rel="icon" id="favicon" href="data:,">
   <meta name="referrer" content="no-referrer">
-  <title>Ligant · Reconstitution</title>
-  <meta name="description" content="The volume of diluent to add to a lyophilised vial for a target concentration, or the concentration a stated volume gives, correct for what the vial's number is the amount of and for the volume the dry solids occupy. A free, deterministic bench tool. Runs entirely in your browser.">
+  <title>Ligant · Reconstitution: Lyophilized Vial Calculator</title>
+  <meta name="description" content="Free reconstitution calculator for lyophilized vials. Diluent to add for a target concentration, or the concentration a volume gives, solids counted or flagged.">
   <link rel="canonical" href="https://benchtools.ligant.ai/reconstitution/">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FAF7F2">
@@ -18,10 +18,10 @@
   <meta property="og:url" content="https://benchtools.ligant.ai/reconstitution/">
   <meta property="og:site_name" content="Ligant Bench Tools">
   <meta property="og:title" content="Ligant · Reconstitution">
-  <meta property="og:description" content="Reconstitute a vial with the content basis, its provenance, carrier, conjugate state and displacement recorded beside the volume. Free, deterministic, runs entirely in your browser.">
+  <meta property="og:description" content="Free reconstitution calculator for lyophilized vials. Diluent to add for a target concentration, or the concentration a volume gives, solids counted or flagged.">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ligant · Reconstitution">
-  <meta name="twitter:description" content="Vial reconstitution that records what the number on the vial is the amount of. Free bench tool.">
+  <meta name="twitter:description" content="Free reconstitution calculator for lyophilized vials. Diluent to add for a target concentration, or the concentration a volume gives, solids counted or flagged.">
   <link rel="stylesheet" href="./src/tokens.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -127,7 +127,7 @@
             <p class="help" id="solids-total" hidden>Total solids mass: the stated content, since it is the total vial contents.</p>
             <p class="help" id="solids-unoffered" hidden>Total solids mass: not offered while the content basis is not recorded.</p>
 
-            <label class="check whole-vial"><input type="checkbox" id="whole-vial"> <span>The <strong>whole vial</strong> is reconstituted. No fraction of a cake is accepted; a previously reconstituted vial is a liquid stock and belongs in the Dilution Planner.</span></label>
+            <label class="check whole-vial"><input type="checkbox" id="whole-vial"> <span>The <strong>whole vial</strong> is reconstituted. No fraction of a cake is accepted; a previously reconstituted vial is a liquid stock and belongs in the Dilution Planner (mass and molar concentrations only).</span></label>
           </div>
         </section>
 
@@ -230,6 +230,13 @@
           <div class="titles"><h2 id="about-heading">About this calculator</h2></div>
         </div>
         <div class="panel-body prose" id="page-content-body"></div>
+      </section>
+
+      <section class="panel" id="faq" aria-labelledby="faq-heading">
+        <div class="panel-head">
+          <div class="titles"><h2 id="faq-heading">Questions and answers</h2></div>
+        </div>
+        <div class="panel-body prose" id="faq-body"></div>
       </section>
 
       <section class="panel" id="privacy" aria-labelledby="privacy-heading">

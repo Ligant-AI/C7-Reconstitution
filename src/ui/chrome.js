@@ -2,8 +2,9 @@ import { renderHeader as suiteHeader, renderFooter as suiteFooter, markSvg } fro
 import { CONFIG } from '../config.js';
 import { escapeHtml as esc } from './page-content.js';
 import { SCOPE_STATEMENT } from './privacy.js';
+import { SEO } from './seo.js';
 export function renderHeader() {
-    return suiteHeader({ path: `/${CONFIG.slug}/`, title: CONFIG.toolTitle, description: CONFIG.tagline });
+    return suiteHeader({ path: `/${CONFIG.slug}/`, title: SEO.h1, description: SEO.lead });
 }
 function citation() {
     const tail = ` (v${CONFIG.version}) [Computer software]. ${CONFIG.legalEntity}. ${CONFIG.publicBase.replace('https://', '')}${CONFIG.slug}/`;

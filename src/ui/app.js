@@ -11,6 +11,7 @@ import { PRIVACY_STATEMENT, PRIVACY_DATE } from './privacy.js';
 import '@ligant/bench-chrome/chrome.css';
 import { bindCopy, markDataUri } from '@ligant/bench-chrome';
 import { renderHeader, renderFooter, renderDisclaimer, renderColophon } from './chrome.js';
+import { faqHtml } from './seo.js';
 const $ = (id) => document.getElementById(id);
 function fillUnits(select, groups, { preferred = '', keep = true } = {}) {
     const previous = select.value;
@@ -161,13 +162,13 @@ async function copyText(text, button, label) {
     }
 }
 function init() {
-    document.title = `${CONFIG.publisher} · ${CONFIG.toolTitle}`;
     $('site-header').innerHTML = renderHeader();
     $('site-footer').innerHTML = renderFooter();
     $('disclaimer').innerHTML = renderDisclaimer(DETERMINES_NOT_VERIFIES);
     $('colophon').innerHTML = renderColophon();
     $('favicon').href = markDataUri();
     $('page-content-body').innerHTML = renderPageContent(CONFIG);
+    $('faq-body').innerHTML = faqHtml();
     $('privacy-body').innerHTML = `<p>${esc(PRIVACY_STATEMENT)}</p><p><a href="${esc(CONFIG.privacyUrl)}" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>`;
     $('privacy-version').textContent = PRIVACY_DATE;
     $('object-hint').textContent = `The machine-readable object (${SCHEMA.name} ${SCHEMA.version}), carrying the unrounded value of every quantity with its unit, every flag with its reason code and every declaration the result rests on. The result above is rendered from it, so the two cannot disagree.`;
